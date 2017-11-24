@@ -9,8 +9,7 @@ title: About
 # Write a short (~150 characters) description of each blog post.
 # This description is used to preview the page on search engines, social media, etc.
 description: >
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  Dennis Seidel is an IT Architect and Developer from Munich. I am interested in everything InsuranceTech especially healthcare related.
 
 # You can show the description on the page by deleting this line:
 hide_description: true
@@ -19,8 +18,6 @@ hide_description: true
 menu: true
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+I am an IT Architect and Developer from Munich. I am interested in everything InsuranceTech especially healthcare related.
 
-Open `about.md` to edit this text.
+Currently working on building an ecosystem to connect customer bases, externalizing functional capabilities as an API (e.g. a well-trained mood and intent detection algorithm for customer mails in the insurance domain) to create better offerings in the insurance space together.

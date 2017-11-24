@@ -4,5 +4,5 @@
 # To create links to social media sites, check out `_data/authors.yml`!
 redirect_to: https://qwtel.com/hydejack/docs/
 title: Documentation
-menu: true
+menu: false
 ---

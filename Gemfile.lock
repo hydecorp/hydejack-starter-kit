@@ -29,6 +29,7 @@ GEM
       jekyll (~> 3.3)
     jekyll-gist (1.4.1)
       octokit (~> 4.2)
+    jekyll-mermaid (1.0.0)
     jekyll-optional-front-matter (0.3.0)
       jekyll (~> 3.0)
     jekyll-paginate (1.1.0)
@@ -90,6 +91,7 @@ DEPENDENCIES
   jekyll-default-layout
   jekyll-feed
   jekyll-gist
+  jekyll-mermaid
   jekyll-optional-front-matter
   jekyll-paginate
   jekyll-readme-index
@@ -102,4 +104,4 @@ DEPENDENCIES
   tzinfo-data
 
 BUNDLED WITH
-   1.15.4
+   1.16.0
