@@ -134,6 +134,11 @@ hydejack:
   # Set to `true` when building with the `--lsi` option
   use_lsi:             false
 
+defaults:
+  - scope:
+      type: posts
+    values:
+      comments: true
 
 # Collections
 # ========================================================================================
@@ -178,7 +183,6 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-titles-from-headings
-  - jekyll-mermaid
 
 # Theme
 # ---------------------------------------------------------------------------------------
