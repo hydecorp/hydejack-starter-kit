@@ -3,7 +3,7 @@
 layout: post
 
 # The title of your post
-title: How to transform a regional seperated enterprise into a global service provider like Google
+title: How to transform a regional seperated enterprise into a global service provider like Google [In Progress]
 
 # (Optional) Write a short (~150 characters) description of each blog post.
 # This description is used to preview the page on search engines, social media, etc.

@@ -3,12 +3,12 @@
 layout: post
 
 # The title of your post
-title: TEST
+title: My Dev Tool Setup [In Progress]
 
 # (Optional) Write a short (~150 characters) description of each blog post.
 # This description is used to preview the page on search engines, social media, etc.
 description: >
-  Setting up a blog on github pages because of simplicity and code is a first class citizen. 
+  The tools I use to design and build software. 
 
 # (Optional) Link to an image that represents your blog post.
 # The aspect ratio should be ~16:9.
@@ -23,7 +23,13 @@ hide_image: true
 # The difference is that categories will be part of the URL, while tags will not.
 # E.g. the URL of this post is <site.baseurl>/hydejack/2017/11/23/example-content/
 categories: [tech]
-tags: [github pages, markdown, blogging]
+tags: [tool, windows, development]
 # If you want a category or tag to have its own page,
 # check out `_featured_categories` and `_featured_tags` respectively.
 ---
+
+* Startup Engineering Course Tools
+* Design Graphs [PantUML](http://plantuml.com/sequence-diagram) and [Gravizo](http://www.gravizo.com/#converter)
+
+
+* Auido Books (for the growx )

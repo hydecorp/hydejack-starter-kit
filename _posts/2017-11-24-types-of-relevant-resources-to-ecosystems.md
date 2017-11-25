@@ -3,7 +3,7 @@
 layout: post
 
 # The title of your post
-title: Find the resources that are intersting to bootstrap your ecosystem
+title: Find the resources that are intersting to bootstrap your ecosystem [In Progress]
 
 # (Optional) Write a short (~150 characters) description of each blog post.
 # This description is used to preview the page on search engines, social media, etc.
@@ -57,7 +57,7 @@ si -> a: /products & /customers;
 
 Resource | Function  | GET | POST | UPDATE | DELETE | Example APIs
 ---|---|---|---|---|---|---
-`/products` | This offers a production catalog some body can use to display and sell the products | x |||| [Zalando Shop API](https://api.zalando.com/swagger/index.html)
+`/products` | This offers a production catalog some body can use to display and sell the products | x |||| [Zalando Shop API](https://api.zalando.com/swagger/index.html), [FinAPI](https://www.microsoft.com/de-de/store/p/quicklook/9nv4bs3l1h4s)
 `/recomendations` | This api takes some relevant paramters about the situation and the customer and displace the right products for this customer (does it even make sense to offer a simple product api?) | x | | | | ?
 `/customers` | This manages the customer from the lead stage (when he browsed to the site anonymous an id and meta data is allready recorded) | x | x | x | | ?  
 
