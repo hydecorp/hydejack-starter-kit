@@ -158,6 +158,15 @@ The final element.
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/XCjvP_ZF4rI?rel=0" frameborder="0" allowfullscreen></iframe>
 
 
+### Graphs
+
+<div class="mermaid">
+  graph LR
+      A --- B
+      B-->C[fa:fa-ban forbidden]
+      B-->D(fa:fa-spinner);
+</div>
+
 ## Hydejack Exclusives
 Hydejack offers a few additional features to markup your markdown.
 Don't worry, these are merely CSS classes added with kramdown's `{:.my-class}` syntax,
