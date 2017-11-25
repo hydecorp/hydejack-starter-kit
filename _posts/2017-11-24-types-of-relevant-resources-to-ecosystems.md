@@ -34,8 +34,26 @@ When you start your ecosystem you need to decide which type of relationship you 
 * **Products**: This is the traditional multi level marketing / broker concept transfert to the digital age. Other 
 have the possibility to sell your product or service this requires apis like: 
 
-*Customer Journey*: 
-Customer browsers the services (might test it) -> The customers "sign up" (his data is first hold at the 3rd party app but we could offer a service to do even the customer manamgement for him) or at least gives one time the relevant data eg name, adress, contact data, payment data -> subscribes to service -> use the service -> manages the subscription (renew/cancel)
+<img src='https://g.gravizo.com/svg?
+@startuml;
+actor Customer as c ;
+participant "Service Interface\n yours or 3rd party" as si;
+database CustomerDB as cdb;
+participant "API" as a;
+c -> si: browse and tests;
+si --> cdb: collect data;
+c -> si: "signs up" ;
+si -> cdb: saves the customer data %28contact & contract details e.g. subscription%29;
+note left of cdb: eg name, adress, contact data, payment data ;
+note right of cdb: we could offer a service manage the \ncustomer data %28multi tenancy & saas%29;
+c -> si: subscribe to service;
+si -> a: manages `/products` and `/customers`;
+c -> si: use service;
+si -> a: serve the `/products` throw interface;
+c -> si: manages the subscription %28renew/cancel%29;
+si -> a: /products & /customers;
+@enduml
+'>
 
 Resource | Function  | GET | POST | UPDATE | DELETE | Example APIs
 ---|---|---|---|---|---|---
