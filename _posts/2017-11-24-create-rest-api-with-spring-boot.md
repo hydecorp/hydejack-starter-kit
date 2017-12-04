@@ -84,5 +84,23 @@ Select the Spring Boot Version (2017/11: 2.0.0M6), your build tool (Maven) and y
 
 create the folder `model` and a `Parties.java`
 
+```java
+package de.dennisseidel.services.parties.model;
+
+import com.sun.org.apache.xpath.internal.operations.Bool;
+
+import java.util.List;
+
+public class Parties {
+    private String customerNumber;
+    private Boolean privacyFlag;
+    private String currency;
+    private List<String> loyalityPrograms;
+    private String preferredLanguage;
+    //TODO externalSystemReferences
+    private List<String> addresses;
+    private List<String> thirdPartyPolicies;
+}
+```
 
 
