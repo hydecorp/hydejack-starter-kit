@@ -28,15 +28,17 @@ title:                 Drah's Blog
 # Can use markdown, but no more than one paragraph (enforced by `>`)
 description:           >
   The More We Learn and Think, The Faster We Think and Learn.
-  #A Jekyll theme with JavaScript powers. "Best Theme by a Mile".
-  #Combines the best of static sites and modern web apps.
-  #Open `_config.yml` to edit this text.
+
+#A Jekyll theme with JavaScript powers. "Best Theme by a Mile".
+#Combines the best of static sites and modern web apps.
+#Open `_config.yml` to edit this text.
 
 # A shorter description for the sidebar.
 tagline:               >
   The More We Learn and Think, The Faster We Think and Learn.
-  #A Jekyll theme with JavaScript powers.
-  #Open `_config.yml` to edit this text.
+
+#A Jekyll theme with JavaScript powers.
+#Open `_config.yml` to edit this text.
 
 # A list of keywords for your blog.
 keywords:              [Drah]
