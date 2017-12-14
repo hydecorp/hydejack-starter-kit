@@ -22,22 +22,24 @@ baseurl:               ''
 lang:                  en
 
 # The title of your blog. Used in the sidebar and the browser tab.
-title:                 Hydejack Starter Kit
+title:                 Drah's Blog
 
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
 description:           >
-  A Jekyll theme with JavaScript powers. "Best Theme by a Mile".
-  Combines the best of static sites and modern web apps.
-  Open `_config.yml` to edit this text.
+  The More We Learn and Think, The Faster We Think and Learn.
+  #A Jekyll theme with JavaScript powers. "Best Theme by a Mile".
+  #Combines the best of static sites and modern web apps.
+  #Open `_config.yml` to edit this text.
 
 # A shorter description for the sidebar.
 tagline:               >
-  A Jekyll theme with JavaScript powers.
-  Open `_config.yml` to edit this text.
+  The More We Learn and Think, The Faster We Think and Learn.
+  #A Jekyll theme with JavaScript powers.
+  #Open `_config.yml` to edit this text.
 
 # A list of keywords for your blog.
-keywords:              []
+keywords:              [Drah]
 
 # Used by jekyll-seo-tag.
 logo:                  /assets/icons/icon.png
@@ -45,8 +47,8 @@ logo:                  /assets/icons/icon.png
 # This should be the same author as first entry in `_data/authors.yml`.
 # Duplication is necessary due to the `jekyll-feed`, `jekyll-seo-tag` plugin.
 author:
-  name:                <firstname> <lastname>
-  email:               <mail@domain.tld>
+  name:                Drah Wong
+  email:               drah2easy@gmail.com
   # Used by `jekyll-seo-tag`:
   # twitter:             <username>
 
