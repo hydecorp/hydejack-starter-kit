@@ -29,5 +29,3 @@ tags: [es6, react, javascript, development]
 ---
 
 I had the problem that I could not call `this.setState()` inside a callback function. This was related to the scope of this (it referenced to the function not the class). I either should use **es6 arrow function** or **bind this to the callback function**. [>> StackOverflow](https://stackoverflow.com/a/31045750/1929968) 
-
-<iframe src="https://stackoverflow.com/a/31045750/1929968"></iframe>
