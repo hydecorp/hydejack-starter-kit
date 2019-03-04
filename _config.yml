@@ -4,7 +4,7 @@
 # IMPORTANT: Set the URL of your site.
 # Set to https://<username>.github.io when hosting on GitHub Pages
 # (unless you are using a custom domain).
-# url:                   https://<username>.github.io
+url:                   https://orbitalindex.com
 
 # IMPORTANT: Set The "base URL" of your site.
 # When your site sits in a subdirectory, set to /<name of directory>
@@ -19,7 +19,7 @@
 lang:                  en
 
 # The title of your blog. Used in the sidebar and the browser tab.
-title:                 Orbital Index
+title:                 The Orbital Index
 
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
@@ -32,7 +32,7 @@ tagline:               >
   Curated news from Space
 
 # A list of keywords for your blog.
-keywords:              []
+keywords:              [space,newsletter,startups,rockets,rovers,science,mars,nasa]
 
 # Used by jekyll-seo-tag.
 logo:                  /assets/icons/icon.png
@@ -40,10 +40,10 @@ logo:                  /assets/icons/icon.png
 # This should be the same author as first entry in `_data/authors.yml`.
 author:
   # Used by `jekyll-feed`:
-  name:                <firstname> <lastname>
-  email:               <mail@domain.tld>
+  name:                Orbital Index
+  email:               groundcontrol@orbitalindex.com
   # Used by `jekyll-seo-tag`:
-  # twitter:             <username>
+  twitter:             orbitalindex
 
 # This text will appear in a `<small>` tag in the footer of every page.
 copyright:             >
@@ -70,12 +70,12 @@ paginate_path:         /page-:num/
 
 # Sidebar image and theme color of the site.
 accent_image:          /assets/img/sidebar-bg.jpg
-accent_color:          '#2f767f'
+accent_color:          rgb(47,118,127)
 
 # This is used for the `theme-color` meta tag,
 # which changes the background color of the browser UI in certain browsers.
 # Defaults to `accent_color`.
-theme_color:           rgb(25,55,71)
+theme_color:           rgb(47,118,127)
 
 # The string encoding which fonts to fetch from Google Fonts.
 # See: <https://hydejack.com/docs/configuration/>
@@ -122,7 +122,7 @@ defaults:
 
 # Setting a tinyletter username will enable the newsletter subscription box.
 # PRO version only!
-# tinyletter:            <tinyletter_username>
+# tinyletter:            temp
 
 
 # Hydejack Settings
@@ -140,7 +140,7 @@ hydejack:
   no_google_fonts:     false
 
   # Set to `true` if you don't want to show an icon indicating external links
-  no_mark_external:    false
+  no_mark_external:    true
 
   # Set to `true` if third party plugins fail to work with dynamically loaded pages
   no_push_state:       false
@@ -243,8 +243,8 @@ remote_theme: qwtel/hydejack@v8.3.2
 #   yandex:              <verification-id>
 
 # Used for Twitter cards
-# twitter:
-#   username:            <twitter handle>
+twitter:
+  username:            orbitalindex
 
 # Used for Facebook open graph
 # facebook:
@@ -253,11 +253,11 @@ remote_theme: qwtel/hydejack@v8.3.2
 #   admins:              <id>
 
 # Used on index and about sites
-# social:
-#   name:                <firstname> <lastname>
-#   links:
-#     - https://twitter.com/<username>
-#     - https://github.com/<username>
+social:
+  name:                Orbital Index
+  links:
+    - https://twitter.com/orbitalindex
+    - https://facebook.com/orbitalindex
 
 
 # Other Plugins
