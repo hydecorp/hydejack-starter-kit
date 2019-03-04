@@ -1,4 +1,6 @@
 // You can add CSS rules here that will be inlucded in Hydejack's CSS file
+@import 'mc-archive';
+
 .avatar {
   border-radius: 0%
 }
@@ -16,3 +18,6 @@
 .sidebar-sticky {
   max-width: 25rem;
 }
+
+
+// break-word

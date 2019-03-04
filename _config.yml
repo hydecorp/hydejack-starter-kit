@@ -25,11 +25,11 @@ title:                 The Orbital Index
 # Can use markdown, but no more than one paragraph (enforced by `>`)
 description:           >
   Curated news from the world of space.
-  An weekly email newsletter by Andrew Cantino and Ben Lachman.
+  A weekly email newsletter by Andrew Cantino and Ben Lachman.
 
 # A shorter description for the sidebar.
 tagline:               >
-  Curated news from Space
+  Space. Weekly, curated, and technical.
 
 # A list of keywords for your blog.
 keywords:              [space,newsletter,startups,rockets,rovers,science,mars,nasa]
