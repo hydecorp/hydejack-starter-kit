@@ -1,12 +1,12 @@
 #mc-archive {
-  background-color: white;
+  background-color: var(--body-bg);
 
   .mcnTextBlockInner, .mcnTextContent, td {
     border-width: 0;
   }
 
   #templatePreheader, #templateBody .mcnTextContent , #templateHeader .mcnTextContent, .mcnTextBlockInner, .mcnImageCardBlockInner, .mcnImageCardTopImageContent, #templateFooter .mcnTextContent {
-    background-color: white;
+    background-color: var(--body-bg);
   }
 
   hy-push-state a {
@@ -151,7 +151,7 @@
 
   #bodyTable,
   body {
-    background-color: #ffffff;
+    background-color: var(--body-bg);
   }
 
   #bodyCell {
@@ -235,7 +235,7 @@
   }
 
   #templateHeader {
-    background-color: #ffffff;
+    background-color: var(--body-bg);
     background-image: none;
     background-repeat: no-repeat;
     background-position: center;
@@ -263,7 +263,7 @@
   }
 
   #templateBody {
-    background-color: #ffffff;
+    background-color: var(--body-bg);
     background-image: none;
     background-repeat: no-repeat;
     background-position: center;
@@ -291,7 +291,7 @@
   }
 
   #templateFooter {
-    background-color: #ffffff;
+    background-color: var(--body-bg);
     background-image: none;
     background-repeat: no-repeat;
     background-position: center;

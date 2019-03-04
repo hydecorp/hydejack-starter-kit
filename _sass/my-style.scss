@@ -19,5 +19,18 @@
   max-width: 25rem;
 }
 
+body {
+  // --body-bg: #aaaaaa;
+  // --body-color: #fafafa;
+  // --text-muted: #dadada;
 
-// break-word
+  --border-color: #384248;
+
+  --text-muted: rgba(255,255,255,.5);
+--gray-bg: rgba(255,255,255,.033);
+--gray-text: rgba(255,255,255,.625);
+--menu-text: rgba(255,255,255,.25);
+--body-color: #d8d8d8;
+--body-bg: #2d3539;
+// --border-color: #4e5d64;
+}
