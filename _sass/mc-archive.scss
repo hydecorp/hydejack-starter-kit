@@ -1,4 +1,10 @@
+// custom overrides to integrate with site theme
 #mc-archive {
+  // Override the builtin .hightlight since we're using it to avoid styling in the archives.
+  table.highlight {
+    margin-bottom: auto;
+  }
+
   background-color: var(--body-bg);
 
   .mcnTextBlockInner, .mcnTextContent, td {
@@ -12,7 +18,10 @@
   hy-push-state a {
     border-bottom-width: 0px;
   }
+}
 
+// styling as embedded into mailchimp messages (colors have been removed in favor of css variables)
+#mc-archive {
   p {
     margin: 10px 0;
     padding: 0;

@@ -1,12 +1,5 @@
-// You can add CSS rules here that will be inlucded in Hydejack's CSS file
+// You can add CSS rules here that will be inlcuded in Hydejack's CSS file
 @import 'mc-archive';
-
-#mc-archive {
-  // Override the builtin .hightlight since we're using it to avoid styling in the archives.
-  table.highlight {
-    margin-bottom: auto;
-  }
-}
 
 .avatar {
   border-radius: 0%
@@ -27,17 +20,12 @@
 }
 
 body {
-  // --body-bg: #aaaaaa;
-  // --body-color: #fafafa;
-  // --text-muted: #dadada;
-
   --border-color: #384248;
 
   --text-muted: rgba(255,255,255,.5);
---gray-bg: rgba(255,255,255,.033);
---gray-text: rgba(255,255,255,.625);
---menu-text: rgba(255,255,255,.25);
---body-color: #d8d8d8;
---body-bg: #2d3539;
-// --border-color: #4e5d64;
+  --gray-bg: rgba(255,255,255,.033);
+  --gray-text: rgba(255,255,255,.625);
+  --menu-text: rgba(255,255,255,.25);
+  --body-color: #d8d8d8;
+  --body-bg: #2d3539;
 }
