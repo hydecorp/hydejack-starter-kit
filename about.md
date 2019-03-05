@@ -21,3 +21,13 @@ image: /assets/img/about/orbital-index.jpg
 menu: true
 order: 3
 ---
+
+We started writing The Orbital Index as a way to share some of the most interesting articles and resources we kept running across while pursuing our personal interests in space and space startups. We ended up sharing a lot of these on a Slack channel we were both part of and eventually ended up collaborating to write the [newsletter](/archive) you're now (hopefully) reading each week.
+
+You can find us in a bunch other places as well:
+
+Twitter: [**@orbitalindex**](http://twitter.com/orbitalindex), [@tectonic](http://twitter.com/tectonic) (Andrew), [@blach](http://twitter.com/blach) (Ben)
+
+Facebook: [**The Orbital Index**](http://facebook.com/orbitalindex)
+
+Web: [Andrew](http://andrewcantino.com), [Ben](http://nicemohawk.com)
