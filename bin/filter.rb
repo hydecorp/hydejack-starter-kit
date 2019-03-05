@@ -15,6 +15,21 @@ def process(data)
     node['class'] = (node['class'] || '') + ' highlight' unless (node['class'] || '') =~ /highlight/
   end
 
+  doc.css("[style]").each do |node|
+    node['style'] = node['style'].gsub(/#\w{6}/) { |m|
+      case m
+      when '#ffffff','#fafafa'
+        'var(--body-bg)'
+      when '#5f5f5f'
+        'var(--gray-text)'
+      when '#202020'
+        'var(--body-color)'
+      else
+        m
+      end
+    }
+  end
+
   if header
     '---' + header + '---' + doc.to_html
   else
@@ -30,4 +45,3 @@ files.each do |file|
     file.print processed
   end
 end
-
