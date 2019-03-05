@@ -15,8 +15,8 @@
     background-color: var(--body-bg);
   }
 
-  hy-push-state a {
-    border-bottom-width: 0px;
+  a, .a {
+    border-bottom: none;
   }
 }
 
