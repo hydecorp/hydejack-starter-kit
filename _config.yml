@@ -24,7 +24,7 @@ title:                 The Orbital Index
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
 description:           >
-  Curated space news and links. Weekly, curated, and technical.
+  Curated space news and links. Weekly, brief, and technical.
 
 # A shorter description for the sidebar.
 tagline:               >
@@ -74,7 +74,7 @@ accent_color:          rgb(47,118,127)
 # This is used for the `theme-color` meta tag,
 # which changes the background color of the browser UI in certain browsers.
 # Defaults to `accent_color`.
-theme_color:           rgb(47,118,127)
+theme_color:           black
 
 # The string encoding which fonts to fetch from Google Fonts.
 # See: <https://hydejack.com/docs/configuration/>
@@ -206,7 +206,7 @@ exclude:
   - vendor
   - Gemfile
   - Gemfile.lock
-
+  - bin
 
 # Plugins and Plugin Configuration
 # ========================================================================================
