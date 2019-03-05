@@ -9,7 +9,7 @@ title: About
 # Write a short (~150 characters) description of each blog post.
 # This description is used to preview the page on search engines, social media, etc.
 description: >
-  The Orbital Index is a curated newsletter from [Andrew Cantino](http://twitter.com/tectonic) and [Ben Lachman](http://twitter.com/blach) highlighting some of the most interesting developments in space, space startups, and related items of interest. Will arrive in your inbox weekly.
+  The Orbital Index is a curated newsletter from [Andrew Cantino](https://twitter.com/tectonic) and [Ben Lachman](https://twitter.com/blach) highlighting interesting technical developments in space, space startups, and related items of interest. Will arrive in your inbox weekly.
 
 # You can show the description on the page by deleting this line:
 hide_description: false

@@ -20,6 +20,17 @@ A quicker, cleaner way to get started blogging with [Hydejack](https://hydejack.
 4. Go to **Settings** again, look for **GitHub Pages**, set **Source** to **master branch**.
 5. Click **Save** and wait for GitHub to set up your new blag.
 
+# Updating the archive
+
+1. Place the new archive html file in `archive/_posts/` with a header of:
+    ```
+    ---
+    layout: page
+    title: Issue No. N
+    ---
+    ```
+2. Run `./bin/filter.rb` to add the `highlight` class to all `table` tags.
+
 ## What's next?
 * Open files and read the comments
 * Read the [docs](https://hydejack.com/docs/)

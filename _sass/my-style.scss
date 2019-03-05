@@ -1,6 +1,13 @@
 // You can add CSS rules here that will be inlucded in Hydejack's CSS file
 @import 'mc-archive';
 
+#mc-archive {
+  // Override the builtin .hightlight since we're using it to avoid styling in the archives.
+  table.highlight {
+    margin-bottom: auto;
+  }
+}
+
 .avatar {
   border-radius: 0%
 }
