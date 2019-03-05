@@ -207,6 +207,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - bin
+  - excluded
 
 # Plugins and Plugin Configuration
 # ========================================================================================
