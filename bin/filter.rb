@@ -24,6 +24,8 @@ def process(data)
         'var(--gray-text)'
       when '#202020'
         'var(--body-color)'
+      when '#2f767f'
+        'var(--mc-link-color)'
       else
         m
       end

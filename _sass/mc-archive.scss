@@ -1,5 +1,7 @@
 // custom overrides to integrate with site theme
 #mc-archive {
+  --mc-link-color: #4fb1ba;
+
   // Override the builtin .hightlight since we're using it to avoid styling in the archives.
   table.highlight {
     margin-bottom: auto;
@@ -238,7 +240,7 @@
 
   #templatePreheader .mcnTextContent a,
   #templatePreheader .mcnTextContent p a {
-    color: #2f767f;
+    color: #4fb1ba;
     font-weight: normal;
     text-decoration: underline;
   }
@@ -266,7 +268,7 @@
 
   #templateHeader .mcnTextContent a,
   #templateHeader .mcnTextContent p a {
-    color: #2f767f;
+    color: --link-color;
     font-weight: normal;
     text-decoration: underline;
   }
@@ -294,7 +296,7 @@
 
   #templateBody .mcnTextContent a,
   #templateBody .mcnTextContent p a {
-    color: #2f767f;
+    color: --link-color;
     font-weight: normal;
     text-decoration: underline;
   }
@@ -322,7 +324,7 @@
 
   #templateFooter .mcnTextContent a,
   #templateFooter .mcnTextContent p a {
-    color: #2f767f;
+    color: --link-color;
     font-weight: normal;
     text-decoration: underline;
   }
