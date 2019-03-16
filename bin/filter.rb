@@ -1,7 +1,13 @@
 #!/usr/bin/env ruby
-require 'nokogiri'
 
-def process(data)
+begin
+  require 'nokogiri'
+rescue LoadError
+  puts "Run 'gem install nokogiri'"
+  exit 1
+end
+
+def split_header(data)
   header, body = nil, nil
   if data =~ /\A\s*---/
     _, header, *rest = data.split('---')
@@ -10,11 +16,20 @@ def process(data)
     body = data
   end
 
+  [header, body]
+end
+
+def process(data)
+  header, body = split_header(data)
+
   doc = Nokogiri::HTML::DocumentFragment.parse(body)
+
+  # Add 'highlight' class to tables because it bypasses our template's default formatting.
   doc.css("table").each do |node|
     node['class'] = (node['class'] || '') + ' highlight' unless (node['class'] || '') =~ /highlight/
   end
 
+  # Set colors.
   doc.css("[style]").each do |node|
     node['style'] = node['style'].gsub(/#\w{6}/) { |m|
       case m
@@ -32,12 +47,30 @@ def process(data)
     }
   end
 
+  # Remove any header, footer, and old subscribe regions.
+  doc.css('#templatePreheader, #templateFooter, #subscribe-footer').each do |node|
+    node.remove
+  end
+
   if header
-    '---' + header + '---' + doc.to_html
+    '---' + header + '---' + doc.to_html + SUBSCRIBE_FOOTER
   else
-    doc.to_html
+    doc.to_html + SUBSCRIBE_FOOTER
   end
 end
+
+# Load the HTML from subscribe.html.
+_, subscribe_page_html = split_header(File.read(File.join(File.dirname(__FILE__), '..', 'subscribe.html')))
+
+# Make a subscribe footer.
+SUBSCRIBE_FOOTER = <<~HTML
+  <div id="subscribe-footer">
+    <header>
+      <p class="message">Like this issue of The Orbital Index? Subscribe for free and get new issues every week. We take spam super seriously and won’t do anything except send you a newsletter about space.</p>
+    </header>
+    #{subscribe_page_html}
+  </div>
+HTML
 
 files = Dir['archive/_posts/*.html']
 files.each do |file|
