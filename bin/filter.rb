@@ -48,29 +48,16 @@ def process(data)
   end
 
   # Remove any header, footer, and old subscribe regions.
-  doc.css('#templatePreheader, #templateFooter, #subscribe-footer').each do |node|
+  doc.css('#templateFooter, #subscribe-footer').each do |node|
     node.remove
   end
 
   if header
-    '---' + header + '---' + doc.to_html + SUBSCRIBE_FOOTER
+    '---' + header + '---' + doc.to_html
   else
-    doc.to_html + SUBSCRIBE_FOOTER
+    doc.to_html
   end
 end
-
-# Load the HTML from subscribe.html.
-_, subscribe_page_html = split_header(File.read(File.join(File.dirname(__FILE__), '..', 'subscribe.html')))
-
-# Make a subscribe footer.
-SUBSCRIBE_FOOTER = <<~HTML
-  <div id="subscribe-footer">
-    <header>
-      <p class="message">Like this issue of The Orbital Index? Subscribe for free and get new issues every week. We take spam super seriously and won’t do anything except send you a newsletter about space.</p>
-    </header>
-    #{subscribe_page_html}
-  </div>
-HTML
 
 files = Dir['archive/_posts/*.html']
 files.each do |file|
