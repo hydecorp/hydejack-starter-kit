@@ -47,7 +47,7 @@ def process(data)
     }
   end
 
-  # Remove any header, footer, and old subscribe regions.
+  # Remove any footer, and old subscribe regions.
   doc.css('#templateFooter, #subscribe-footer').each do |node|
     node.remove
   end
