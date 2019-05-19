@@ -10,6 +10,8 @@ layout: page
 <div class="archive-nav">
   {% if page.previous.url %}
   <a class="prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
+  {% else %}
+  <a class="prev" href="/archive/">&laquo; Archive</a>
   {% endif %}
   {% if page.next.url %}
   <a class="next" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
@@ -18,7 +20,9 @@ layout: page
 
 <div id="subscribe-footer">
   <header>
-    <p class="message">Like this issue of The Orbital Index? Subscribe for free and get new issues every week. We take spam super seriously and won’t do anything except send you a newsletter about space.</p>
+    <p class="message">
+      Like this issue of The Orbital Index? Subscribe and get new issues every week. We take spam super seriously and won’t do anything except send you a newsletter about space.
+    </p>
   </header>
 
   {% include mc-subscribe.html %}

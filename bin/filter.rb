@@ -60,9 +60,9 @@ def process(data, force_header: nil, format_for_frontpage: false)
     doc.css('#templatePreheader').each(&:remove)
 
     # Rename the title
-    doc.css('#templateHeader h1 span').each do |node|
-      node.inner_html = "Latest Issue"
-    end
+    # doc.css('#templateHeader h1 span').each do |node|
+    #   node.inner_html = "Latest Issue"
+    # end
   end
 
   if force_header || header

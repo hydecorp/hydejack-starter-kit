@@ -4,8 +4,19 @@ Use this add elements to the <body/> of the document.
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+
 <script>
-  // setTimeout(function() {
-  //   $(".sidebar-about h1 a").click()
-  // }, 500);
+  setTimeout(function() {
+    $(".sidebar-nav").append(
+      "<div class='sidebar-signup'>" +
+        "<form action=\"https://orbitalindex.us20.list-manage.com/subscribe/post?u=e215b9e6f9a105b2c34f627a3&amp;id=de8318630a\" method=\"post\" id=\"mc-embedded-subscribe-form\" name=\"mc-embedded-subscribe-form\" novalidate>" +
+          "<input type=\"email\" value=\"\" placeholder=\"Your email address\" name=\"EMAIL\" class=\"required email\" id=\"mce-EMAIL\">" +
+          "<div style=\"position: absolute; left: -5000px;\" aria-hidden=\"true\"><input type=\"text\" name=\"b_e215b9e6f9a105b2c34f627a3_de8318630a\" tabindex=\"-1\" value=\"\"></div>" +
+          "<button name=\"subscribe\" class=\"btn btn-primary btn-sm\">Subscribe</button>" +
+        "</form>" +
+      "</div>").find("input[type='email']").on('click mousedown mouseup mousemove', function(e) {
+        e.stopPropagation();
+      });
+  }, 1);
 </script>

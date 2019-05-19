@@ -32,7 +32,7 @@ layout: archive
 
 <td valign="top" class="mcnTextContent" style="padding-top: 0;padding-right: 18px;padding-bottom: 9px;padding-left: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;color: var(--body-color);font-family: 'Lora', Georgia, 'Times New Roman', serif;font-size: 16px;line-height: 150%;text-align: left;">
 
-    <h1 style="text-align: center;display: block;margin: 0;padding: 0;color: var(--body-color);font-family: 'Lora', Georgia, 'Times New Roman', serif;font-size: 26px;font-style: normal;font-weight: bold;line-height: 125%;letter-spacing: normal;"><span style="font-size:32px">Latest Issue</span></h1>
+    <h1 style="text-align: center;display: block;margin: 0;padding: 0;color: var(--body-color);font-family: 'Lora', Georgia, 'Times New Roman', serif;font-size: 26px;font-style: normal;font-weight: bold;line-height: 125%;letter-spacing: normal;"><span style="font-size:32px">The Orbital Index</span></h1>
 
 <div style="text-align: center;">Issue No. 12 | May 14, 2019<br>
 <br>
