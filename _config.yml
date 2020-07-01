@@ -347,7 +347,7 @@ plugins:
 google_site_verification: kRoh_csFULhK6lxBJwZOxiWYQpvttOkFj0a3lWwQADc
 # -- or --
 # webmaster_verifications:
-#   google:              xlwWRCmc8tMoEuhrBFFj3r-r75zd0zVlHvQYBwGcCQU
+#   google:              <verification-id>
 #   bing:                <verification-id>
 #   alexa:               <verification-id>
 #   yandex:              <verification-id>
@@ -364,7 +364,7 @@ twitter:
 
 # Used on index and about sites
 # social:
-#   name:                Florian Klampfer
+#   name:                <firstname> <lastname>
 #   links:
-#     - https://twitter.com/qwtel
-#     - https://github.com/qwtel
+#     - https://twitter.com/<username>
+#     - https://github.com/<username>
