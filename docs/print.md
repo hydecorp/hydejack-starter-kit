@@ -13,8 +13,6 @@ Should you discover a mistake in the docs (or a bug in general) feel free to [op
 While this manual tries to be beginner-friendly, as a user of Jekyll it is assumed that you are comfortable running shell commands and editing text files.
 {:.note}
 
-Buyers of the PRO version can jump straight to [installation for PRO buyers](#pro-version),)
-or [upgrades for PRO buyers](#pro-version).)
 
 
 
@@ -35,148 +33,101 @@ you can find it [here]({{ site.baseurl }}{% link docs/README.md %}).
 ----------------------------------------------------------------{% endcomment %}
 
 ## Install
-There are multiple ways of installing Hydejack.
-The easiest and cleanest way is [via the Starter Kit](#via-starter-kit).
-Alternatively, you can use the [Ruby gem](#via-gem).
-If you don't mind a cluttered source directory, you can use [the zip file](#via-zip).
-Finally, If you know what you are doing, you can [fork the git repository](#via-git).
-
-Buyers of the PRO version should [follow these steps](#pro-version).
+How you install Hydejack depends on whether you [start a new site](#new-sites), 
+or change the theme of [an existing site](#existing-sites).
 
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
 
-### Via Starter Kit
-Using the Starter Kit has the advantage of not cluttering your blog repository.
-Additionally, it allows you to publish your site on GitHub Pages with a single `push`.
+### New sites
+For new sites, the best way to get started with Hydejack is via the Starter Kit. 
+It comes with a documented config file and example content that gets you started quickly.
 
-If you have a GitHub account, fork the [hy-starter-kit](https://github.com/hydecorp/hy-starter-kit) repository. Otherwise [download the source files][src] and unzip them somewhere on your machine.
+If you have a GitHub account, fork the [Hydejack Starter Kit][hsc] repository. 
+Otherwise [download the Starter Kit][src] and unzip them somewhere on your machine.
+
+If you bought the __PRO Version__ of Hydejack, use the contents of the `starter-kit` folder instead.
 
 In addition to the docs here, you can follow the quick start guide in the Starter Kit.
 {:.note}
 
-`cd` into the directory where `_config.yml` is located and follow the steps in [Running locally](#running-locally).
+You can now jump to [running locally](#running-locally).
 
-Alternatively, you can just [![Deploy to Netlify][dtn]][nfy]{:.no-hover.no-mark}.
+You can now also [![Deploy to Netlify][dtn]][nfy]{:.no-mark-external} directly.
+{:.note}
 
-[src]: https://github.com/hydecorp/hy-starter-kit/archive/v9.0.0.zip
+[hsc]: https://github.com/hydecorp/hydejack-starter-kit
+[src]: https://github.com/hydecorp/hydejack-starter-kit/archive/v9.0.0.zip
 [nfy]: https://app.netlify.com/start/deploy?repository=https://github.com/hydecorp/hydejack-starter-kit
 [dtn]: https://www.netlify.com/img/deploy/button.svg
 
-### Via gem
-Jekyll has [built-in support](https://jekyllrb.com/docs/themes/) for using themes that are hosted on RubyGems.  
 
-If you haven't already, create a new Jekyll site first:
-
-~~~bash
-$ jekyll new <PATH>
-~~~
-
-Your site's root dir should look something like this
-
-~~~
-├── _posts
-│   └── 2017-04-07-welcome-to-jekyll.markdown
-├── _config.yml
-├── about.md
-├── Gemfile
-├── Gemfile.lock
-└── index.md
-~~~
-
-Hydejack works with Jekyll's default `config.yml`, but it is recommended that you replace it with
-[Hydejack's default config file](https://github.com/hydecorp/hydejack/blob/v8/_config.yml).
-It contains the names of all config options known to Hydejack and provides sensible defaults (like minifying HTML and CSS in production builds).
-{:.note}
-
-Next, you'll want to add `jekyll-theme-hydejack` as a dependency by adding the following line to the `Gemfile`.
+### Existing sites
+If you have an existing site that you'd like to upgrade to Hydejack you can install the theme via bundler.
+Add the following to your `Gemfile`:
 
 ~~~ruby
+## file: `Gemfile`
 gem "jekyll-theme-hydejack"
 ~~~
 
-(You can also remove the old theme `jekyll-theme-minima` from the Gemfile)
+If you bought the __PRO Version__ of Hydejack, copy the `#jekyll-theme-hydejack` folder into the root folder of your site,
+and add the following to your `Gemfile` instead:
 
-Now you want to edit the `_config.yml` of your Jekyll site and set Hydejack as the theme.
-Look for the `theme` key and set its value to `jekyll-theme-hydejack`.
+~~~ruby
+## file: `Gemfile`
+gem "jekyll-theme-hydejack", path: "./#jekyll-theme-hydejack"
+~~~
+
+The folder is prefixed with a `#` to indicate that this folder is different from regular Jekyll content. 
+The `#` char was choosen specifically because it is on of the four characters ignored by Jekyll by default (`.`, `_` , `#`, `~`).
+{:.note}
+
+In your config file, change the `theme` to Hydejack:
 
 ~~~yml
+## file: `_config.yml`
 theme: jekyll-theme-hydejack
 ~~~
 
-For more information on gem-based themes, see the [Jekyll Documentation](http://jekyllrb.com/docs/themes/).
+Hydejack comes with a default configuration file that takes care most of the configuration,
+but it pays off to check out the example config file in the Starter Kit to see what's available.
 
-You can now continue with [running locally](#running-locally).
+You can now jump to [running locally](#running-locally).
 
-### Via zip
-If you downloaded the [extended zip](https://github.com/hydecorp/hydejack/releases),
-extract the contents somewhere on your machine.
-The high-level folder structure will look something like.
+#### Troubleshooting
+If your existing site combines theme files with your content (as did previous verisons of Hydejack/PRO),
+make sure to delete the following folders:
 
-~~~
-├── _data
-├── _featured_categories
-├── _featured_tags
-├── _includes
-├── _js
-├── _layouts
-├── _posts
-├── _sass
-├── assets
-├── _config.yml
-├── 404.md
-├── about.md
-├── index.html
-└── posts.md
-~~~
+- `_layouts`
+- `_includes` 
+- `_sass` 
+- `assets`
 
-`cd` into the directory where `_config.yml` is located and follow the steps in [Running locally](#running-locally).
+The `assets` folder most likely includes theme files as well as your personal/content files. 
+Make sure to only delete files that belong to the old theme!
 
-### Via git
-If you are familiar with using git, you can add the [Hydejack repository](https://github.com/hydecorp/hydejack)
-as a remote, and merge its master branch into your working branch.
 
-~~~bash
-$ git remote add hydejack git@github.com:hydecorp/hydejack.git
-$ git pull hydejack master
-~~~
+### GitHub Pages
+If you want to use your site with [GitHub Pages][ghp] exclusively, you can instead set the `remote_theme` key as follows:
 
-You can also update Hydejack this way. The master branch will not contain work in progress,
-but will contain major (breaking) changes.
-This approach is recommended if you intend to customize Hydejack.
+```yml
+## file: `_config.yml`
+remote_theme: hydecorp/hydejack@v9.0.0
+```
 
-You can now continue with [running locally](#running-locally).
+[ghp]: https://jekyllrb.com/docs/github-pages/
 
-### PRO Version
-If you bought the PRO version, you've received a zip archive with the following contents:
+To run this configuration locally, make sure the following is part of your `Gemfile`:
 
-~~~
-├── install
-├── upgrade
-├── CHANGELOG.pdf
-├── Documentation.pdf
-├── NOTICE.pdf
-├── PRO License.pdf
-├── PRO–hy-drawer License.pdf
-├── PRO–hy-img License.pdf
-├── PRO–hy-push-state License.pdf
-└── .ssh
-~~~
+```ruby
+## file: `Gemfile`
+gem "github-pages", group: :jekyll_plugins
+```
 
-`install`
-: Contains all files and folders needed to create a new blog.
-
-`upgrade`
-: Contains only the files and folders needed for upgrading form an earlier version of Hydejack (6.0.0 or above). See [Upgrade]{:.heading.flip-title} for more.
-
-For new installations only the `install` folder is relevant.
-Unzip the archive somewhere on your machine, then `cd` *into* the `install` folder, e.g.
-
-~~~bash
-$ cd ~/Downloads/hydejack-pro-9.0.0/install/
-~~~
-
-You can now continue with [Running locally](#running-locally).
+Note that Hydejack has a reduced feature set when built on GitHub Pages. 
+Specifically, using KaTeX math formulas doesn't work when built in this way.
+{:.note}
 
 
 ### Running locally
@@ -221,62 +172,38 @@ Before upgrading to v7+, make sure you've read the [CHANGELOG](../CHANGELOG.md){
 especially the part about the [license change](../CHANGELOG.md#license-change)!
 {:.note}
 
-### Via Starter Kit
-When using the Starter Kit, upgrading Hydejack is as simple as setting the `remote_theme` key in `config.yml` to the desired version.
-
-```yml
-remote_theme: hydecorp/hydejack@v9.0.0
-```
-
-To use the latest version on the `v8` branch on each build, you can use  `hydecorp/hydejack@v8`.
-
-
-### Via gem
-Upgrading the gem-based theme is as easy as running
+### Free version
+Upgrading the free version of the theme is as easy as running
 
 ```bash
 bundle update jekyll-theme-hydejack
 ```
 
-### Via zip
-Upgrading via zip is a bit of a dark art, specially if you've made changes to any source files,
-and the prime reason why I suggest using the gem-based version of the theme.
-
-Generally, you'll want to copy these files and folders:
-
-* `_includes/`
-* `_layouts/`
-* `_sass/`
-* `assets/`
-* `Gemfile`
-* `Gemfile.lock`
-
-and merge them with your existing folder. However, you'll also want to check out `_data` and `_config.yml` for any changes
-and read latest entries to the [CHANGELOG](../CHANGELOG.md){:.heading.flip-title}.
-
-If you've modified any of Hydejack's internal files, your changes will most likely be overwritten
-and you have to apply them again.
-Make sure you've made a backup before overwriting any files.
-{:.note}
-
-
-### Via git
-The latest version sits on the `master` branch of [hydecorp/hydejack](https://github.com/hydecorp/hydejack).
-To apply them to your repository run
-
-~~~bash
-$ git remote add hydejack git@github.com:hydecorp/hydejack.git
-$ git pull hydejack master
-~~~
-
-
 ### PRO Version
-Buyers of the PRO version will find the files necessary for an upgrade in the `upgrade` folder of the downloaded zip archive.
 
-If you've modified any of Hydejack's internal files, your changes will most likely be overwritten
-and you have to apply them again.
-Make sure you've made a backup before overwriting any files.
+In v9, the structure of Hydejack PRO sites has changed. If you're looking to upgrade from v8 or earlier, 
+check out [Installation for existing sites](./install.md#existing-sites) instead.
 {:.note}
+
+Buyers of the PRO version will find the files necessary for an upgrade in the `#jekyll-theme-hydejack` folder of the downloaded zip archive.
+To upgrade, simply overwrite the existing theme folder in the root directory of your site with the new one, then run
+
+```bash
+bundle update jekyll-theme-hydejack
+```
+
+If you've modified any of Hydejack's files in `#jekyll-theme-hydejack`, your changes will most likely be overwritten
+and you have to apply them again. Make sure you've made a backup before overwriting any files.
+{:.note}
+
+### GitHub Pages
+When building on GitHub Pages, upgrading Hydejack is as simple as setting the `remote_theme` key in `_config.yml` to the desired version.
+
+```yml
+remote_theme: hydecorp/hydejack@v9.0.0
+```
+
+To use the latest version on the `v9` branch on each build, you can use  `hydecorp/hydejack@v9`.
 
 
 
@@ -285,7 +212,8 @@ Make sure you've made a backup before overwriting any files.
 ----------------------------------------------------------------{% endcomment %}
 
 ## Config
-Once Jekyll is running, you can start with basic configuration by adding various entries to `_config.yml`. Besides these descriptions, you can also read the [annotated config file](https://github.com/hydecorp/hydejack/blob/v8/_config.yml).
+Once Jekyll is running, you can start with basic configuration by adding various entries to `_config.yml`. 
+Besides the documentation here, you can also read the [annotated config file][config].
 
 When making changes to `_config.yml`, it is necessary to restart the Jekyll process for changes to take effect.
 {:.note}
@@ -330,9 +258,7 @@ For for information on the types of pages you can host on GitHub, see the
 
 ### Changing accent colors and sidebar images
 Hydejack allows you to choose the background image of the sidebar, as well as the accent color
-(color of the links, selection and focus outline, etc...) on a per-page, per-category, per-tag, per-author and global basis.
-
-Set the fallback values in `_config.yml`, which are used should no other rule (page, category, tag, author) apply:
+(color of the links, selection and focus outline, etc...).
 
 ~~~yml
 ## file: `_config.yml`
@@ -346,9 +272,30 @@ If you save a blurred image as JPG, it will also drastically reduce its file siz
 
 The `accent_image` property also accepts the special value `none` which will remove the default image.
 
-Hydejack also has a `theme_color` property. When set, it will change the background color of the sidebar, as well as set the `theme_color` property in the Web App Manifest. In some browsers, such as Chrome on Android, this will change the color of the browser's UI components.
-The property can be overridden on a per-page basis, by setting it in the front matter.
+Note that these values can be overwritte on a per-page basis, i.e. you can create a unique look for each page.
+You can also apply a certain look all posts in a category via [front matter defaults][fmd], e.g.:
 
+```yml
+## file: `_config.yml`
+defaults:
+  - scope:
+      path:         hydejack/
+    values:
+      accent_image: /assets/img/hydejack-bg.jpg
+      accent_color: rgb(38,139,210)
+```
+
+#### Theme color
+Hydejack also supports the `theme_color` property. When set, it will change the background color of the sidebar, as well as set the `theme_color` property in the [Web App Manifest][wam]. In some browsers, such as Chrome on Android, this will change the color of the browser's UI components.
+
+~~~yml
+## file: `_config.yml`
+theme_color:  rgb(25,55,71)
+~~~
+
+Just like `accent_*` properties, the theme color can be overridden on a per-page basis by setting it in the front matter.
+
+[wam]: https://web.dev/add-manifest/#theme-color
 
 ### Changing fonts
 Hydejack lets you configure the font of regular text and headlines, and it has built-in support for Google Fonts.
@@ -362,8 +309,7 @@ font_heading: Roboto Slab, Helvetica, Arial, sans-serif
 google_fonts: Roboto+Slab:700|Noto+Sans:400,400i,700,700i
 ~~~
 
-`font` and `font_heading` must be valid CSS `font-family` values. When using Google Fonts make sure they consist of at least two fonts
-(everything except the first entry will be used as a fallback until the fonts have completed loading).
+`font` and `font_heading` must be valid CSS `font-family` values. When using Google Fonts make sure to provide at least one fallback.
 
 The `google_fonts` key is the string necessary to fetch the fonts from Google.
 You can get it from the download page at [Google Fonts](https://fonts.google.com) after you've selected one or more fonts:
@@ -380,16 +326,21 @@ The `no_google_fonts` parameter has been removed in v9 and no longer has any eff
 
 
 ### Choosing a blog layout
-Hydejack features two layouts for showing your blog posts.
+Hydejack features three layouts for showing your blog posts.
 
 * The [`list` layout][posts] only shows the title and groups the posts by year of publication.
+* The [`grid` layout][grid]\* is exclusive to the PRO Version and will show a content card (with `image`) for each post.
 * The [`blog` layout][blog] is a traditional paginated layout and shows the title and an excerpt of each post.
 
-In order to use the `list` layout add the following front-matter to a new markdown file:
+[blog]: https://hydejack.com/blog/
+[posts]: https://hydejack.com/posts/
+[grid]: https://hydejack.com/blog/hydejack/
+
+In order to use the `list` or `grid` layout add the following front-matter to a new markdown file:
 
 ~~~yml
 ---
-layout: list
+layout: list # or `grid`
 title:  Home
 ---
 ~~~
@@ -454,7 +405,7 @@ In your config file, make sure the `paginate_path` matches the name of the subdi
 ~~~yml
 ## file: `_config.yml`
 paginate:      10
-paginate_path: /my-blog/:num/
+paginate_path: /my-blog/:num/ #!!
 ~~~
 
 To add an entry in the sidebar to your blog directory, see [Adding an entry to the sidebar](./basics.md#adding-an-entry-to-the-sidebar).
@@ -537,7 +488,7 @@ The keys of the `srcset` hash will be used as image descriptors. For more inform
 #### Adding social media icons
 Hydejack supports a variety of social media icons out of the box. These are defined on a per-author basis, so make sure you've followed the steps in [Adding an author](#adding-an-author).
 
-If you are using the gem-based version of Hydejack, download [`social.yml`](https://github.com/hydecorp/hydejack/blob/v8/_data/social.yml) and put it into `_data` in the root directory. This is necessary because gem-based themes do not support including `_data`.
+If you are using the gem-based version of Hydejack, download [`social.yml`][social] and put it into `_data` in the root directory. This is necessary because gem-based themes do not support including `_data`.
 {:.note}
 
 You can add a link to a social network by adding an entry to the `social` key in to an author.
@@ -551,7 +502,7 @@ author:
     github:  qwtel
 ~~~
 
-Check out [`authors.yml`](https://github.com/hydecorp/hydejack/blob/v8/_data/authors.yml) to see which networks are available.
+Check out [`authors.yml`][authors] to see which networks are available.
 You can also follow the steps [here](#advanced) to add your own social media icons.
 
 You can change the order in which the icons appear by moving lines up or down, e.g.
@@ -565,7 +516,7 @@ author:
 ~~~
 
 To get an overview of which networks are available and how a typical username in that network looks like,
-see the included [`authors.yml`](https://github.com/hydecorp/hydejack/blob/v8/_data/authors.yml).
+see the included [`authors.yml`][authors].
 
 Should providing a username not produce a correct link for some reason, you can provide a complete URL instead, e.g.
 
@@ -576,7 +527,7 @@ author:
     youtube: https://www.youtube.com/channel/UCu0PYX_kVANdmgIZ4bw6_kA
 ~~~
 
-You can add any platform, even if it's not defined in [`social.yml`](https://github.com/hydecorp/hydejack/blob/v8/_data/social.yml), by providing a complete URL. However, a fallback icon <span class="icon-link"></span> will be used when no icon is available. Supplying your own icons is an [advanced topic](#advanced).
+You can add any platform, even if it's not defined in [`social.yml`][social], by providing a complete URL. However, a fallback icon <span class="icon-link"></span> will be used when no icon is available. Supplying your own icons is an [advanced topic](#advanced).
 {:.note}
 
 
@@ -634,18 +585,17 @@ Enabling Google Analytics is as simple as setting the `google_analytics` key.
 google_analytics: UA-XXXXXXXX-X
 ~~~
 
-Conversely, if you want to disable it, you only have to remove the `google_analytics` key and no GA code will be part of the generated site.
+To remove Google Analytics and all associated code from the site, set the `google_analytics` key to `false`.
 
 
 #### Using a custom analytics provider
-If you want to use a different analytics provider, e.g. [Matomo](https://matomo.org/), you can add its code snippet to `_includes/my-body.html` (create if it doesn't exist).
-The [default file](https://github.com/hydecorp/hydejack/blob/v8/_includes/my-body.html) contains example code for using Matomo.
-
+If you want to use a different analytics provider such as [Matomo](https://matomo.org/), you can add its code snippet to `_includes/my-body.html` (create if it doesn't exist).
+The [default file][mybody] contains an example.
 
 ### Changing built-in strings
 You can change the wording of built-in strings like "Related Posts" or "Read more" in `_data/strings.yml`.
 
-If you are using the gem-based version the file doesn't exist, but you can get the default file [here](https://github.com/hydecorp/hydejack/blob/v8/_data/strings.yml).
+If you are using the gem-based version the file doesn't exist, but you can get the default file [here][strings].
 
 You will frequently find markers like `<!--post_title-->`.
 You can place them freely within your string and they will be replaced with the content they refer to.
@@ -677,6 +627,50 @@ legal:
 
 When using Hydejack's offline feature, the pages listed here will be downloaded and cached when loading the page for the first time.
 
+### Enabling math blocks
+
+Hydejack supports [math blocks][ksynmath] with either [KaTeX] or [MathJax]. 
+
+The _MathJax implementation_ comes with a client-side runtime and works on GitHub Pages. 
+It is the more heavy-weight of the two and doesn't work without JavaScript enabled. 
+Due to the size of the complete MathJax package, it only works partially with offline support enabled.
+
+The _KaTeX implementation_ pre-renders the KaTeX output during site building.
+It's more lightweight because it does not ship a client-side runtime and therefore works without JavaScript.
+In my opinion, it is the more elegant solution, but it requires a JavaScript runtime on the machine that builds the site,
+i.e. it does not work on GitHub Pages.
+
+You can switch between the two implementations by changing the `kramdown.math_engine` key to either `katex` or `mathjax` in your config file.
+
+```yml
+## file: `_config.yml`
+kramdown:
+  math_engine:         katex
+  math_engine_opts:    {}
+```
+
+The KaTeX implementation also requires the `kramdown-math-katex` gem in your `Gemfile`. 
+If you intend to use MathJax instead, this step is not required.
+
+```ruby
+## file: `Gemfile`
+gem "kramdown-math-katex"
+```
+
+There are a couple of things to know about this gem:
+*  It is not supported on GitHub Pages. 
+   You have to build the site on your machine before uploading to GitHub,
+   or use a more permissive cloud building tool such as Netlify. 
+   See [the section below](#mathjax) for an alternative.
+*  You need some kind of JavaScript runtime on your machine.
+   Usually installing [NodeJS](https://nodejs.org/en/download/) will suffice. 
+   For details, see <https://github.com/kramdown/math-katex#documentation>
+
+Before you add math content, remember to run `bundle install` and restart Jekyll.
+
+[ksynmath]: https://kramdown.gettalong.org/syntax.html#math-blocks
+[katex]: https://khan.github.io/KaTeX/
+[mathjax]: https://www.mathjax.org/
 
 ### Adding custom favicons and app icons
 By default, Hydejack includes its own favicon, as well as app icons for in five different resolutions.
@@ -707,6 +701,26 @@ If you don't want to use PNGs, or want to use different resolutions, you have to
 
 In any case, Hydejack expects a `assets/icons/icon.png` file for use as `apple-touch-icon` and a `assets/icons/favicon.ico` for use as `shortcut icon`.
 {:.note}
+
+
+### Adding a cookies banner*
+
+~~~yml
+## file: `_config.yml`
+hydejack:
+  cookies_banner: true
+~~~
+
+Enabling this setting will show a notice at the top of the page to new visitors.
+You can change the wording of the notice in `_data/strings.yml`
+with the `cookies_banner.text` and `cookies_banner.okay` keys:
+
+~~~yml
+## file: `_data/strings.yml`
+cookies_banner:
+  text: This site uses cookies. [Markdown allowed](/cookies-policy/)!
+  okay: Okay
+~~~
 
 
 ### Enabling newsletter boxes*
@@ -752,8 +766,12 @@ Finally, setting `always` will cause dark mode to become the default theme at al
 
 
 
-[blog]: https://hydejack.com/blog/
-[posts]: https://hydejack.com/posts/
+
+[config]: https://github.com/hydecorp/hydejack-starter-kit/blob/v9/_config.yml
+[social]: https://github.com/hydecorp/hydejack-starter-kit/blob/v9/_data/social.yml
+[authors]: https://github.com/hydecorp/hydejack-starter-kit/blob/v9/_data/authors.yml
+[strings]: https://github.com/hydecorp/hydejack-starter-kit/blob/v9/_data/strings.yml
+[mybody]: https://github.com/hydecorp/hydejack-starter-kit/blob/v9/_includes/my-body.html
 
 *[FOIT]: Flash of Invisible Text
 *[GA]: Google Analytics
@@ -771,20 +789,44 @@ This chapter covers the basics of content creation with Hydejack.
 {:toc}
 
 
-### Adding a page
-You can add generic pages that support markdown content but aren't blog posts.
-For example, this documentation is written in markdown, consisting of several generic pages.
+### Adding images
+Adding good images is key to a engaging blog experience. You can provide an `image` attribute in in the front matter of posts, pages, and projects* that will be used by Hydejack in a variety of ways, 
+such as header image in the `blog` and `post` layout, social media previews, cards in the `gird` and `projects` layout\*, thumbnails in the search dropdown\*, etc.
 
-To add a page, create a new markdown file and put `layout: page` in a front matter
+The `image` attribute will accept an URL to an image, but it is recommended that you provide a `path` / `srcset` hash instead, e.g. 
 
-~~~yml
----
-layout: page
-title:  Documentation
----
-~~~
+```yml
+image:
+  path:    /assets/img/projects/hyde-v2.jpg
+  srcset:
+    1920w: /assets/img/projects/hyde-v2.jpg
+    960w:  /assets/img/projects/hyde-v2@0,5x.jpg
+    480w:  /assets/img/projects/hyde-v2@0,25x.jpg
+```
 
-Now you can add content as you would in a blog post.
+Hydejack will show the image in various sizes depending on available screen width so that no specific size will fit all. 
+Instead, I recommend using a [mipmap]-like approach, providing the image in multiple sizes, each image half the width of the previous one.
+Since Hydejack provides an appropriate [`sizes` attribute][mdn-sizes], the browser can chose the best image from the provided source set.
+
+If you have [ImageMagick] installed, you can use the following commands to create images at 50%, 25%, and 12.5% of the original image. 
+Other image tools will provide similar capabilities.
+
+    convert your-image.jpg -resize 50% -sampling-factor 4:2:0 -strip -quality 85 -interlace JPEG -colorspace RGB your-image@0,5x.jpg
+    convert your-image.jpg -resize 25% -sampling-factor 4:2:0 -strip -quality 85 -interlace JPEG -colorspace RGB your-image@0,25x.jpg
+    convert your-image.jpg -resize 12.5% -sampling-factor 4:2:0 -strip -quality 85 -interlace JPEG -colorspace RGB your-image@0,125x.jpg
+
+Note that the keys in the `srcset` hash have to be valid "descriptors" (as defined [here][mdn-srcset]). In practice this means the width in pixels followed by `w`.
+
+The `path` key is a fallback image for browsers that don't support the `srcset` attribute. It's also used by `jekyll-seo-tag` for social media previews.
+
+For more information on `srcset`, see the [documentation at MDN][mdn-srcset], or [this article from CSS-Tricks][csstricks].
+
+[imagemagick]: https://imagemagick.org/index.php
+[mipmap]: https://en.wikipedia.org/wiki/Mipmap
+[mdn-srcset]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-srcset
+[mdn-sizes]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-sizes
+[csstricks]: https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/
+
 
 
 ### Adding an entry to the sidebar
@@ -813,7 +855,7 @@ menu:
 ``` 
 
 ### Adding a category or tag
-Hydejack allows you to use the `list` layout to show all posts of a particular category or tag.
+Hydejack allows you to use the `list` or `grid`\* layout to show all posts of a particular category or tag.
 
 Before you start, make sure your config files contains the `features_categories` and `featured_tags` collections:
 
@@ -874,7 +916,7 @@ Tags       | Welcome to Jekyll¬ 07 Apr 2017 **on** Jekyll, Update
 Both       | Welcome to Jekyll¬ 07 Apr 2017 **in** Jekyll / Update **on** Jekyll, Update
 {:.scroll-table-small}
 
-You can adjust these in [`_data/string.yml`](https://github.com/hydecorp/hydejack/blob/v8/_data/strings.yml).
+You can adjust these in [`_data/string.yml`][strings].
 
 #### Creating a new category or tag
 By default, categories and tags are rendered as plain text. Further steps are necessary if you want them to link to a page that contains a list of all posts that belong to that category or tag.
@@ -896,7 +938,7 @@ description: >
 ~~~
 
 `layout`
-: Must be `list`
+: Must either `list` or `grid`\*
 
 `title`
 : Used as title of the page, as well as name of the category or tag as part of the line below a blog post's title. Can be different from the name of the tag or category, as long as `slug` is identical to the name.
@@ -919,7 +961,7 @@ About pages are a frequent use case, so Hydejack has a special layout for it. It
 To create an about page, make sure `layout` is set to `about`.
 For more on authors, see [Adding an author](#adding-an-author).)
 
-~~~html
+~~~md
 <!-- file: `about.md` -->
 ---
 layout: about
@@ -937,6 +979,30 @@ Hydejack 8 introduces cover pages, i.e. pages witht he sidebar opened, so that i
 
 ![Cover page example](../assets/img/blog/hydejack-8@0,5x.png){:width="960" height="540"}
 
+~~~yml
+## file: `index.md`
+---
+layout: welcome
+title:  Welcome
+cover:  true #!! Add this
+---
+~~~
+
+### Adding related posts to a post
+You can choose which posts will appear in the "Related Posts" section below a post by adding the `related_posts` key to the front matter of a post
+
+~~~yml
+## file: `category/_posts/2020-02-01-some-post.md`
+---
+layout: post
+related_posts:
+  # Specify via the path in the file system
+  - category/_posts/2020-01-01-other-post.md
+  # Can also use the url of the post,
+  # but this will break when changing the `permalink` setting!
+  - /blog/category/2020-01-02-other-other-post/
+---
+~~~
 
 ### Customization
 #### Adding custom CSS
@@ -973,9 +1039,10 @@ cover:  true
 ---
 ~~~
 
-Without further configuration, the welcome page will just look like a regular page.
-To show the two most recent projects, add the `<!--projects-->` marker to the content.
-To show the five most recent blog posts, add the `<!--posts-->` marker to the content.
+Without further configuration, the welcome page will just look like a regular page. However, it can be enhanced through the use of markers:
+- To show the two most recent projects, add the `<!--projects-->` marker to the content
+- To show the four most recent blog posts, add the `<!--posts-->` marker to the content
+- (To show the five most recent blog posts in list form, add the `<!--posts_list-->` marker to the content)
 
 The welcome layout also supports selecting specific projects and posts, by adding to the front matter, e.g.:
 
@@ -984,33 +1051,35 @@ The welcome layout also supports selecting specific projects and posts, by addin
 ---
 selected_projects:
   - _projects/hydejack-v6.md
-  - _projects/hyde-v2.md
-more_projects: projects.md
+  - /projects/hyde-v2/
+projects_page: projects.md
 selected_posts:
   - _posts/2017-05-03-javascripten.md
-  - _posts/2012-02-07-example-content.md
-more_posts: posts.md
-featured: true
+  - /blog/2012-02-07-example-content/
+posts_page: /blog/
+featured: false
 ---
 ~~~
 
 `selected_projects`
-: A list of paths to project files that should be displayed below the main content of the page.
-  The paths are relative to the main directory with no leading `./`.
-  If no paths are provided, the two most recent projects will be used.
+: A list of paths to projects that should be featured in the `<!--projects-->` marker.
+  Either provide paths relative to the main directory with no leading `/`,
+  or URLs according to the schema defined in `permalink`.
 
-`more_projects`
-: The path to the main projects page.
-  The path is relative to the main directory with no leading `./`.
+`projects_page`
+: The path to the main projects page
+  Either a path relative to the main directory with no leading `./`,
+  or a URL according to the schema defined in `permalink`.
 
 `selected_projects`
-: A list of paths to blog posts that should be featured on the welcome page.
-  The paths are relative to the main directory with no leading `./`.
-  If no paths are provided, the five most recent posts will be used.
+: A list of paths to blog posts that should be featured in the `<!--posts-->` or `<!--posts_list-->` marker.
+  Either provide paths relative to the main directory with no leading `/`,
+  or URLs according to the schema defined in `permalink`.
 
-`more_posts`
+`posts_page`
 : The path to the main posts page.
-  The path is relative to the main directory with no leading `./`.
+  Either a path relative to the main directory with no leading `./`,
+  or a URL according to the schema defined in `permalink`.
 
 `featured`
 : Optional. When `true`, project thumbnails will span the full width instead of half.
@@ -1078,8 +1147,8 @@ A project's front matter should look like:
 layout:      project
 title:       Hyde v2*
 date:        2 Jan 2014
-screenshot:
-  src:       /assets/img/projects/hyde-v2@0,25x.jpg
+image:
+  path:       /assets/img/projects/hyde-v2@0,25x.jpg
   srcset:
     1920w:   /assets/img/projects/hyde-v2.jpg
     960w:    /assets/img/projects/hyde-v2@0,5x.jpg
@@ -1103,21 +1172,14 @@ featured:    false
 `date`
 : Providing a year is the minimum requirement. Used to sort the projects.
 
-`screenshot`
-: A 16:9 screenshot of the project.
-
-  You can pass an URL to an image, but it is recommended that you provide a `src`-`srcset` pair (see example above).
-
-  Hydejack will show the screenshot in various sizes, depending on the screen width, so that no specific size will fit all. Instead, it is recommended that you use a [mipmap]-like approach, providing the image in multiple sizes, each image half the width of the previous one.
-  The `src` key is a fallback image for browsers that don't support the `srcset` attribute. The keys of the `srcset` hash will be used as descriptors.
-
-  For more information on `srcset`, see the [documentation at MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-srcset), or [this article from CSS-Tricks](https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/).
+`image`
+: A 16:9 image of the project. See [Adding images](#adding-images) for details.
 
 `caption`
 : A short description, shown as part of each "project card" in the `projects` layout.
 
 `description`
-: A medium-length description, used on the project's detail page as meta description and shown as message box below the screenshot.
+: A medium-length description, used on the project's detail page as meta description and shown as message box below the image.
 
 `links`
 : A list of `title`-`url` pairs that link to external resources related to this project.
@@ -1128,13 +1190,14 @@ featured:    false
 `featured`
 : Optional. When `true`, the project preview will span the full content width. You can use this for projects that should receive more attention. You can set/override this for an entire page, by setting `featured` in the front matter (applies to the `projects` and `welcome` layout).
 
+
 #### Organizing Projects
 If you want to organize your projects using categories or tags, similar to the way you do with posts, the best way is to achieve this is via multiple collections. Categories and tags are reserved for posts, and adding them to collections has no effect.
 
 The default config file comes with one projects collection predefined, but we can easily add additional collections like so:
 
 ~~~yml
-## file: `config.yml`
+## file: `_config.yml`
 collections:
   # The default projects collection
   projects:
@@ -1158,11 +1221,12 @@ This is enough to render the project pages. To render them all on a single page,
 ---
 layout: projects
 title: Other Projects*
-show_collection: other_projects # !!
+show_collection: other_projects #!!
 ---
 ```
 
 Note that the file name matches the `other-projects` path in the `permalink` we've defined above. This is to ensure that the directories match up.
+
 
 ### Adding a resume*
 Hydejack's PRO version features a generalized resume layout.
@@ -1170,7 +1234,7 @@ Hydejack's PRO version features a generalized resume layout.
 
 It generates the resume page from a valid [JSON Resume](https://jsonresume.org/), which is good news if you already have a JSON resume. Otherwise, there are various ways of obtaining one:
 
-* You can edit the [example `resume.yml`](https://github.com/hydecorp/hydejack/blob/v8/_data/resume.yml) in `_data` directly. It contains example entries for each type of entry.
+* You can edit the [example `resume.yml`][resumeyml] in `_data` directly. It contains example entries for each type of entry.
 * You can use the visual [JSON Resume Editor](http://registry.jsonresume.org/).
 * If you have a LinkedIn profile, you can try [LinkedIn to Json Résumé](https://jmperezperez.com/linkedin-to-json-resume/).
 
@@ -1185,11 +1249,56 @@ layout: resume
 title:  Resume
 description: >
   A short description of the page for search engines (~150 characters long).
+hide_description: true 
 ---
 ~~~
 
 You can download the final `resume.json` (minified) from the assets folder. When running locally, you can find it at `_site/assets/resume.json`.
 {:.note}
+
+#### Changing the layout
+You can customize the layout of the resume by rearranging the entries in the `left_column` and `right_columns` keys in the front matter, e.g.
+
+~~~yml
+## file: `resume.md`
+---
+layout: resume
+left_column:
+  - work
+  - volunteer
+  - education
+  - awards
+  - publications
+  - references
+right_column:
+  - languages
+  - skills
+  - interests
+---
+~~~
+
+#### Skill level icons
+By default, the layout will replace certain keywords with star icons. The keywords are as follows:
+
+| Icon | Skills | Languages |
+|--|--|--|
+| <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span>    | 3/3, Master, Expert, Senior, Professional | 5/5, Native or bilingual proficiency, Native speaker |
+| <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span>    |                                           | 4/5, Full professional proficiency |
+| <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-empty"></span>   | 2/3, Intermediate, Advanced, Amateur      | 3/5, Professional working proficiency |
+| <span class="icon-star-full"></span><span class="icon-star-half"></span><span class="icon-star-empty"></span>   |                                           | 2/5, Limited working proficiency |
+| <span class="icon-star-full"></span><span class="icon-star-empty"></span><span class="icon-star-empty"></span>  | 1/3, Beginner, Novice, Junior             | 1/5, Elementary proficiency |
+| <span class="icon-star-empty"></span><span class="icon-star-empty"></span><span class="icon-star-empty"></span> | 0/3                                       | 0/5, No proficiency |
+
+If a keyword is not recognized, the provided text will be spelled out  instead. To disable icons and always spell out the text,  set `no_skill_icons` and/or `no_langauge_icons` to `true`.
+
+~~~yml
+## file: `resume.md`
+---
+layout: resume
+no_language_icons: true
+no_skill_icons: true
+---
+~~~
 
 #### Adding a specialized resume or multiple resumes
 You can add a specialized resume or multiple resumes by adding the resume YAML to the front matter under the `resume` key.
@@ -1211,6 +1320,26 @@ resume:
 ---
 ~~~
 
+<!-- ### Downloads
+By default, the resume layout will show buttons for printing, vCard and JSON Resume button. 
+To disable these buttons, add `no_buttons: true` to the front matter.
+
+The PDF download can't be generated automatically. Instead, place `Resume.pdf` in your `assets` folder:
+
+Downloads currently aren't supported when using multiple resumes. Use the `no_buttons` option to avoid confusion.
+{:.note}
+
+```
+├── assets
+│   └── Resume.pdf
+```
+
+You can generate the `Resume.pdf` from your resume page itself. 
+Use your browser's "Print to PDF" feature (Chrome works best). 
+For best results, check the following options in the print popup:
+
+![Uncheck Headers and footers, check Background graphics](/assets/img/docs/chrome-print.png){:width="299" height="588" loading="lazy"} -->
+
 
 
 
@@ -1220,7 +1349,8 @@ resume:
 [projects]: https://hydejack.com/projects/
 [project]: https://hydejack.com/projects/default/
 
-[mipmap]: https://en.wikipedia.org/wiki/Mipmap
+[strings]: https://github.com/hydecorp/hydejack-site/blob/master/_data/strings.yml
+[resumeyml]: https://github.com/hydecorp/hydejack-site/blob/master/_data/resume.yml
 
 
 
@@ -1269,19 +1399,19 @@ You can also create your table of contents as an ordered list (note the `1.` ins
 {:toc}
 ~~~
 
-In order for the table of contents to appear in the side bar a number of conditions has to be met:
-
-*  The width of the display has to be larger than 1665px. 
-*  The `hydejack.no_break_layout` option has to be enabled in the config file.
-   Otherwise, large code blocks or tables could overlap with the table of contents.
-
-If these conditions aren't met, the ToC will appear where the seed list is placed in the document.  
+The width of the display has to be larger than 1665px for the ToC to become sticky.
+Otherwise, the ToC will appear where the seed list is placed in the document.
 To show the table of contents only on large displays (> 1665px) use the following:
 
 ~~~md
 * this unordered seed list will be replaced by the toc 
 {:toc .large-only}
 ~~~
+
+A sticky table of contents will reduce the amount of space freed up by the `no_break_layout: false` setting.  
+This is necessary to ensure large code blocks or tables don't overlap with the ToC.
+{:.note}
+
 
 ### Adding notes
 You can add a note by adding the `note` class to a paragraph.
@@ -1297,7 +1427,16 @@ You can add a note.
 {:.note}
 ~~~
 
-Edit the `note` key in `_data/strings.yml` to change the wording of the label.
+Edit the `note` key in `_data/strings.yml` to change the wording of the default label.
+To add a note with a specific label, add a `title` attribute:
+
+~~~markdown
+A custom label.
+{:.note title="Attention"}
+~~~
+
+A custom label.
+{:.note title="Attention"}
 
 ### Adding large text
 You can add large text by adding the `lead` class to the paragraph.
@@ -1479,7 +1618,7 @@ To add a code block without syntax highlighting, simply indent 4 spaces (regular
 For code blocks with code highlighting, use `~~~<language>`. This syntax is also supported by GitHub.
 For more information and a list of supported languages, see [Rouge](http://rouge.jneen.net/).
 
-You can give each code block a title, by making the first line in the block a comment of the form `Title: "<my title>"`.
+<!-- You can give each code block a title, by making the first line in the block a comment of the form `Title: "<my title>"`. -->
 
 Example:
 
@@ -1527,20 +1666,7 @@ You can read more about it [here](https://github.com/penibelst/jekyll-compress-h
 {:.note}
 
 ### Adding math
-Hydejack supports [math blocks][ksynmath] via [KaTeX][katex].
-
-Why KaTeX instead of MathJax? KaTeX is faster and more lightweight at the cost of having less features, but
-for the purpose of writing blog posts, this should be a favorable tradeoff.
-
-Before you add math content, make sure you have the following in your config file:
-
-```yml
-kramdown:
-  math_engine:         mathjax # this is not a typo
-  math_engine_opts:
-    preview:           true
-    preview_as_code:   true
-```
+Before adding math blocks, make sure you've [set up math support](./config.md#enabling-math-blocks).
 
 #### Inline
 Example:
@@ -1612,8 +1738,6 @@ Instead, `aligned` should be used, e.g. `\begin{aligned} ... \end{aligned}`.
 [mm]: https://guides.github.com/features/mastering-markdown/
 [ksyn]: https://kramdown.gettalong.org/syntax.html
 [ksyntab]:https://kramdown.gettalong.org/syntax.html#tables
-[ksynmath]: https://kramdown.gettalong.org/syntax.html#math-blocks
-[katex]: https://khan.github.io/KaTeX/
 [rtable]: https://dbushell.com/2016/03/04/css-only-responsive-tables/
 
 
@@ -1716,33 +1840,6 @@ This chapters shows how to prepare your Hydejack site for a production build and
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
 
-### Starter Kit
-If you're using the [starter kit](#via-starter-kit), all you have to do is push your repository:)
-
-```bash
-$ git add .
-$ git commit "Update"
-$ git push origin master
-```
-
-### Preparation
-
-Before building, make sure the following is part of your config file:
-
-```yml
-## file: `_config.yml`
-compress_html:
-  comments:  ["<!-- ", " -->"]
-  clippings: all
-  endings:   all
-
-sass:
-  style:     compressed
-```
-
-You can check out [jekyll-compress-html](https://github.com/penibelst/jekyll-compress-html) and
-<https://jekyllrb.com/docs/assets/#sassscss> for details.
-
 ### Building locally
 When building Hydejack it is important to set the environment variable `JEKYLL_ENV` to `production`.
 Otherwise the output will not be minified. Building itself happens via Jekyll's `build` command.
@@ -1784,6 +1881,15 @@ which can be deployed using the methods outlined in the [Jekyll Documentation][d
 
 
 ### GitHub Pages
+If you're using the Starter Kit for GitHub pages, all you have to do is push your repository:
+
+```bash
+$ git add .
+$ git commit "Update"
+$ git push origin master
+```
+
+<!-- ## GitHub Pages
 To deploy to GitHub Pages, the steps are:
 
 ~~~bash
@@ -1802,11 +1908,11 @@ $ cd ..
 `remote_branch`
 : Either `master` for "user or organization pages", or `gh-pages` for "project pages"
 
-More on [user, organization, and project pages](https://help.github.com/articles/user-organization-and-project-pages/).
+More on [user, organization, and project pages](https://help.github.com/articles/user-organization-and-project-pages/). -->
 
 
-
-
+<!-- 
+ -->
 
 [deploy]: https://jekyllrb.com/docs/deployment-methods/
 [lsa]: https://en.wikipedia.org/wiki/Latent_semantic_analysis
@@ -1837,15 +1943,13 @@ Enabling this feature requires that your content meets the following criteria:
 * The site is mostly self-contained, i.e. assets are served from the same domain (offline support will not download assets form external sites by default)
 * The site is served via HTTPS (this is a Service Worker requirement)
 
-To enable this feature, create the [`sw.js`][sw] file in the root of your project and add the following content:
+To enable this feature, create a `sw.js` file in the root of your project and add the following content:
 
 ```js
 ---
 ---
 importScripts("{% raw %}{{ '/assets/js/service-worker.js' | relative_url }}?t={{ site.time | date_to_xmlschema }}{% endraw %}");
 ```
-
-[sw]: https://github.com/hydecorp/hydejack/blob/v8/sw.js
 
 This will load the main service worker script from Hydejack's assets. The `site.time` part is necessary to make the service worker "byte different" every time you create a new build of your site, which triggers an update.
 
