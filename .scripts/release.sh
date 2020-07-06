@@ -24,7 +24,6 @@ cp -r \
   ../../\#jekyll-theme-hydejack/README.md \
   ../../\#jekyll-theme-hydejack/LICENSE.md \
   ../../\#jekyll-theme-hydejack/NOTICE.md \
-  ../../\#jekyll-theme-hydejack/CHANGELOG.md \
   ../../\#jekyll-theme-hydejack/*.gemspec \
   \#jekyll-theme-hydejack
 
