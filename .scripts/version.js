@@ -17,10 +17,8 @@ const FILES = [
 ].map(f => resolve(f));
 
 const COPY_FILES = [
-  "CHANGELOG.md",
   "LICENSE.md",
   "NOTICE.md",
-  "README.md",
 ];
 
 const RE_TAG = /\{[:%][^}]*\}/g;
