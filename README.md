@@ -1,7 +1,7 @@
 ---
 layout: home
 cover: true
-image: /assets/img/blog/hydejack-9.jpg
+image: /assets/img/blog/hydejack-8.jpg
 description: >
   Hydejack is a boutique Jekyll theme for hackers, nerds, and academics,
   with a focus on personal sites that are meant to impress.
@@ -11,7 +11,7 @@ selected_projects:
   - /projects/hydejack-site/ # or the URL
 projects_page: examples.md
 selected_posts:
-  - hydejack/_posts/2019-07-31-service-release-8.5.0.md
+  - hydejack/_posts/2020-07-03-introducing-hydejack-9.md
   - /blog/hydejack/2018-09-01-introducing-dark-mode/
   - hydejack/_posts/2018-06-30-introducing-hydejack-8.md
   - hydejack/_posts/2018-06-01-example-content-iii.md
@@ -27,7 +27,7 @@ A boutique Jekyll theme for hackers, nerds, and academics.
 1. this list will be replaced by the toc
 {:toc .large-only}
 
-![Screenshot](assets/img/blog/hydejack-9.jpg){:.lead width="1920" height="1080" loading="lazy"}
+![Screenshot](assets/img/blog/hydejack-8.jpg){:.lead width="1920" height="1080" loading="lazy"}
 
 Hydejack's cover page on a variety of screens.
 {:.figcaption}
@@ -40,6 +40,12 @@ It includes a blog that is suitable for both prose and technical documentation, 
 > Your complete presence on the web — A [blog], [portfolio], and [resume].
 {:.lead}
 
+
+## A Personal Site That Won't Disappear
+
+**Hydejack** is 100% built on Open Source software, and is Open Source itself, save for parts of the PRO version. The PRO version is a one-time payment that gives you the right to use it forever.
+
+Hydejack is all static sites. _HTML_. All you need is a web server --- any web server --- to have a professional web presence that lasts a lifetime.
 
 ## Download
 
@@ -72,7 +78,7 @@ Write all content with Markdown. __Hydejack__ gives you [additional CSS classes]
 
 
 ## Just Markup
-**Hydejack** boasts a plethora of modern JavaScript, but make no mistake: It's still a _plain old web page_ at its core. It works without JavaScript, and you can even view it in a text-based browser like `w3m`:
+**Hydejack** boasts a plethora of modern JavaScript, but make no mistake: It's still a _plain old web page_ at its core. It works without JavaScript and you can even view it in a text-based browser like `w3m`:
 
 ![w3m Screenshot](assets/img/blog/w3m.png){:width="1920" height="1260" loading="lazy"}
 
@@ -95,7 +101,7 @@ Code blocks can have a filename and a caption.
 
 
 ## Beautiful Math
-They say math is beautiful — and with **Hydejack**'s [math support][maths] it's guaranteed to also look beautiful:
+They say math is beautiful — and with **Hydejack**'s [math support][math] it's guaranteed to also look beautiful:
 
 $$
 \begin{aligned}
@@ -117,13 +123,6 @@ $$
 
 Hydejack uses KaTeX to efficiently render math.
 {:.figcaption}
-
-[maths]: docs/writing.md#adding-math
-
-
-## A Personal Site That Won't Disappear
-
-**Hydejack** is 100% built on Open Source software, and is Open Source itself, save for parts of the PRO version. The PRO version is a one-time payment that gives you the right to use it forever.
 
 
 ## Build an Audience
@@ -170,8 +169,9 @@ Use the the form below to purchase Hydejack PRO:
 [pro]: licenses/PRO.md
 [docs]: docs/README.md
 [ofln]: docs/advanced.md#enabling-offline-support
+[math]: docs/writing.md#adding-math
 
-[kit]: https://github.com/hydecorp/hydejack-starter-kit/archive/v9.0.0.zip
+[kit]: https://github.com/hydecorp/hydejack-starter-kit/archive/v9.0.1.zip
 [src]: https://github.com/hydecorp/hydejack
 [gem]: https://rubygems.org/gems/jekyll-theme-hydejack
 [buy]: https://gum.co/nuOluY

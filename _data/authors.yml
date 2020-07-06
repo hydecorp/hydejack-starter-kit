@@ -18,15 +18,15 @@ qwtel:
     |:------------------------------|:--------------:|:-------------------:|
     | [Features][fea]               | &#x2714;       | &#x2714;            |
     | [PRO Features][pro]           |                | &#x2714;            |
-    | __Price__ / Upgrade           | __Free__       | __$79__ / $29 [^22] |
+    | __Price__ / Upgrade           | __Free__       | __$99__ / $39 [^22] |
     | | [__Download__][kit] <br/>-- or --<br/> [__Deploy to Netlify__][nfy] | [__Buy PRO__][buy]{:.gumroad-button data-gumroad-single-product="true"} |
     {:.stretch-table.dl-table}
 
-    [^22]: Upgrades from v8: Find your discount code in the latest zip download.
+    [^22]: Upgrading from Hydejack 8? Find your discount code in the latest zip download!
 
     [fea]: /#features
     [pro]: /download/
-    [kit]: https://github.com/hydecorp/hydejack-starter-kit/archive/v9.0.0.zip
+    [kit]: https://github.com/hydecorp/hydejack-starter-kit/archive/v9.0.1.zip
     [nfy]: https://app.netlify.com/start/deploy?repository=https://github.com/hydecorp/hydejack-starter-kit
     [dtn]: https://www.netlify.com/img/deploy/button.svg
     [buy]: https://gum.co/nuOluY
@@ -46,7 +46,7 @@ qwtel:
     twitter:         hydecorp
     github:          https://github.com/hydecorp/hydejack
     email:           mail@qwtel.com
-    download:        https://github.com/hydecorp/hydejack-starter-kit/archive/v9.0.0.zip
+    download:        https://github.com/hydecorp/hydejack-starter-kit/archive/v9.0.1.zip
 
 # Another author
 mdo:

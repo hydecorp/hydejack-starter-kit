@@ -13,6 +13,6 @@ links:
     url: https://hydecorp.github.io/push-state/
 accent_color: '#4fb1ba'
 accent_image:
-  background: 'linear-gradient(to bottom,#193747 0%,#233e4c 30%,#3c929e 50%,#d5d5d4 70%,#cdccc8 100%)'
+  background: 'linear-gradient(to bottom, #0a7b81 0%, #01636e 25%, #02505b 50%, #073a4a 75%, #082e39 100%)'
   overlay:    true
 ---
