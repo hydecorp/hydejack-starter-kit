@@ -175,8 +175,6 @@ Use the the form below to purchase Hydejack PRO:
 [src]: https://github.com/hydecorp/hydejack
 [gem]: https://rubygems.org/gems/jekyll-theme-hydejack
 [buy]: https://gum.co/nuOluY
-[nfy]: https://app.netlify.com/start/deploy?repository=https://github.com/hydecorp/hydejack-starter-kit
-[dtn]: https://www.netlify.com/img/deploy/button.svg
 
 [gpss]: https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fhydejack.com%2Fresume%2F
 [rouge]: http://rouge.jneen.net
