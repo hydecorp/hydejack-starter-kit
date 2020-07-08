@@ -15,6 +15,6 @@ An incomplete list of features included in all versions of **Hydejack**:
 * Simple and semantic HTML + Structured Data
 * Google Analytics and Google Fonts support
 
-[^11]: Actual page load speed depends on your hosting provider, resolution of embedded images and usage of 3rd party plugins.
+[^11]: Actual page load speed depends on your hosting provider, location, resolution and format of images, usage of 3rd party plugins, and other factors.
 
 *[FLIP]: First-Last-Invert-Play. A coding technique to achieve performant page transition animations.

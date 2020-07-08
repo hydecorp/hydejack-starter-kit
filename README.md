@@ -27,9 +27,9 @@ A boutique Jekyll theme for hackers, nerds, and academics.
 1. this list will be replaced by the toc
 {:toc .large-only}
 
-![Screenshot](assets/img/blog/hydejack-8.jpg){:.lead width="1920" height="1080" loading="lazy"}
+![Screenshot](assets/img/blog/hydejack-9@0,5x.jpg){:.lead width="1920" height="1080" loading="lazy"}
 
-Hydejack's cover page on a variety of screens.
+Hydejack's cover page on a variety of screen sizes.
 {:.figcaption}
 
 
@@ -178,9 +178,7 @@ Use the the form below to purchase Hydejack PRO:
 [nfy]: https://app.netlify.com/start/deploy?repository=https://github.com/hydecorp/hydejack-starter-kit
 [dtn]: https://www.netlify.com/img/deploy/button.svg
 
-[gpss]: https://developers.google.com/speed/pagespeed/insights/?url=https://hydejack.com/
-[hy-push-state]: https://hydecorp.github.io/hy-push-state/
-[hy-drawer]: https://hydecorp.github.io/hy-drawer/
+[gpss]: https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fhydejack.com%2Fresume%2F
 [rouge]: http://rouge.jneen.net
 [katex]: https://khan.github.io/KaTeX/
 [mathjax]: https://www.mathjax.org/
