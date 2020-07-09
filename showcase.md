@@ -1,6 +1,6 @@
 ---
 layout: projects
-title: Examples
+title: Showcase
 show_collection: projects
 description: >
   How people are using Hydejack in the real world. 
@@ -8,6 +8,7 @@ description: >
 no_groups: true
 redirect_from:
   - /projects/
+  - /examples/
 ---
 
 __If you'd like to have your blog or project featured here, please contact me at [mail@qwtel.com](mailto:mail@qwtel.com).__  
