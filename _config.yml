@@ -54,8 +54,8 @@ author:
 menu:
   - title:             Blog
     url:               /blog/
-  - title:             Examples
-    url:               /examples/
+  - title:             Projects
+    url:               /projects/
   - title:             Résumé*
     url:               /resume/
   - title:             Documentation
