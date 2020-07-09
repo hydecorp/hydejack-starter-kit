@@ -8,7 +8,7 @@ description: >
 hide_description: true
 selected_projects:
   - _projects/qwtel.md # Use path to the project
-  - /projects/hydejack-site/ # or the URL
+  - /showcase/hydejack-site/ # or the URL
 projects_page: examples.md
 projects_page: showcase.md
 selected_posts:
