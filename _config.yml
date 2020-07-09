@@ -294,7 +294,7 @@ collections:
     output:            true
 
   projects:
-    permalink:         /projects/:path/
+    permalink:         /showcase/:path/
     output:            true
 
 
