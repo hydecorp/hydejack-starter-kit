@@ -57,7 +57,7 @@ You can now also [![Deploy to Netlify][dtn]][nfy]{:.no-mark-external} directly.
 {:.note}
 
 [hsc]: https://github.com/hydecorp/hydejack-starter-kit
-[src]: https://github.com/hydecorp/hydejack-starter-kit/archive/v9.0.2.zip
+[src]: https://github.com/hydecorp/hydejack-starter-kit/archive/v9.0.3.zip
 [nfy]: https://app.netlify.com/start/deploy?repository=https://github.com/hydecorp/hydejack-starter-kit
 [dtn]: https://www.netlify.com/img/deploy/button.svg
 
@@ -113,7 +113,7 @@ If you want to use your site with [GitHub Pages][ghp] exclusively, you can inste
 
 ```yml
 ## file: `_config.yml`
-remote_theme: hydecorp/hydejack@v9.0.2
+remote_theme: hydecorp/hydejack@v9.0.3
 ```
 
 [ghp]: https://jekyllrb.com/docs/github-pages/
@@ -200,7 +200,7 @@ and you have to apply them again. Make sure you've made a backup before overwrit
 When building on GitHub Pages, upgrading Hydejack is as simple as setting the `remote_theme` key in `_config.yml` to the desired version.
 
 ```yml
-remote_theme: hydecorp/hydejack@v9.0.2
+remote_theme: hydecorp/hydejack@v9.0.3
 ```
 
 To use the latest version on the `v9` branch on each build, you can use  `hydecorp/hydejack@v9`.
@@ -540,7 +540,7 @@ author:
   social:
     email:    mail@qwtel.com
     rss:      {{ site.url }}{{ site.baseurl }}/feed.xml # make sure you provide an absolute URL
-    download: https://github.com/hydecorp/hydejack/archive/v9.0.2.zip
+    download: https://github.com/hydecorp/hydejack/archive/v9.0.3.zip
 ~~~
 
 
