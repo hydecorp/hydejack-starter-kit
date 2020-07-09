@@ -7,9 +7,8 @@ description: >
   with a focus on personal sites that are meant to impress.
 hide_description: true
 selected_projects:
-  - _projects/qwtel.md # Use path to the project
-  - /projects/hydejack-site/ # or the URL
-projects_page: examples.md
+  - /projects/shawn-yeager/ # Use path to the project
+  - _projects/qwtel.md # or the URL
 projects_page: showcase.md
 selected_posts:
   - hydejack/_posts/2020-07-03-introducing-hydejack-9.md
