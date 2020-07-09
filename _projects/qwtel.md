@@ -21,18 +21,11 @@ accent_image:
 theme_color: '#193747'
 ---
 
-For my personal site I've toned it down a bit. Instead of a flashy sidebar image, I chose a solid background color.
-However, I've given [certain](https://qwtel.com/projects/ducky-hunting/) [pages](https://qwtel.com/projects/blocky-blocks/) big sidebar images,
-and let Hydejack blend back to normal when the user navigates away.
+<!-- **hy-drawer** is a touch-enabled drawer component for the modern web. It focuses on providing a fun, natural feel in both the Android and iOS stock browser, while being performant and easy to use. It is the perfect companion for mobile-first web pages and progressive web apps.
 
-While I love the font used for Hydejack's headings, for my personal site I felt less of a need to control the typesetting.
-That's why I'm not using Google Fonts, and instead use whatever is the default for the reader's operating system.
+> A touch-enabled drawer component for the modern web.
+{:.lead}
 
-```yml
-google_fonts: false
-font:         system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-font_heading: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-```
+**hy-drawer** is used by hundreds of sites as part of the [Hydejack] Jekyll theme.
 
-The configuration I use to enable the system font on my site. Feel free to copy!
-{:.figcaption}
+[hydejack]: ../README.md -->
