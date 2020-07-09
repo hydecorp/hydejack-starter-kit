@@ -4,10 +4,10 @@ title: Example Content II
 description: >
   A page showing how regular markdown content is styled in Hydejack.
 image: /assets/img/blog/example-content-ii.jpg
-noindex: true
 related_posts:
   - hydejack/_posts/2018-06-01-example-content-iii.md
   - hyde/_posts/2012-02-07-example-content.md
+sitemap: false
 ---
 
 There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
