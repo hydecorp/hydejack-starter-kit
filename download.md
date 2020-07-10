@@ -22,7 +22,7 @@ Use the the form below to purchase Hydejack PRO:
 
 
 [blog]: /blog/
-[portfolio]: examples.md
+[portfolio]: showcase.md
 [resume]: resume.md
 [download]: download.md
 [welcome]: README.md
