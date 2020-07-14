@@ -1,6 +1,6 @@
 ---
 layout: project
-title: DaeInn Lee
+title: DaeIn Lee
 caption: DaeIn Lee took customization to the next level
 description: >
   DaeIn Lee took customization to the next level.
