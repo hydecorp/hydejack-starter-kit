@@ -8,7 +8,7 @@ description: >
 hide_description: true
 selected_projects:
   - /showcase/shawn-yeager/
-  - _projects/qwtel.md
+  - _projects/lazyren.md
 projects_page: showcase.md
 selected_posts:
   - hydejack/_posts/2020-07-03-introducing-hydejack-9.md

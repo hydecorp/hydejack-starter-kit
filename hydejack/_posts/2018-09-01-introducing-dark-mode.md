@@ -51,5 +51,10 @@ Dark Mode is now available for buyers of the [PRO version][buy].
 
 [buy]: https://app.simplegoods.co/i/NATYVLYT
 
+<script type="module">
+  const classes = document.body.classList.toString();
+  document.body.classList.add('dark-mode');
+  document.querySelector('hy-push-state').addEventListener('after', () => setTimeout(() => document.body.setAttribute('class', classes), 700), { once: true });
+</script>
 
 [^1]: This would require visitors' permission to read their geolocation, which is not reasonable or practical for this use case.

@@ -1,9 +1,9 @@
 ---
 layout: project
 title: Shawn Yeager
-caption: Shawn uses Hydejack's customization to its full potential
+caption: Shawn created a professional look with just a few tweaks
 description: >
-  Shawn uses Hydejack's customization to its full potential:
+  Shawn created a professional look with just a few tweaks:
   A accent color and matching sidebar gradient together with a beautiful typeset
   make for an impressive personal–professional site.
 image: 
@@ -20,9 +20,10 @@ accent_color: rgba(0,174,239,1)
 accent_image:
   background: linear-gradient(225deg, rgba(27,10,58,1) 0%, rgba(0,174,239,1) 80%)
   overlay: false
+theme_color: rgba(27,10,58,1)
 ---
 
-Shawn uses Hydejack’s customization to its full potential:
+Shawn created a professional look with just a few tweaks:
 A accent color and matching sidebar gradient together with a beautiful typeset make for an impressive personal–professional site.
 
 Other customizations I love about Shawn's site: 
