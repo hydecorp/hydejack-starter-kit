@@ -46,7 +46,7 @@ Use the the form below to purchase Hydejack PRO:
 [gem]: https://rubygems.org/gems/jekyll-theme-hydejack
 [buy]: https://gum.co/nuOluY
 
-[gpss]: https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fhydejack.com%2Fresume%2F
+[gpss]: https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fhydejack.com%2Fdocs%2F
 [rouge]: http://rouge.jneen.net
 [katex]: https://khan.github.io/KaTeX/
 [mathjax]: https://www.mathjax.org/
