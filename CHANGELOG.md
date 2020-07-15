@@ -8,6 +8,17 @@ layout: page
 * this list will be replaced by the toc
 {:toc .large-only}
 
+## v9.0.4
+July 15 2020
+{:.heading.post-date}
+
+* Fixed image fade in animation for images with `srcset`
+* Slightly increased size of post and project cards
+* Added page margin to print layout
+* Fixed KaTeX when JavaScript is disabled 
+* Fixed a layout bug in the `resume` layout when changing the content width in variable
+* Fixed table of contents sticky breakpoint
+
 ## v9.0.3
 July 9 2020
 {:.heading.post-date}

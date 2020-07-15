@@ -57,7 +57,7 @@ You can now also [![Deploy to Netlify][dtn]][nfy]{:.no-mark-external} directly.
 {:.note}
 
 [hsc]: https://github.com/hydecorp/hydejack-starter-kit
-[src]: https://github.com/hydecorp/hydejack-starter-kit/archive/v9.0.3.zip
+[src]: https://github.com/hydecorp/hydejack-starter-kit/archive/v9.0.4.zip
 [nfy]: https://app.netlify.com/start/deploy?repository=https://github.com/hydecorp/hydejack-starter-kit
 [dtn]: https://www.netlify.com/img/deploy/button.svg
 
@@ -109,20 +109,33 @@ Make sure to only delete files that belong to the old theme!
 
 
 ### GitHub Pages
-If you want to use your site with [GitHub Pages][ghp] exclusively, you can instead set the `remote_theme` key as follows:
+If you want to build your site on [GitHub Pages][ghp], check out the [`gh-pages` branch][gpb] in the Hydejack Starter Kit repo.
+
+[ghp]: https://jekyllrb.com/docs/github-pages/
+[gpb]: https://github.com/hydecorp/hydejack-starter-kit/tree/gh-pages
+
+For existing sites, you can instead set the `remote_theme` key as follows:
 
 ```yml
 ## file: `_config.yml`
-remote_theme: hydecorp/hydejack@v9.0.3
+remote_theme: hydecorp/hydejack@v9.0.4
 ```
 
-[ghp]: https://jekyllrb.com/docs/github-pages/
+Make sure the `plugins` list contains `jekyll-include-cache` (create if it doesn't exist):
+{:.note title="Important"}
+
+```yml
+## file: `_config.yml`
+plugins:
+  - jekyll-include-cache
+```
 
 To run this configuration locally, make sure the following is part of your `Gemfile`:
 
 ```ruby
 ## file: `Gemfile`
 gem "github-pages", group: :jekyll_plugins
+gem "jekyll-include-cache", group: :jekyll_plugins
 ```
 
 Note that Hydejack has a reduced feature set when built on GitHub Pages. 
@@ -200,7 +213,7 @@ and you have to apply them again. Make sure you've made a backup before overwrit
 When building on GitHub Pages, upgrading Hydejack is as simple as setting the `remote_theme` key in `_config.yml` to the desired version.
 
 ```yml
-remote_theme: hydecorp/hydejack@v9.0.3
+remote_theme: hydecorp/hydejack@v9.0.4
 ```
 
 To use the latest version on the `v9` branch on each build, you can use  `hydecorp/hydejack@v9`.
@@ -540,7 +553,7 @@ author:
   social:
     email:    mail@qwtel.com
     rss:      {{ site.url }}{{ site.baseurl }}/feed.xml # make sure you provide an absolute URL
-    download: https://github.com/hydecorp/hydejack/archive/v9.0.3.zip
+    download: https://github.com/hydecorp/hydejack/archive/v9.0.4.zip
 ~~~
 
 
@@ -1066,7 +1079,7 @@ featured: false
   Either a path relative to the main directory with no leading `./`,
   or a URL according to the schema defined in `permalink`.
 
-`selected_projects`
+`selected_posts`
 : A list of paths to blog posts that should be featured in the `<!--posts-->` or `<!--posts_list-->` marker.
   Either provide paths relative to the main directory with no leading `/`,
   or URLs according to the schema defined in `permalink`.
@@ -1933,7 +1946,7 @@ Hydejack v8 introduces experimental "cache as you go" offline support. This is i
 
 Enabling this feature requires that your content meets the following criteria:
 
-* Content doesn't change between between deploys (e.g. manually adding things to `_site` etc.)
+* Content doesn't change between deploys (e.g. manually adding things to `_site` etc.)
 * All assets in `assets` are immutable, i.e. they never change (when changing a file in assets, it needs to have a new name and links need to point to the new file).
 * The site is mostly self-contained, i.e. assets are served from the same domain (offline support will not download assets form external sites by default)
 * The site is served via HTTPS (this is a Service Worker requirement)
@@ -2019,7 +2032,7 @@ deviantart:
 ~~~
 
 `name`
-: The name of the network. Used for for the title attribute and screen readers.
+: The name of the network. Used for the title attribute and screen readers.
 
 `icon`
 : The icon CSS class. Can be chosen during the IcoMoon creation process.
