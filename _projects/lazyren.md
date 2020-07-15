@@ -20,7 +20,7 @@ accent_image: https://lazyren.github.io/assets/img/sidebar-bg.jpg
 theme_color: rgb(25,55,71)
 ---
 
-DaeIn Lee, a.k.a Lazy Ren, took customization to the next level.
+DaeIn Lee took customization to the next level.
 There's hardly a spot he didn't touch. 
 He used a ton of Hydejack's customization options, and then wrote his own HTML and CSS on top.
 

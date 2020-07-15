@@ -4,7 +4,7 @@ title: Showcase
 show_collection: projects
 description: >
   How people are using Hydejack in the real world. 
-  This page is built using the `projects` layout* that you can use yourself to build a portfolio.
+  This page is built using the `projects` layout* that is included in the PRO version.
 no_groups: true
 redirect_from:
   - /projects/
