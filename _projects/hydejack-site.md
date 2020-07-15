@@ -14,6 +14,7 @@ image:
 links:
   - title: Link
     url: https://hydejack.com/
+sitemap: false
 ---
 
 <!-- **hy-drawer** is a touch-enabled drawer component for the modern web. It focuses on providing a fun, natural feel in both the Android and iOS stock browser, while being performant and easy to use. It is the perfect companion for mobile-first web pages and progressive web apps.

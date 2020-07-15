@@ -15,4 +15,5 @@ accent_color: '#4fb1ba'
 accent_image:
   background: 'linear-gradient(to bottom, #0a7b81 0%, #01636e 25%, #02505b 50%, #073a4a 75%, #082e39 100%)'
   overlay:    true
+sitemap: false
 ---

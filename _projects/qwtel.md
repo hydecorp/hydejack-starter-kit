@@ -19,6 +19,7 @@ accent_color: '#4fb1ba'
 accent_image:
   background: '#193747'
 theme_color: '#193747'
+sitemap: false
 ---
 
 For my personal site I've toned it down a bit. Instead of a flashy sidebar image, I chose a solid background color.
