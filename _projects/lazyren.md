@@ -8,10 +8,9 @@ description: >
 image: 
   path: /assets/img/projects/lazyren.jpg
   srcset:
-    2880w: /assets/img/projects/lazyren.jpg
-    1440w: /assets/img/projects/lazyren@0,5x.jpg
-    720w:  /assets/img/projects/lazyren@0,25x.jpg
-    360w:  /assets/img/projects/lazyren@0,125x.jpg
+    1920w: /assets/img/projects/lazyren.jpg
+    960w:  /assets/img/projects/lazyren@0,5x.jpg
+    480w:  /assets/img/projects/lazyren@0,25x.jpg
 date: 14 Jul 2020
 links:
   - title: Link
