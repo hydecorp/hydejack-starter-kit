@@ -14,13 +14,13 @@ qwtel:
     There are multiple versions of **Hydejack**.
     The table below shows what's included in each version:
 
-    |                               | Free           | PRO                 |
-    |:------------------------------|:--------------:|:-------------------:|
-    | [Features][fea]               | &#x2714;       | &#x2714;            |
-    | [PRO Features][pro]           |                | &#x2714;            |
-    | __Price__ / Upgrade           | __Free__       | __$99__ / $39 [^22] |
-    |===============================+================+=====================|
-    | | [__Download__][kit]         | [__Buy PRO__][buy]{:.gumroad-button data-gumroad-single-product="true"} |
+    |                               | Free                | PRO                 |
+    |:------------------------------|:-------------------:|:-------------------:|
+    | [Features][fea]               | &#x2714;            | &#x2714;            |
+    | [PRO Features][pro]           |                     | &#x2714;            |
+    | __Price__ / Upgrade           | __Free__            | ~~__$99__ / $39~~ __$89__ / $34 [^22] |
+    |===============================+=====================+=====================|
+    |                               | [__Download__][kit] | [__Buy PRO__][buy]{:.gumroad-button data-gumroad-single-product="true"} |
     {:.stretch-table.dl-table}
 
     [^22]: Upgrading from Hydejack 8? Find your discount code in the latest zip download!

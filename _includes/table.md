@@ -22,8 +22,8 @@ The table below shows what's included in each version:
 | No Hydejack Branding          |                     | &#x2714;            |
 | License                       | [GPL-3.0][lic]      | [PRO]               |
 | Source                        | [GitHub][src]       | Included            |
-| __Price__ / Upgrade           | __Free__            | __$99__ / $39 [^22] |
-|===============================+================+=====================|
+| __Price__ / Upgrade           | __Free__            | ~~__$99__ / $39~~ __$89__ / $34 [^22] |
+|===============================+=====================+=====================|
 |                               | [__Download__][kit] | [__Buy PRO__][buy]{:.gumroad-button data-gumroad-single-product="true"} |
 {:.stretch-table.dl-table}
 
