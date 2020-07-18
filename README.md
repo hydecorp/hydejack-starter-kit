@@ -47,10 +47,6 @@ It includes a blog that is suitable for both prose and technical documentation, 
 
 Hydejack is all static sites. _HTML_. All you need is a web server --- any web server --- to have a professional web presence that lasts a lifetime.
 
-## Download
-
-{% include table.md %}
-
 
 ## A Free Blogging Theme
 **Hydejack** started out as a free blogging theme for Jekyll — and continues to be so.
@@ -92,7 +88,7 @@ The Hydejack blog, as seen by the text browser `w3m`.
 ```js
 // file: `example.js`
 document.querySelector("hy-push-state").addEventListener("hy-push-state-load", () => {
-  const supportsCodeHighlights = true; //!!
+  const supportsCodeHighlights = false; // TBD!!
 });
 ```
 
@@ -138,7 +134,7 @@ If you are using a different service like MailChimp, you can build a custom news
 {% include features.md %}
 
 
-## Comparison
+## Download
 
 {% include table.md %}
 
