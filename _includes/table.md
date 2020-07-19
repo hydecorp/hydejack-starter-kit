@@ -31,7 +31,7 @@ The table below shows what's included in each version:
 
 [^21]: Large screens (> 1664px width) only.
 
-[^22]: <span class="ppi">Upgrading from Hydejack 8? Find your discount code in the latest zip download</span>.
+[^22]: <span class="ppi">Upgrading from Hydejack 8? Find your discount code in the latest zip download.</span>
 
 <script type="module">
   document.querySelectorAll('a[href="#_search-input"]').forEach(el => {
