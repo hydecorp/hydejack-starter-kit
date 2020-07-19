@@ -44,7 +44,7 @@ The table below shows what's included in each version:
   document.querySelectorAll('.ppi').forEach(async el => {
     if (!el.dataset.done) {
       const { name, emoji, code, discount } = await window._ppiData;
-      if (!name) return;
+      if (!code) return;
       const template = document.getElementById('_ppi-template');
       const temp = template.content.cloneNode(true);
       temp.querySelector('.name').innerText = name;
@@ -61,7 +61,7 @@ The table below shows what's included in each version:
   document.querySelectorAll('.price').forEach(async el => {
     if (!el.dataset.done) {
       const { name, emoji, code, discount } = await window._ppiData;
-      if (!name) return;
+      if (!code) return;
       const template2 = document.getElementById('_price-template');
       const temp2 = template2.content.cloneNode(true);
       temp2.querySelector('.emoji').innerText = emoji;
