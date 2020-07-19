@@ -22,14 +22,16 @@ The table below shows what's included in each version:
 | No Hydejack Branding          |                     | &#x2714;            |
 | License                       | [GPL-3.0][lic]      | [PRO]               |
 | Source                        | [GitHub][src]       | Included            |
-| __Price__ / Upgrade           | __Free__            | ~~__$99__ / $39~~ __$89__ / $34 [^22] |
+| __Price__                     | __Free__            | <span class="price"><strong>$99</strong></span> [^22] |
 |===============================+=====================+=====================|
 |                               | [__Download__][kit] | [__Buy PRO__][buy]{:.gumroad-button data-gumroad-single-product="true"} |
 {:.stretch-table.dl-table}
 
+<p class="lead ppi"></p>
+
 [^21]: Large screens (> 1664px width) only.
 
-[^22]: Upgrading from Hydejack 8? Find your discount code in the latest zip download!
+[^22]: <span class="ppi">Upgrading from Hydejack 8? Find your discount code in the latest zip download</span>.
 
 <script type="module">
   document.querySelectorAll('a[href="#_search-input"]').forEach(el => {
@@ -38,4 +40,36 @@ The table below shows what's included in each version:
       el.dataset.done = '';
     }
   });
+
+  document.querySelectorAll('.ppi').forEach(async el => {
+    if (!el.dataset.done) {
+      const { name, emoji, code, discount } = await window._ppiData;
+      if (!name) return
+      const template = document.getElementById('_ppi-template');
+      const temp = template.content.cloneNode(true);
+      temp.querySelector('.name').innerText = name;
+      temp.querySelector('.emoji').innerText = emoji;
+      temp.querySelector('.emoji').title = name;
+      temp.querySelector('.code').innerText = code.toUpperCase();
+      temp.querySelector('.discount').innerText = `${discount * 100}%`;
+      el.innerHTML = '';
+      el.appendChild(temp);
+      el.dataset.done = '';
+    }
+  })
+
+  document.querySelectorAll('.price').forEach(async el => {
+    if (!el.dataset.done) {
+      const { name, emoji, code, discount } = await window._ppiData;
+      if (!name) return
+      const template2 = document.getElementById('_price-template');
+      const temp2 = template2.content.cloneNode(true);
+      temp2.querySelector('.emoji').innerText = emoji;
+      temp2.querySelector('.emoji').title = name;
+      temp2.querySelector('.new-price').innerText = `$${99 - discount * 100}`;
+      el.innerHTML = '';
+      el.appendChild(temp2);
+      el.dataset.done = '';
+    }
+  })
 </script>

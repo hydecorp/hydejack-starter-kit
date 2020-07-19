@@ -47,3 +47,6 @@ Left here for reference, feel free to delete.
     document.querySelectorAll('.gumroad-button').forEach(el => io.observe(el));
   });
 </script>
+<script type="module">
+  window._ppiData = fetch('https://hydejack-ppi.qwtel.workers.dev', { mode: 'cors'}).then(res => res.json());
+</script>
