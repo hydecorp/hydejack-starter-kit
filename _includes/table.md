@@ -56,7 +56,7 @@ The table below shows what's included in each version:
       el.appendChild(temp);
       el.dataset.done = '';
     }
-  })
+  });
 
   document.querySelectorAll('.price').forEach(async el => {
     if (!el.dataset.done) {
@@ -71,5 +71,5 @@ The table below shows what's included in each version:
       el.appendChild(temp2);
       el.dataset.done = '';
     }
-  })
+  });
 </script>
