@@ -18,12 +18,12 @@ qwtel:
     |:------------------------------|:-------------------:|:-------------------:|
     | [Features][fea]               | &#x2714;            | &#x2714;            |
     | [PRO Features][pro]           |                     | &#x2714;            |
-    | __Price__                     | __Free__            | <span class="price"><strong>$99</strong></span> [^22] |
+    | __Price__                     | __Free__            | <span class="price"><del>$99</del> <strong>$89</strong></span> [^22] |
     |===============================+=====================+=====================|
     |                               | [__Download__][kit] | [__Buy PRO__][buy]{:.gumroad-button data-gumroad-single-product="true"} |
     {:.stretch-table.dl-table}
 
-    [^22]: <span class="ppi">Upgrading from Hydejack 8? Find your discount code in the latest zip download.</span>
+    [^22]: <span class="ppi">Limited time v9 launch discount.<br/>Upgrading from Hydejack 8? Find your discount code in the latest zip download.</span>
 
     <script type="module">
       document.querySelectorAll('.ppi').forEach(async el => {

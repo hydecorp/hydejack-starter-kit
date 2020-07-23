@@ -22,7 +22,7 @@ The table below shows what's included in each version:
 | No Hydejack Branding          |                     | &#x2714;            |
 | License                       | [GPL-3.0][lic]      | [PRO]               |
 | Source                        | [GitHub][src]       | Included            |
-| __Price__                     | __Free__            | <span class="price"><strong>$99</strong></span> [^22] |
+| __Price__                     | __Free__            | <span class="price"><del>$99</del> <strong>$89</strong></span> [^22] |
 |===============================+=====================+=====================|
 |                               | [__Download__][kit] | [__Buy PRO__][buy]{:.gumroad-button data-gumroad-single-product="true"} |
 {:.stretch-table.dl-table}
@@ -31,7 +31,7 @@ The table below shows what's included in each version:
 
 [^21]: Large screens (> 1664px width) only.
 
-[^22]: <span class="ppi">Upgrading from Hydejack 8? Find your discount code in the latest zip download.</span>
+[^22]: <span class="ppi">Limited time v9 launch discount.<br/>Upgrading from Hydejack 8? Find your discount code in the latest zip download.</span>
 
 <script type="module">
   document.querySelectorAll('a[href="#_search-input"]').forEach(el => {
