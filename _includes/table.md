@@ -27,8 +27,6 @@ The table below shows what's included in each version:
 |                               | [__Download__][kit] | [__Buy PRO__][buy]{:.gumroad-button data-gumroad-single-product="true"} |
 {:.stretch-table.dl-table}
 
-<p class="lead ppi"></p>
-
 [^21]: Large screens (> 1664px width) only.
 
 [^22]: <span class="ppi">Limited time v9 launch discount.<br/>Upgrading from Hydejack 8? Find your discount code in the latest zip download.</span>

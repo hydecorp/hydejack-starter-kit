@@ -1,3 +1,17 @@
+<!-- <script>
+  document.querySelector('hy-push-state').setAttribute('prefetch', '');
+
+  document.querySelectorAll('.sidebar a[href^="/"]').forEach(function (el) { 
+    el.addEventListener('click', function (e) {
+      if (el.pathname === window.location.pathname) {
+        e.preventDefault();
+        e.stopPropagation();
+        document.querySelector('hy-drawer').close();
+      }
+    });
+  });
+</script> -->
+
 <!--
 Code for integrating CloudFlare's email protection with Hydejack's single page app loading.
 -->
@@ -50,7 +64,8 @@ Code for integrating CloudFlare's email protection with Hydejack's single page a
 </script>
 
 <template id="_ppi-template">
-  Visiting from <span class="name">Country</span> <span class="emoji">🏳</span>? Use the discount code <strong class="code">CODE</strong> to get <strong class="discount"></strong> off!<br/><small>Adjustment based on <a href="https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2020&displayColumn=1">Purchasing Power Index</a>.</small>
+  Visiting from <span class="name">country</span> <span class="emoji">🏳</span>? A <strong class="discount">0%</strong> discount has been applied to adjust for <a href="https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2020&displayColumn=1">purchasing power</a> differences.
+  <br/><small>Note: You can save the offer code <strong class="code">CODE</strong> and apply it on a later purchase.</small>
 </template>
 
 <template id="_price-template">
