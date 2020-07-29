@@ -17,6 +17,8 @@ links:
     url: https://nickengmann.com/
 accent_image: https://nickengmann.com/assets/img/sidebar-bg.jpg
 theme_color: rgb(79,177,186)
+redirect_from:
+  /showcase/nickengmann/
 ---
 
 Nick Engmann has a ton of cool stuff on his site.

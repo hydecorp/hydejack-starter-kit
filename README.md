@@ -1,13 +1,13 @@
 ---
 layout: home
-cover: false
+cover: true
 image: /assets/img/blog/hydejack-9.jpg
 description: >
   Hydejack is a boutique Jekyll theme for hackers, nerds, and academics,
   with a focus on personal sites that are meant to impress.
 hide_description: true
 selected_projects:
-  - _projects/nickengmann.md
+  - _projects/nick-engmann.md
   - /showcase/shawn-yeager/
 projects_page: showcase.md
 selected_posts:
@@ -167,7 +167,7 @@ Use the the form below to purchase Hydejack PRO:
 [ofln]: docs/advanced.md#enabling-offline-support
 [math]: docs/writing.md#adding-math
 
-[kit]: https://github.com/hydecorp/hydejack-starter-kit/archive/v9.0.4.zip
+[kit]: https://github.com/hydecorp/hydejack-starter-kit/releases
 [src]: https://github.com/hydecorp/hydejack
 [gem]: https://rubygems.org/gems/jekyll-theme-hydejack
 [buy]: https://gum.co/nuOluY
