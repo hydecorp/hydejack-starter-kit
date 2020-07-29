@@ -60,7 +60,7 @@ The table below shows what's included in each version:
       el.querySelectorAll('.name').forEach(el => { el.innerText = name });
       el.querySelectorAll('.emoji').forEach(el => { el.innerText = emoji; el.title = name });
       el.querySelectorAll('.code').forEach(el => { el.innerText = code.toUpperCase() });
-      el.querySelectorAll('.new-price').forEach(el => { el.innerText = `$${69 - discount * 70 + 7}` });
+      el.querySelectorAll('.new-price').forEach(el => { el.innerText = `$${99 - discount * 100}` });
       el.dataset.done = '';
     }
   });
