@@ -4,7 +4,7 @@ Left here for reference, feel free to delete.
 -->
 <link rel="dns-prefetch" href="https://assets.gumroad.com">
 <script type="module">
-  const ppiData = window._ppiData = fetch('https://hydejack-ppi.qwtel.workers.dev', { mode: 'cors'}).then(res => res.json());
+  const ppiData = window._ppiData = fetch('https://hydejack-ppi.qwtel.workers.dev', { mode: 'cors'}).then(res => res.json()).catch(() => ({}));
   const promisify = f => x => new Promise(r => f(x).addEventListener('load', r));
   const loadJS = promisify(window.loadJS);
   {
@@ -14,13 +14,11 @@ Left here for reference, feel free to delete.
         if (entries.some(x => x.isIntersecting)) {
           p = p || loadJS('https://gumroad.com/js/gumroad-embed.js');
           const [{ code }] = await Promise.all([ppiData, p]);
-          if (code) {
-            document.querySelectorAll('.gumroad-product-embed').forEach(el => { 
-              if (!el.dataset.gumroadParams) {
-                el.dataset.gumroadParams = 'offer_code=' + code;
-              }
-            });
-          }
+          document.querySelectorAll('.gumroad-product-embed').forEach(el => { 
+            if (!el.dataset.gumroadParams) {
+              el.dataset.gumroadParams = 'offer_code=' + (code || 'qr0tw8m');
+            }
+          });
           if (!window.GumroadEmbed) {
             await new Promise(function check1(res) {
               if ('createGumroadEmbed' in window) res(window.createGumroadEmbed());
@@ -46,7 +44,7 @@ Left here for reference, feel free to delete.
           if (code) {
             document.querySelectorAll('.gumroad-button').forEach(el => { 
               if (!el.href.endsWith(code)) {
-                el.href = el.href + '/' + code;
+                el.href = el.href + '/' + (code || 'qr0tw8m');
               }
             });
           }

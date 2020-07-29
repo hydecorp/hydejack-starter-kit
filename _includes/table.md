@@ -22,14 +22,16 @@ The table below shows what's included in each version:
 | No Hydejack Branding          |                     | &#x2714;            |
 | License                       | [GPL-3.0][lic]      | [PRO]               |
 | Source                        | [GitHub][src]       | Included            |
-| __Price__                     | __Free__            | <span class="price"><del>$99</del> <strong>$89</strong></span> [^22] |
+| __Price__                     | __Free__            | <span class="price"><del>$99</del> <strong class="new-price">$69</strong> <small>One-Time Payment</small></span> [^22] |
 |===============================+=====================+=====================|
 |                               | [__Download__][kit] | [__Buy PRO__][buy]{:.gumroad-button data-gumroad-single-product="true"} |
 {:.stretch-table.dl-table}
 
 [^21]: Large screens (> 1664px width) only.
 
-[^22]: <span class="ppi">Limited time v9 launch discount.<br/>Upgrading from Hydejack 8? Find your discount code in the latest zip download.</span>
+[^22]: Price now permanently reduced by <strong class="discount">30%</strong>! Use the offer code <strong class="code">QR0TW8M</strong> to apply this discount later.
+       {:.ppi}
+       If you're upgrading from Hydejack 8, find your upgrade discount code in the latest zip download.
 
 <script type="module">
   document.querySelectorAll('a[href="#_search-input"]').forEach(el => {
@@ -43,15 +45,10 @@ The table below shows what's included in each version:
     if (!el.dataset.done) {
       const { name, emoji, code, discount } = await window._ppiData;
       if (!code) return;
-      const template = document.getElementById('_ppi-template');
-      const temp = template.content.cloneNode(true);
-      temp.querySelector('.name').innerText = name;
-      temp.querySelector('.emoji').innerText = emoji;
-      temp.querySelector('.emoji').title = name;
-      temp.querySelector('.code').innerText = code.toUpperCase();
-      temp.querySelector('.discount').innerText = `${discount * 100}%`;
-      el.innerHTML = '';
-      el.appendChild(temp);
+      el.querySelectorAll('.name').forEach(el => { el.innerText = name });
+      el.querySelectorAll('.emoji').forEach(el => { el.innerText = emoji; el.title = name });
+      el.querySelectorAll('.code').forEach(el => { el.innerText = code.toUpperCase() });
+      el.querySelectorAll('.discount').forEach(el => { el.innerText = `${discount * 100}%` });
       el.dataset.done = '';
     }
   });
@@ -60,13 +57,10 @@ The table below shows what's included in each version:
     if (!el.dataset.done) {
       const { name, emoji, code, discount } = await window._ppiData;
       if (!code) return;
-      const template2 = document.getElementById('_price-template');
-      const temp2 = template2.content.cloneNode(true);
-      temp2.querySelector('.emoji').innerText = emoji;
-      temp2.querySelector('.emoji').title = name;
-      temp2.querySelector('.new-price').innerText = `$${99 - discount * 100}`;
-      el.innerHTML = '';
-      el.appendChild(temp2);
+      el.querySelectorAll('.name').forEach(el => { el.innerText = name });
+      el.querySelectorAll('.emoji').forEach(el => { el.innerText = emoji; el.title = name });
+      el.querySelectorAll('.code').forEach(el => { el.innerText = code.toUpperCase() });
+      el.querySelectorAll('.new-price').forEach(el => { el.innerText = `$${69 - discount * 70 + 7}` });
       el.dataset.done = '';
     }
   });
