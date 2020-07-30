@@ -85,11 +85,13 @@ The Hydejack blog, as seen by the text browser `w3m`.
 ## Syntax Highlighting
 **Hydejack** features syntax highlighting, powered by [Rouge].
 
-```js
-// file: `example.js`
-document.querySelector("hy-push-state").addEventListener("hy-push-state-load", () => {
-  const supportsCodeHighlights = false; // TBD!!
-});
+```html
+<!-- file: `_includes/my-body.html` -->
+<script type="module">
+  document.querySelector("hy-push-state").addEventListener("hy-push-state-load", () => {
+    const supportsCodeHighlights = false; // TBD!!
+  });
+</script>
 ```
 
 Code blocks can have a filename and a caption.
