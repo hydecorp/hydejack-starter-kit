@@ -25,6 +25,10 @@ cp -r \
   ../../\#jekyll-theme-hydejack/LICENSE.md \
   ../../\#jekyll-theme-hydejack/NOTICE.md \
   ../../\#jekyll-theme-hydejack/CHANGELOG.md \
+  ../../\#jekyll-theme-hydejack/_js \
+  ../../\#jekyll-theme-hydejack/.scripts \
+  ../../\#jekyll-theme-hydejack/package*.json \
+  ../../\#jekyll-theme-hydejack/webpack.config.js \
   ../../\#jekyll-theme-hydejack/*.gemspec \
   \#jekyll-theme-hydejack
 
