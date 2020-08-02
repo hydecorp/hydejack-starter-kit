@@ -304,6 +304,7 @@ exclude:
   - ./#jekyll-theme-hydejack/.git
   - .jekyll-cache
   - .sass-cache
+  - '*.toml'
   - vendor
   - Gemfile
   - Gemfile.lock
