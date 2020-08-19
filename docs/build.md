@@ -85,11 +85,11 @@ More on [user, organization, and project pages](https://help.github.com/articles
 <!-- Continue with [Advanced](advanced.md){:.heading.flip-title}
 {:.read-more} -->
 
+<clap-button></clap-button>
+
 [deploy]: https://jekyllrb.com/docs/deployment-methods/
 [lsa]: https://en.wikipedia.org/wiki/Latent_semantic_analysis
 [crb]: http://www.classifier-reborn.com/
 [lsi]: http://www.classifier-reborn.com/lsi
 
 *[LSI]: Latent Semantic Indexer
-
-<clap-button></clap-button>

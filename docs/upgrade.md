@@ -48,8 +48,7 @@ remote_theme: hydecorp/hydejack@v9.0.4
 
 To use the latest version on the `v9` branch on each build, you can use  `hydecorp/hydejack@v9`.
 
+<clap-button></clap-button>
 
 Continue with [Config](config.md){:.heading.flip-title}
 {:.read-more}
-
-<clap-button></clap-button>
