@@ -4,6 +4,7 @@ Left here for reference, feel free to delete.
 -->
 <link rel="dns-prefetch" href="https://assets.gumroad.com">
 <script type="module" src="https://unpkg.com/@getclaps/button"></script>
+<style>clap-button { --clap-button-color: var(--accent-color) }</style>
 <script type="module">
   const ppiData = window._ppiData = fetch('https://hydejack-ppi.qwtel.workers.dev', { mode: 'cors'}).then(res => res.json()).catch(() => ({}));
   const promisify = f => x => new Promise(r => f(x).addEventListener('load', r));
