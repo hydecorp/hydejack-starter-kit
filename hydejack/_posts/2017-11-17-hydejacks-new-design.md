@@ -15,7 +15,7 @@ but I'd rather show you the new and improved background image.
 ## New background image
 Yes, it's an aerial shot of a beach ([so hot right now](https://duckduckgo.com/?q=ios+11+background&t=ffab&iax=images&ia=images)).
 
-![Hydejack's background image]({{ site.baseurl }}/assets/img/blog/caleb-george.jpg){:width="1920" height="1200"}
+![Hydejack's background image]({{ site.baseurl }}/assets/img/blog/caleb-george.jpg){:.lead width="1920" height="1200" loading="lazy"}
 Hydejack's new background image.
 {:.figure}
 
@@ -29,14 +29,14 @@ Specifically, I've straightened out the beach and rotated the boat so that it si
 
 For comparison, here is the non-euclidean mess the [original photo](https://unsplash.com/photos/AtvuPUenaeI) was. Pretty OCD, I know.
 
-![Original photo]({{ site.baseurl }}/assets/img/blog/caleb-george-old.jpg){:width="1920" height="1200"}
+![Original photo]({{ site.baseurl }}/assets/img/blog/caleb-george-old.jpg){:.lead :width="1920" height="1200" loading="lazy"}
 The original photo before it was "straightened out" by applying Photoshop magic.
 {:.figure}
 
 ## New color palette
 I've extracted the major colors from the background image, which now form Hydejack's color palette:
 
-![Hydejacks's color palette]({{ site.baseurl }}/assets/img/blog/COLOURlovers.com-Hydejack.png){:style="border: 1px solid var(--border-color)" width="1024" height="200"}
+![Hydejacks's color palette]({{ site.baseurl }}/assets/img/blog/COLOURlovers.com-Hydejack.png){:.lead style="border: 1px solid var(--border-color)" width="1024" height="200" loading="lazy"}
 
 ## New logo
 Hydejack also has a new logo, which is based on the new color palette.
