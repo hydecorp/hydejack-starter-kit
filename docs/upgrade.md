@@ -41,19 +41,13 @@ and you have to apply them again. Make sure you've made a backup before overwrit
 {:.note}
 
 ## GitHub Pages
-### GH Pages + Free Version
-When building on GitHub Pages, upgrading Hydejack is as simple as setting the `remote_theme` key in `_config.yml` to the latest version:
+When building on GitHub Pages, upgrading Hydejack is as simple as setting the `remote_theme` key in `_config.yml` to the desired version.
 
 ```yml
-remote_theme: hydecorp/hydejack@v9.0.5
+remote_theme: hydecorp/hydejack@v9.1.0
 ```
 
-### GH Pages + PRO Version
-This confiugration is the most difficult to upgrade because we've mashed our content and theme files together. 
-For the most part you have to [follow the steps for the installation](./install.md#gh-pages--pro-version) again. 
-
-Keep in mind that, if you've made changes to any theme files, they will be overwritten! That includes the various `my-*` files that are recommended for customization.
-Make sure you don't override them accidentally (you can use git to restore them).
+To use the latest version on the `v9` branch on each build, you can use  `hydecorp/hydejack@v9`.
 
 
 Continue with [Config](config.md){:.heading.flip-title}
