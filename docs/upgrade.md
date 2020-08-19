@@ -51,3 +51,5 @@ To use the latest version on the `v9` branch on each build, you can use  `hydeco
 
 Continue with [Config](config.md){:.heading.flip-title}
 {:.read-more}
+
+<clap-button></clap-button>

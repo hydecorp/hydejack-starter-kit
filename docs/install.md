@@ -142,3 +142,5 @@ Continue with [Config](config.md){:.heading.flip-title}
 
 
 [upgrade]: upgrade.md
+
+<clap-button></clap-button>

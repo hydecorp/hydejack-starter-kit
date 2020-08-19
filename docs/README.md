@@ -44,3 +44,5 @@ While this manual tries to be beginner-friendly, as a user of Jekyll it is assum
 [LICENSE]: ../LICENSE.md
 [NOTICE]: ../NOTICE.md
 [CHANGELOG]: ../CHANGELOG.md
+
+<clap-button></clap-button>

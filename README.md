@@ -138,6 +138,7 @@ If you are using a different service like MailChimp, you can build a custom news
 
 {% include table.md %}
 
+<clap-button></clap-button>
 
 ## Get It Now
 

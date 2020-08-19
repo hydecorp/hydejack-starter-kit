@@ -185,3 +185,5 @@ to your config file.
 
 
 *[FLIP]: First Last Invert Play
+
+<clap-button></clap-button>
