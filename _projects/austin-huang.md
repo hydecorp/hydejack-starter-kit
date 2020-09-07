@@ -11,7 +11,7 @@ image:
     1920w: /assets/img/projects/austin-huang.jpg
     960w:  /assets/img/projects/austin-huang@0,5x.jpg
     480w:  /assets/img/projects/austin-huang@0,25x.jpg
-date: 24 Mar 2020
+date: 24 Jul 2020
 links:
   - title: Site
     url: https://austinhuang.me
