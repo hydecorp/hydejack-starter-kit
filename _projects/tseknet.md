@@ -22,7 +22,7 @@ Dan implemented a lot of features I want to ship with Hydejack sometime, such as
 
 - Last updated field for posts
 - Estimated reading time
-- Messages/notes with color/intent
+- Colorful callouts (known as "notes" or "messages" in Hydejack)
 - Click to copy code block (coming in 9.1 🤞)
 - A more privacy and user friendly comment system than Disqus...
 
