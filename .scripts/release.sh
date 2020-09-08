@@ -6,11 +6,6 @@ rm -rf   _zip/hydejack-pro-$version
 mkdir -p _zip/hydejack-pro-$version
 cd       _zip/hydejack-pro-$version
 
-# mkdir -p ~/.ssh
-# cp       ~/.ssh/hydejack_8_pro .ssh/
-
-# cp ../../~V9_PROMO_CODE.TXT .
-
 mkdir -p \#jekyll-theme-hydejack
 mkdir -p starter-kit
 
@@ -41,7 +36,8 @@ cp -r \
     -not -name .bundle \
     -not -name node_modules \
     -not -name vendor\
-    -not -name _zip  \
+    -not -name _zip \
+    -not -name workers-site \
     -not -name '.git*' \
     -not -name '*.gem'  \
     -not -name '*~' \
@@ -52,6 +48,25 @@ cp -r \
   starter-kit
 cp -r \#jekyll-theme-hydejack starter-kit
 
+# mkdir starter-kit/_projects
+# cp ../../_projects/qwtel.md         starter-kit/_projects
+# cp ../../_projects/hydejack-site.md starter-kit/_projects
+
+# Make Starter Kit folder for GH Pages
+cp -r starter-kit starter-kit-gh-pages
+
+rsync -a starter-kit-gh-pages/\#jekyll-theme-hydejack/_includes starter-kit-gh-pages
+rsync -a starter-kit-gh-pages/\#jekyll-theme-hydejack/_layouts  starter-kit-gh-pages
+rsync -a starter-kit-gh-pages/\#jekyll-theme-hydejack/_sass     starter-kit-gh-pages
+rsync -a starter-kit-gh-pages/\#jekyll-theme-hydejack/assets    starter-kit-gh-pages
+
+sed -i '' -E 's/^(theme:.*)$/# \1/' starter-kit-gh-pages/_config.yml
+
+cp ../../.scripts/gh-pages-gemfile starter-kit-gh-pages/Gemfile
+rm -r starter-kit-gh-pages/\#jekyll-theme-hydejack
+rm -r starter-kit-gh-pages/Gemfile.lock
+
+# Cleanup
 find . -name '.DS_Store' -delete
 
 # # Generate PDFs.
