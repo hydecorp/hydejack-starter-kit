@@ -8,6 +8,16 @@ layout: page
 * this list will be replaced by the toc
 {:toc .large-only}
 
+## v9.0.5
+Sept 8 2020
+{:.heading.post-date}
+
+* Added GitHub Pages Starter Kit to PRO version
+* Added chapter on how to deploy PRO on GitHub Pages
+* JavaScript source files now included in PRO zip again
+* Updated default config file
+* Changed default code font
+
 ## v9.0.4
 July 15 2020
 {:.heading.post-date}
