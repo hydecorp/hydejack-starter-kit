@@ -61,6 +61,7 @@ rsync -a starter-kit-gh-pages/\#jekyll-theme-hydejack/_sass     starter-kit-gh-p
 rsync -a starter-kit-gh-pages/\#jekyll-theme-hydejack/assets    starter-kit-gh-pages
 
 sed -i '' -E 's/^(theme:.*)$/# \1/' starter-kit-gh-pages/_config.yml
+sed -i '' -E 's/katex/mathjax/' starter-kit-gh-pages/_config.yml
 
 cp ../../.scripts/gh-pages-gemfile starter-kit-gh-pages/Gemfile
 rm -r starter-kit-gh-pages/\#jekyll-theme-hydejack
