@@ -91,5 +91,3 @@ hydejack:
 
 Continue with [Build](build.md){:.heading.flip-title}
 {:.read-more}
-
-<clap-button></clap-button>

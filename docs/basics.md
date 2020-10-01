@@ -576,5 +576,3 @@ Continue with [Writing](writing.md){:.heading.flip-title}
 
 [strings]: https://github.com/hydecorp/hydejack-site/blob/master/_data/strings.yml
 [resumeyml]: https://github.com/hydecorp/hydejack-site/blob/master/_data/resume.yml
-
-<clap-button></clap-button>

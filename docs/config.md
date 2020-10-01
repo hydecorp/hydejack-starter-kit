@@ -569,6 +569,3 @@ Continue with [Basics](basics.md){:.heading.flip-title}
 
 *[FOIT]: Flash of Invisible Text
 *[GA]: Google Analytics
-
-<clap-button></clap-button>
-

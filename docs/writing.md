@@ -396,5 +396,3 @@ Continue with [Scripts](scripts.md){:.heading.flip-title}
 [ksyn]: https://kramdown.gettalong.org/syntax.html
 [ksyntab]:https://kramdown.gettalong.org/syntax.html#tables
 [rtable]: https://dbushell.com/2016/03/04/css-only-responsive-tables/
-
-<clap-button></clap-button>

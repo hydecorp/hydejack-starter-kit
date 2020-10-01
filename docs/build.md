@@ -91,5 +91,3 @@ More on [user, organization, and project pages](https://help.github.com/articles
 [lsi]: http://www.classifier-reborn.com/lsi
 
 *[LSI]: Latent Semantic Indexer
-
-<clap-button></clap-button>

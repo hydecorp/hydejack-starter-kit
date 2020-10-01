@@ -11,8 +11,6 @@ image: /assets/img/blog/hydejack-8.png
 
 {% include table.md %}
 
-<clap-button></clap-button>
-
 ## Features
 {% include features.md %}
 
