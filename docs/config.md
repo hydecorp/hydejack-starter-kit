@@ -557,8 +557,6 @@ Setting `icon` will show a switch to alternate between the light and dark mode a
 
 Finally, setting `always` will cause dark mode to become the default theme at all times (combine with `dynamic: false`).
 
-<clap-button></clap-button>
-
 Continue with [Basics](basics.md){:.heading.flip-title}
 {:.read-more}
 
@@ -571,3 +569,6 @@ Continue with [Basics](basics.md){:.heading.flip-title}
 
 *[FOIT]: Flash of Invisible Text
 *[GA]: Google Analytics
+
+<clap-button></clap-button>
+

@@ -388,8 +388,6 @@ KaTeX does not support the `align` and `align*` environments.
 Instead, `aligned` should be used, e.g. `\begin{aligned} ... \end{aligned}`.
 {:.note}
 
-<clap-button></clap-button>
-
 Continue with [Scripts](scripts.md){:.heading.flip-title}
 {:.read-more}
 
@@ -398,3 +396,5 @@ Continue with [Scripts](scripts.md){:.heading.flip-title}
 [ksyn]: https://kramdown.gettalong.org/syntax.html
 [ksyntab]:https://kramdown.gettalong.org/syntax.html#tables
 [rtable]: https://dbushell.com/2016/03/04/css-only-responsive-tables/
+
+<clap-button></clap-button>

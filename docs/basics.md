@@ -565,7 +565,6 @@ For best results, check the following options in the print popup:
 
 ![Uncheck Headers and footers, check Background graphics](/assets/img/docs/chrome-print.png){:width="299" height="588" loading="lazy"}
 
-<clap-button></clap-button>
 
 Continue with [Writing](writing.md){:.heading.flip-title}
 {:.read-more}
@@ -577,3 +576,5 @@ Continue with [Writing](writing.md){:.heading.flip-title}
 
 [strings]: https://github.com/hydecorp/hydejack-site/blob/master/_data/strings.yml
 [resumeyml]: https://github.com/hydecorp/hydejack-site/blob/master/_data/resume.yml
+
+<clap-button></clap-button>

@@ -136,9 +136,11 @@ $ bundle exec jekyll serve
 
 and point your browser to <http://localhost:4000> to see Hydejack in action.
 
-<clap-button></clap-button>
 
 Continue with [Config](config.md){:.heading.flip-title}
 {:.read-more}
 
+
 [upgrade]: upgrade.md
+
+<clap-button></clap-button>
