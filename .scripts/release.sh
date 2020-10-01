@@ -68,34 +68,34 @@ rm -r starter-kit-gh-pages/Gemfile.lock
 # Cleanup
 find . -name '.DS_Store' -delete
 
-# # Generate PDFs.
-# # This assumes the next version is already online at qwtel.com
-# # This also assumes macOS with chrome installed...
-# function pdfprint {
-#   /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome \
-#     --headless \
-#     --disable-gpu \
-#     --disable-translate \
-#     --disable-extensions \
-#     --disable-background-networking \
-#     --safebrowsing-disable-auto-update \
-#     --disable-sync \
-#     --metrics-recording-only \
-#     --disable-default-apps \
-#     --no-first-run \
-#     --mute-audio \
-#     --hide-scrollbars \
-#     --run-all-compositor-stages-before-draw \
-#     --virtual-time-budget=25000 \
-#     --print-to-pdf="$1.pdf" $2
-# }
+# Generate PDFs.
+# This assumes the next version is already online at qwtel.com
+# This also assumes macOS with chrome installed...
+function pdfprint {
+  /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome \
+    --headless \
+    --disable-gpu \
+    --disable-translate \
+    --disable-extensions \
+    --disable-background-networking \
+    --safebrowsing-disable-auto-update \
+    --disable-sync \
+    --metrics-recording-only \
+    --disable-default-apps \
+    --no-first-run \
+    --mute-audio \
+    --hide-scrollbars \
+    --run-all-compositor-stages-before-draw \
+    --virtual-time-budget=25000 \
+    --print-to-pdf="$1.pdf" $2
+}
 
-# pdfprint "PRO License" "https://hydejack.com/licenses/PRO/"
+pdfprint "CHANGELOG" "https://hydejack.com/CHANGELOG/"
+pdfprint "Documentation" "https://hydejack.com/docs/print/"
+pdfprint "NOTICE" "https://hydejack.com/NOTICE/"
+pdfprint "PRO License" "https://hydejack.com/licenses/PRO/"
 # pdfprint "PRO–hy-drawer License" "https://hydecorp.github.io/drawer/licenses/hydejack/"
 # pdfprint "PRO–hy-push-state License" "https://hydecorp.github.io/push-state/licenses/hydejack/"
-# pdfprint "NOTICE" "https://hydejack.com/NOTICE/"
-# pdfprint "CHANGELOG" "https://hydejack.com/CHANGELOG/"
-# pdfprint "Documentation" "https://hydejack.com/docs/print/"
 
 # Generate the zip
 cd ..; zip -q -r hydejack-pro-$version.zip hydejack-pro-$version/
