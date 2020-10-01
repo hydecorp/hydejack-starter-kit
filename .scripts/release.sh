@@ -48,9 +48,7 @@ cp -r \
   starter-kit
 cp -r \#jekyll-theme-hydejack starter-kit
 
-# mkdir starter-kit/_projects
-# cp ../../_projects/qwtel.md         starter-kit/_projects
-# cp ../../_projects/hydejack-site.md starter-kit/_projects
+cp ../../.scripts/default-gitignore starter-kit/.gitignore
 
 # Make Starter Kit folder for GH Pages
 cp -r starter-kit starter-kit-gh-pages
