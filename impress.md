@@ -7,7 +7,7 @@ Name
 : Florian Klampfer
 
 Address
-: Weiherweg 2A, 5164 Seeham, Austria
+: Kreit 1, 5162 Obertrum am See, Austria
 
 Email
 : [mail@qwtel.com](mailto:mail@qwtel.com)
