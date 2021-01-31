@@ -1,5 +1,5 @@
 ---
-layout: legal
+layout: plain
 ---
 
 # NOTICE
