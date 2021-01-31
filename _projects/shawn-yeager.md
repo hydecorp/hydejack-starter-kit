@@ -4,8 +4,7 @@ title: Shawn Yeager
 caption: Shawn created a professional look with just a few tweaks
 description: >
   Shawn created a professional look with just a few tweaks:
-  A accent color and matching sidebar gradient together with a beautiful typeset
-  make for an impressive personal–professional site.
+  A accent color and matching sidebar gradient together with a beautiful typeset.
 image: 
   path: /assets/img/projects/shawn-yeager.jpg
   srcset:

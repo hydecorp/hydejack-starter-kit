@@ -2,10 +2,14 @@
 layout: home
 cover: true
 image: /assets/img/blog/hydejack-9.jpg
+logo: <img src="/assets/img/logo.png"/>
 description: >
-  Hydejack is a boutique Jekyll theme for hackers, nerds, and academics,
+  A boutique Jekyll theme for hackers, nerds, and academics,
   with a focus on personal sites that are meant to impress.
-hide_description: true
+# hide_description: true
+buttons: |
+  [Download](#download){:.btn.btn-primary}
+  [Documentation](/docs){:.btn.btn-default}
 selected_projects:
   - _projects/nick-engmann.md
   - /showcase/shawn-yeager/
@@ -20,6 +24,20 @@ no_third_column: true
 ---
 
 # Hydejack
+
+<!-- <style>
+  .layout-home>.page>header { 
+    color: #fff;
+    text-shadow: rgb(0 0 0 / 25%) 0.1rem 0.1rem 0.15rem;
+    background-color:rgb(8,46,57);
+    background-image:url(/assets/img/sidebar-bg.jpg) ;
+    background-position: center;
+    background-size: cover;
+  }
+  .layout-home>.page>header .btn-default { 
+    color: #fff;
+  }
+</style> -->
 
 A boutique Jekyll theme for hackers, nerds, and academics.  
 {:.lead}
@@ -76,7 +94,7 @@ Write all content with Markdown. __Hydejack__ gives you [additional CSS classes]
 ## Just Markup
 **Hydejack** boasts a plethora of modern JavaScript, but make no mistake: It's still a _plain old web page_ at its core. It works without JavaScript and you can even view it in a text-based browser like `w3m`:
 
-![w3m Screenshot](assets/img/blog/w3m.png){:width="1920" height="1260" loading="lazy"}
+![w3m Screenshot](assets/img/blog/w3m.png){:.tail width="1920" height="1260" loading="lazy"}
 
 The Hydejack blog, as seen by the text browser `w3m`.
 {:.figcaption}
