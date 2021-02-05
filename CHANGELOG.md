@@ -10,10 +10,10 @@ sitemap: false
 {:toc .large-only}
  
 ## v9.1.0
-Feb 3 2021
+Feb 5 2021
 {:.heading.post-date}
 
-Version 9.1 closes many issues and adds new features:
+Version 9.1 provides minor design changes, new features, and closes multiple issues:
 
 ### Added
 
