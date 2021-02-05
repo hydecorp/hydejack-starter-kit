@@ -7,6 +7,83 @@ layout: plain
 
 * this list will be replaced by the toc
 {:toc .large-only}
+ 
+## v9.1.0
+Feb 3 2021
+{:.heading.post-date}
+
+Version 9.1 closes many issues and adds new features:
+
+### Added
+
+*   Code blocks now can have headers:
+
+    ~~~js
+    // file: 'hello-world.js'
+    console.log('Hello World!');
+    ~~~
+
+    To add the headers, simply make the first line a comment of the form `file: "dir/filename.ext"`.
+
+    * Code blocks now have a copy-to-clipboard button
+  
+*   Resumes can now have download buttons.
+
+    ![Breadcrumbs](assets/img/blog/9.1.0-3.png){:.border}
+
+    Add the following to the front matter. Note that the PDF needs to be pre-generated. 
+    See [the docs](docs/basics.md#downloads) for more.
+
+    ```yml
+    # file: "resume.md"
+    buttons:
+      print: true
+      pdf: /assets/Resume.pdf
+      vcf: http://h2vx.com/vcf/<!--url-->
+      json: /assets/resume.json
+    ```
+
+* Added breadcrumbs above page title:
+
+  ![Breadcrumbs](assets/img/blog/9.1.0-2.png){:.border}
+
+  Note that this requires a [directory-like URL pattern](https://qwtel.com/posts/software/urls-are-directories/) like `/blog/:categories/:year-:month-:day-:title/` (default for Hydejack).
+
+  Disable with `hydejack.no_breadcrumbs`.
+
+* Added "Last modified at" to post layout:
+
+  ![Last modified at](assets/img/blog/9.1.0-1.png){:.border}
+
+  To enable this feature, the post needs to have a `last_modified_at` property with a valid date. You can either set it manually in the frontmatter (not recommended), or use the [`jekyll-last-modified-at` plugin](https://github.com/gjtorikian/jekyll-last-modified-at) to set it for you (Not available on GitHub Pages!). 
+
+  You can remove this element by setting `hide_last_modified` in the front matter. You can disable it for all posts by setting `hydejack.hide_last_modified` in the config file. Setting `hydejack.hide_dates` (PRO version only) will also remove it, together with all other time-related UI elements.
+
+  You can customize the hover text, icon, and date format in `_data/strings.yml` using the following keys: `last_modified_at` (hover text), `last_modified_at_icon` (icon name, default: `icon-history`) and `date_formats.last_modified_at` (date format, default: `%Y-%m-%d`).
+
+* Added option to "invert" / darken the font colors in the sidebar. This enables use of bright sidebar images. 
+  Set `invert_sidebar: true` in the font matter to enable. Use `defaults` in the config file to enable this for all pages.
+
+* Added a demo of [Clap Button](https://getclaps.app/) during development.
+
+* Added option to configure border radius
+* Added dingbat to `page` layout
+* Added `plain` layout that comes without a dingbat
+* Added `smaller` and `larger` CSS classes that set the font size to the respective values.
+* Added options to change the file paths to favicon and apple touch icon in the confog file. Use `favicon` and `apple_touch_icon` respectively.
+
+### Changed
+* Added border radius to many elements
+* Modernized table design
+* [PRO] Setting `hydejack.advertise: false` will now remove the banner from the HTML and the JavaScript console.
+* Changed the box shadow of cards (projects, posts) to reduce the amount of painting the browser has to do on when mouse hovering them.
+* The layout when using the theme without the `no_break_layout` setting is now
+
+
+### Fixes
+* Allow transparent project and post images
+* Removing/leaving out the `logo` key in the config file will now correctly remove the logo from the sidebar
+* [PRO] Fixed a bug that caused blog posts to be included the the search even when set to `sitemap: false` in the front matter.
 
 ## v9.0.5
 Sept 8 2020

@@ -71,8 +71,12 @@ If you save a blurred image as JPG, it will also drastically reduce its file siz
 
 The `accent_image` property also accepts the special value `none` which will remove the default image.
 
-Note that these values can be overwritte on a per-page basis, i.e. you can create a unique look for each page.
-You can also apply a certain look all posts in a category via [front matter defaults][fmd], e.g.:
+If your sidebar image contains bright colors, the white text can be difficult to read. In this case, consider setting
+`invert_sidebar: true` in the front matter to invert the text colors in the sidebar. 
+Use [front matter defaults][fmd] to enable this on all pages (see below).
+
+Note that these values can be overwritten on a per-page basis, i.e. you can create a unique look for each page.
+You can also apply a certain look to all posts in a category via [front matter defaults][fmd], e.g.:
 
 ```yml
 # file: `_config.yml`
