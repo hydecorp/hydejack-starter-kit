@@ -1,28 +1,7 @@
-GIT
-  remote: https://github.com/benbalter/jekyll-default-layout
-  revision: 11054b8af659382223d9afe0a26f1627869a6abb
-  specs:
-    jekyll-default-layout (0.1.4)
-      jekyll (>= 3.0, < 5.0)
-
-GIT
-  remote: https://github.com/hydecorp/jekyll-include-cache
-  revision: 2168263a7c88101f92557e6fe015a276267d8274
-  specs:
-    jekyll-include-cache (0.2.0)
-      jekyll (>= 3.7, < 5.0)
-
-GIT
-  remote: https://github.com/hydecorp/jekyll-seo-tag
-  revision: 6135021410981d2d76878568e9c21cf363882bfe
-  specs:
-    jekyll-seo-tag (2.6.1)
-      jekyll (>= 3.3, < 5.0)
-
 PATH
   remote: #jekyll-theme-hydejack
   specs:
-    jekyll-theme-hydejack (9.0.5)
+    jekyll-theme-hydejack (9.1.0)
       jekyll (>= 3.8, < 5.0)
       jekyll-include-cache (~> 0.2)
 
@@ -32,37 +11,41 @@ GEM
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
     colorator (1.1.0)
-    concurrent-ruby (1.1.7)
+    concurrent-ruby (1.1.8)
     em-websocket (0.5.2)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
     eventmachine (1.2.7)
     eventmachine (1.2.7-x64-mingw32)
     execjs (2.7.0)
-    ffi (1.13.1)
-    ffi (1.13.1-x64-mingw32)
+    ffi (1.14.2)
+    ffi (1.14.2-x64-mingw32)
     forwardable-extended (2.6.0)
     http_parser.rb (0.6.0)
-    i18n (1.8.5)
+    i18n (1.8.7)
       concurrent-ruby (~> 1.0)
-    jekyll (4.1.1)
+    jekyll (4.2.0)
       addressable (~> 2.4)
       colorator (~> 1.0)
       em-websocket (~> 0.5)
       i18n (~> 1.0)
       jekyll-sass-converter (~> 2.0)
       jekyll-watch (~> 2.0)
-      kramdown (~> 2.1)
+      kramdown (~> 2.3)
       kramdown-parser-gfm (~> 1.0)
       liquid (~> 4.0)
       mercenary (~> 0.4.0)
       pathutil (~> 0.9)
       rouge (~> 3.0)
       safe_yaml (~> 1.0)
-      terminal-table (~> 1.8)
+      terminal-table (~> 2.0)
     jekyll-compose (0.12.0)
       jekyll (>= 3.7, < 5.0)
-    jekyll-feed (0.15.0)
+    jekyll-default-layout (0.1.5)
+      jekyll (>= 3.0, < 5.0)
+    jekyll-feed (0.15.1)
+      jekyll (>= 3.7, < 5.0)
+    jekyll-include-cache (0.2.1)
       jekyll (>= 3.7, < 5.0)
     jekyll-last-modified-at (1.3.0)
       jekyll (>= 3.7, < 5.0)
@@ -78,13 +61,15 @@ GEM
       jekyll (>= 3.3, < 5.0)
     jekyll-sass-converter (2.1.0)
       sassc (> 2.0.1, < 3.0)
+    jekyll-seo-tag (2.7.1)
+      jekyll (>= 3.8, < 5.0)
     jekyll-sitemap (1.4.0)
       jekyll (>= 3.7, < 5.0)
     jekyll-titles-from-headings (0.5.3)
       jekyll (>= 3.3, < 5.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
-    katex (0.6.0)
+    katex (0.6.1)
       execjs (~> 2.7)
     kramdown (2.3.0)
       rexml
@@ -94,7 +79,7 @@ GEM
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
     liquid (4.0.3)
-    listen (3.2.1)
+    listen (3.4.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.4.0)
@@ -106,13 +91,13 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     rexml (3.2.4)
-    rouge (3.23.0)
+    rouge (3.26.0)
     safe_yaml (1.0.5)
     sassc (2.4.0)
       ffi (~> 1.9)
     sassc (2.4.0-x64-mingw32)
       ffi (~> 1.9)
-    terminal-table (1.8.0)
+    terminal-table (2.0.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
     unicode-display_width (1.7.0)
 
@@ -123,16 +108,16 @@ PLATFORMS
 DEPENDENCIES
   jekyll (~> 4.1)
   jekyll-compose
-  jekyll-default-layout!
+  jekyll-default-layout
   jekyll-feed
-  jekyll-include-cache!
+  jekyll-include-cache
   jekyll-last-modified-at
   jekyll-optional-front-matter
   jekyll-paginate
   jekyll-readme-index
   jekyll-redirect-from
   jekyll-relative-links
-  jekyll-seo-tag!
+  jekyll-seo-tag
   jekyll-sitemap
   jekyll-theme-hydejack!
   jekyll-titles-from-headings
