@@ -193,7 +193,10 @@ In this case, Hydejack will break the layout and grant the table the entire avai
 | 2 line          |            |                 |                | 2 line          |            |                 |                | 2 line          |            |                 |                | 2 line          |            |                 |                |
 |=================|============|=================|================|=================|============|=================|================|=================|============|=================|================|=================|============|=================|================|
 | Footer row      |            |                 |                | Footer row      |            |                 |                | Footer row      |            |                 |                | Footer row      |            |                 |                |
-{:.fine}
+{:.smaller}
+
+Tables adopts to the font size! You can decrease the size of the table by adding the `smaller` CSS class. Put `{:.smaller}` below the Markdown table, or add `class="smaller"` to a HTML table.
+{:.note}
 
 ### Scroll table
 If the extra space still isn't enough, the table will receive a scrollbar.
@@ -209,7 +212,7 @@ By adding the `scroll-table` class on a table, the behavior is changed to never 
 | 2 line          |            |                 |                | 2 line          |            |                 |                | 2 line          |            |                 |                | 2 line          |            |                 |                |
 |=================|============|=================|================|=================|============|=================|================|=================|============|=================|================|=================|============|=================|================|
 | Footer row      |            |                 |                | Footer row      |            |                 |                | Footer row      |            |                 |                | Footer row      |            |                 |                |
-{:.fine.scroll-table}
+{:.smaller.scroll-table}
 
 You can add the `scroll-table` class to a markdown table by putting `{:.scroll-table}` in line directly below the table.
 To add the class to a HTML table, add the it to the `class` attribute of the `table` tag, e.g. `<table class="scroll-table">`.
@@ -238,7 +241,9 @@ Example:
 | 8th line        |quux        | baz             | bar            | 8th line        |quux        | baz             | bar            | 8th line        |quux        | baz             | bar            | 8th line        |quux        | baz             | bar            |
 | 9th line        |quux        | baz             | bar            | 9th line        |quux        | baz             | bar            | 9th line        |quux        | baz             | bar            | 9th line        |quux        | baz             | bar            |
 | 10th line       |quux        | baz             | bar            | 10th line       |quux        | baz             | bar            | 10th line       |quux        | baz             | bar            | 10th line       |quux        | baz             | bar            |
-{:.fine.flip-table}
+| 11th line       |quux        | baz             | bar            | 11th line       |quux        | baz             | bar            | 11th line       |quux        | baz             | bar            | 11th line       |quux        | baz             | bar            |
+| 12th line       |quux        | baz             | bar            | 12th line       |quux        | baz             | bar            | 12th line       |quux        | baz             | bar            | 12th line       |quux        | baz             | bar            |
+{:.smaller.flip-table}
 
 You can add the `flip-table` class to a markdown table by putting `{:.flip-table}` in line directly below the table.
 To add the class to a HTML table, add the it to the `class` attribute of the `table` tag, e.g. `<table class="flip-table">`.
@@ -271,12 +276,12 @@ To add a code block without syntax highlighting, simply indent 4 spaces (regular
 For code blocks with code highlighting, use `~~~<language>`. This syntax is also supported by GitHub.
 For more information and a list of supported languages, see [Rouge](http://rouge.jneen.net/).
 
-<!-- You can give each code block a title, by making the first line in the block a comment of the form `Title: "<my title>"`. -->
+You can give each code block a filename, by making the first line in the block a comment of the form `File: "dir/filename.ext"`. Use either single quotes `'`, double quotes `"`, or backticks <code>`</code> to surround the filename.
 
 Example:
 
 ~~~js
-// title: "code-block.js"
+// file: "code-block.js"
 // Example can be run directly in your JavaScript console
 
 // Create a function that takes two arguments and returns the sum of those
@@ -294,7 +299,7 @@ An optional caption for a code block
 Markdown:
 
     ~~~js
-    // title: "code-block.js"
+    // file: "code-block.js"
     // Example can be run directly in your JavaScript console
 
     // Create a function that takes two arguments and returns the sum of those
@@ -359,7 +364,7 @@ Markdown:
 
 ~~~latex
 $$
-\begin{aligned}
+\begin{aligned} %!!15
   \phi(x,y) &= \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right) \\[2em]
             &= \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j)            \\[2em]
             &= (x_1, \ldots, x_n)
