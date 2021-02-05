@@ -77,23 +77,6 @@ paginate:              10
 paginate_path:         /:num/
 
 
-# Collections
-# ----------------------------------------------------------------------------------------
-
-collections:
-  featured_categories:
-    permalink:         /:name/
-    output:            true
-
-  featured_tags:
-    permalink:         /tag-:name/
-    output:            true
-
-  projects:
-    permalink:         /projects/:path/
-    output:            true
-
-
 # Theme
 # ---------------------------------------------------------------------------------------
 
@@ -145,12 +128,11 @@ defaults:
     values:
       sitemap:         false
 
-  # Don't include licenses in sitemap (feel free to delete)
   - scope:
       path:            licenses/
     values:
-      sitemap:         false
       layout:          plain
+      sitemap:         false
 
   # # You can use the following to enable comments on all posts.
   # - scope:
@@ -177,7 +159,7 @@ defaults:
         type:          WebPage
 
 kramdown:
-  math_engine:         katex
+  math_engine:         mathjax
   math_engine_opts:    {}
   footnote_backlink:   '&#x21a9;&#xfe0e;'
 
@@ -259,12 +241,15 @@ hydejack:
   # This only affects the meta tag, not the color specified in the app manifest.
   no_theme_color:      false
 
+  # Disable the breadcrumbs above the title
+  no_breadcrumbs:      false
+
   # Set to `true` when building with the `--lsi` option
   use_lsi:             true
 
   # When using Google Analytics, set to `true` to display a cookie notice banner.
   # When enabled, no user-related data will be stored until the user gives consent.
-  cookies_banner:      true
+  cookies_banner:      false
 
   # Set to `true` if you would like to add a "Powered by Hydejack" link in the footer.
   # Note that this setting has no effect when using the free version.
@@ -274,6 +259,9 @@ hydejack:
   # Frequent consumers of online content will know that nothing devalues a post like
   # seeing an old date. 
   hide_dates:          false
+
+  # TODO
+  hide_last_modified:  false
 
   # Note that dark mode only works in the PRO version of Hydejack.
   dark_mode:
@@ -292,9 +280,26 @@ hydejack:
   # Only use if you know what Service Workers are and how they can impact your site!
   offline:
     enabled:           false
-    cache_version:     7
+    cache_version:     13
     precache_assets:
       - /assets/img/swipe.svg
+
+
+# Collections
+# ----------------------------------------------------------------------------------------
+
+collections:
+  featured_categories:
+    permalink:         /:name/
+    output:            true
+
+  featured_tags:
+    permalink:         /tag-:name/
+    output:            true
+
+  projects:
+    permalink:         /projects/:path/
+    output:            true
 
 
 # File inclusion/exclusion
