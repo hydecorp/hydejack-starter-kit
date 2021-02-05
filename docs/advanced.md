@@ -27,7 +27,7 @@ To enable this feature, create a `sw.js` file in the root of your project and ad
 ```js
 ---
 ---
-importScripts("{% raw %}{{ '/assets/js/service-worker.js' | relative_url }}?t={{ site.time | date_to_xmlschema }}{% endraw %}");
+importScripts("{% raw %}{{ '/assets/js/sw.js' | relative_url }}?t={{ site.time | date_to_xmlschema }}{% endraw %}");
 ```
 
 This will load the main service worker script from Hydejack's assets. The `site.time` part is necessary to make the service worker "byte different" every time you create a new build of your site, which triggers an update.
@@ -160,7 +160,7 @@ The rules are as follows:
 * Every line that isn't contained in a block and ends with `// link` will be linked
 * Every line for which none of the above applies will be included in both.
 
-The actual splitting happen with the `_scripts/build-css.sh` script (requires node.js 8+).
+The actual splitting happen with the `.scripts/build-css.sh` script (requires node.js 8+).
 You can run the script once by using
 
 ~~~bash

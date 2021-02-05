@@ -46,6 +46,7 @@ vendor
 *.gem
 _zip
 /stats.json
+/dist
 
 /assets/js/*hydejack-*
 /_sass/*/__*__/*
