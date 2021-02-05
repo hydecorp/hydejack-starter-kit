@@ -21,13 +21,14 @@ jump_to:               Jump to
 navigation:            Navigation
 social:                Social
 links:                 Links
+links_icon:            'icon-link'
 pagination:            Pagination
 newer:                 Newer
 older:                 Older
 forward:               Forward
 back:                  Back
 permalink:             Permalink
-permalink_icon:        content-hash
+permalink_icon:        'content-hash'
 templates:             Templates (for web app)
 present:               present
 toc:                   Table of Contents
@@ -69,6 +70,8 @@ error:
 # Separators
 # ---------------------------------------------------------------------------------------
 posted:                'Posted'
+last_modified_at:      'Last modified at'
+last_modified_at_icon: 'icon-history'
 colon:                 ':'
 separator:             '|'
 category_start:        'in '
@@ -76,11 +79,14 @@ category_spearator:    ' / '
 tag_start:             'on '
 tag_separator:         ', '
 from_to_separator:     '–'
+breadcrumbs_home:      'home'
+breadcrumbs_separator: '/'
 
 # Date formats
 # ---------------------------------------------------------------------------------------
 date_formats:
   post:                '%d %b %Y'
+  last_modified_at:    '%Y-%m-%d'
   related_post:        '%d %b %Y'
   list_group_by:       '%Y'
   list_entry:          '%d %b'
