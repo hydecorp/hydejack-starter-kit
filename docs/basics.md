@@ -9,8 +9,8 @@ sitemap: false
 
 This chapter covers the basics of content creation with Hydejack.
 
-<!-- 0. this unordered seed list will be replaced by toc as unordered list
-{:toc} -->
+0. this unordered seed list will be replaced by toc as unordered list
+{:toc}
 
 
 ## Adding images
