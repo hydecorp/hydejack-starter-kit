@@ -8,6 +8,20 @@ layout: plain
 * this list will be replaced by the toc
 {:toc .large-only}
  
+## v9.1.1
+Feb 9 2021
+{:.heading.post-date}
+
+* Added tooltips to post subtitles and last-modified-at lines.
+* Added tooltips to abberavations (`<abbr>` tags), e.g. IIAFE. See [Example Content](/blog/hyde/2012-02-07-example-content/#inline-html-elements){:.flip-title} on how to use them in markdown.
+* Added tooltips to social media icons (inside main column only)
+* Fixed KaTeX font rendering
+* [PRO] Setting `clap_button: false` will hide the clap button preview, even in development
+* [PRO] A overscrolling ToC will scroll itself to keep the active element in view.
+
+*[IIAFE]: Instantly Invoked Asynchronous Function Expression
+*[ToC]: Table of Contents
+
 ## v9.1.0
 Feb 5 2021
 {:.heading.post-date}
@@ -29,7 +43,7 @@ Version 9.1 provides minor design changes, new features, and closes multiple iss
   
 *   Resumes can now have download buttons.
 
-    ![Breadcrumbs](assets/img/blog/9.1.0-3.png){:.border}
+    ![Breadcrumbs](assets/img/blog/9.1.0-3.png){:.border.lead}
 
     Add the following to the front matter. Note that the PDF needs to be pre-generated. 
     See [the docs](docs/basics.md#downloads) for more.
@@ -45,7 +59,7 @@ Version 9.1 provides minor design changes, new features, and closes multiple iss
 
 * Added breadcrumbs above page title:
 
-  ![Breadcrumbs](assets/img/blog/9.1.0-2.png){:.border}
+  ![Breadcrumbs](assets/img/blog/9.1.0-2.png){:.border.lead}
 
   Note that this requires a [directory-like URL pattern](https://qwtel.com/posts/software/urls-are-directories/) like `/blog/:categories/:year-:month-:day-:title/` (default for Hydejack).
 
@@ -53,7 +67,7 @@ Version 9.1 provides minor design changes, new features, and closes multiple iss
 
 * Added "Last modified at" to post layout:
 
-  ![Last modified at](assets/img/blog/9.1.0-1.png){:.border}
+  ![Last modified at](assets/img/blog/9.1.0-1.png){:.border.lead}
 
   To enable this feature, the post needs to have a `last_modified_at` property with a valid date. You can either set it manually in the frontmatter (not recommended), or use the [`jekyll-last-modified-at` plugin](https://github.com/gjtorikian/jekyll-last-modified-at) to set it for you (Not available on GitHub Pages!). 
 
