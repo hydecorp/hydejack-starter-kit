@@ -46,8 +46,6 @@ async function getFiles(dir) {
       prevVersion: vPrev,
     } = JSON.parse(await readFile(resolve("./#jekyll-theme-hydejack/assets/version.json"), ENC));
 
-    console.log(vNext, vPrev);
-
     const prev = vPrev.replace(/\./g, "\\.");
     const prevRegExp = new RegExp(prev, "g");
 
