@@ -1,6 +1,9 @@
 #!/bin/bash
 
-version=$(cat ./\#jekyll-theme-hydejack/package.json | jq '.version' -r)
+cd ./\#jekyll-theme-hydejack
+git checkout pro/v9
+version=$(cat ./package.json | jq '.version' -r)
+cd ..
 
 rm -rf   _zip/hydejack-pro-$version
 mkdir -p _zip/hydejack-pro-$version
