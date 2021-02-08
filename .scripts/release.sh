@@ -37,6 +37,7 @@ cp -r \
     -not -name .sass-cache \
     -not -name .jekyll-cache \
     -not -name .bundle \
+    -not -name Gemfile.lock \
     -not -name node_modules \
     -not -name vendor\
     -not -name _zip \
@@ -66,7 +67,6 @@ sed -i '' -E 's/katex/mathjax/' starter-kit-gh-pages/_config.yml
 
 cp ../../.scripts/gh-pages-gemfile starter-kit-gh-pages/Gemfile
 rm -r starter-kit-gh-pages/\#jekyll-theme-hydejack
-rm -r starter-kit-gh-pages/Gemfile.lock
 
 # Cleanup
 find . -name '.DS_Store' -delete
