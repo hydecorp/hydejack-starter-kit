@@ -52,7 +52,7 @@ async function getFiles(dir) {
     const args = await Promise.all([
       getFiles(resolve("./hyde/_posts")),
       getFiles(resolve("./hydejack/_posts")),
-      getFiles(resolve("./_projects")),
+      getFiles(resolve("./_showcase")),
       getFiles(resolve("./docs")),
     ]);
       
