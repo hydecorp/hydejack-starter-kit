@@ -27,7 +27,7 @@ He used a ton of Hydejack's customization options, and then wrote his own HTML a
 He wrote about [how to customize Hydejack](https://lazyren.github.io/devlog/how-i-customized-hydejack-theme.html) in his devlog,
 where you can also find other Jekyll-related topics. [Go check it out!](https://lazyren.github.io/devlog/)
 
-If you intend to use Hydejack to write in Korean, you can [see what it looks like](https://lazyren.github.io/review/various-keyboard-layouts.html) on his site as well.
+If you intend to use Hydejack with Korean, you can [see what it looks like](https://lazyren.github.io/review/various-keyboard-layouts.html) on his site as well.
 
 <script type="module">
   const classes = document.body.classList.toString();

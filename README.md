@@ -11,7 +11,7 @@ buttons: |
   [Download](#download){:.btn.btn-primary}
   [Documentation](/docs){:.btn.btn-default}
 selected_projects:
-  - _projects/nick-engmann.md
+  - _showcase/nick-engmann.md
   - /showcase/shawn-yeager/
 projects_page: showcase.md
 selected_posts:

@@ -1,7 +1,7 @@
 PATH
   remote: #jekyll-theme-hydejack
   specs:
-    jekyll-theme-hydejack (9.1.1)
+    jekyll-theme-hydejack (9.1.2)
       jekyll (>= 3.8, < 5.0)
       jekyll-include-cache (~> 0.2)
 
