@@ -8,6 +8,14 @@ sitemap: false
 
 * this list will be replaced by the toc
 {:toc .large-only}
+
+## v9.1.2
+Feb 11 2021
+{:.heading.post-date}
+
+* Fix [#258](https://github.com/hydecorp/hydejack/issues/258)
+* Fix [#259](https://github.com/hydecorp/hydejack/issues/259)
+
  
 ## v9.1.1
 Feb 9 2021
