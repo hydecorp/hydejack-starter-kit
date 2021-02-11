@@ -39,6 +39,7 @@ validation-report.json
 
 # Folders to ignore
 node_modules
+package*.json
 vendor
 .sass-cache
 .jekyll-metadata
