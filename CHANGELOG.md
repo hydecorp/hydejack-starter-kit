@@ -51,7 +51,7 @@ Version 9.1 provides minor design changes, new features, and closes multiple iss
   
 *   Resumes can now have download buttons.
 
-    ![Breadcrumbs](assets/img/blog/9.1.0-3.png){:.border.lead}
+    ![Download Buttons](/assets/img/blog/9.1.0-3.png){:.border.lead width="1776" height="258" loading="lazy"}
 
     Add the following to the front matter. Note that the PDF needs to be pre-generated. 
     See [the docs](docs/basics.md#downloads) for more.
@@ -65,29 +65,28 @@ Version 9.1 provides minor design changes, new features, and closes multiple iss
       json: /assets/resume.json
     ```
 
-* Added breadcrumbs above page title:
+*   Added breadcrumbs above page title:
 
-  ![Breadcrumbs](assets/img/blog/9.1.0-2.png){:.border.lead}
+    ![Breadcrumbs](/assets/img/blog/9.1.0-2.png){:.border.lead width="1588" height="164" loading="lazy"}
 
-  Note that this requires a [directory-like URL pattern](https://qwtel.com/posts/software/urls-are-directories/) like `/blog/:categories/:year-:month-:day-:title/` (default for Hydejack).
+    Note that this requires a [directory-like URL pattern](https://qwtel.com/posts/software/urls-are-directories/) like `/blog/:categories/:year-:month-:day-:title/` (default for Hydejack).
 
-  Disable with `hydejack.no_breadcrumbs`.
+    Disable with `hydejack.no_breadcrumbs`.
 
-* Added "Last modified at" to post layout:
+*   Added "Last modified at" to post layout:
 
-  ![Last modified at](assets/img/blog/9.1.0-1.png){:.border.lead}
+    ![Last modified at](/assets/img/blog/9.1.0-1.png){:.border.lead width="1254" height="218" loading="lazy"}
 
-  To enable this feature, the post needs to have a `last_modified_at` property with a valid date. You can either set it manually in the frontmatter (not recommended), or use the [`jekyll-last-modified-at` plugin](https://github.com/gjtorikian/jekyll-last-modified-at) to set it for you (Not available on GitHub Pages!). 
+    To enable this feature, the post needs to have a `last_modified_at` property with a valid date. You can either set it manually in the frontmatter (not recommended), or use the [`jekyll-last-modified-at` plugin](https://github.com/gjtorikian/jekyll-last-modified-at) to set it for you (Not available on GitHub Pages!). 
 
-  You can remove this element by setting `hide_last_modified` in the front matter. You can disable it for all posts by setting `hydejack.hide_last_modified` in the config file. Setting `hydejack.hide_dates` (PRO version only) will also remove it, together with all other time-related UI elements.
+    You can remove this element by setting `hide_last_modified` in the front matter. You can disable it for all posts by setting `hydejack.hide_last_modified` in the config file. Setting `hydejack.hide_dates` (PRO version only) will also remove it, together with all other time-related UI elements.
 
-  You can customize the hover text, icon, and date format in `_data/strings.yml` using the following keys: `last_modified_at` (hover text), `last_modified_at_icon` (icon name, default: `icon-history`) and `date_formats.last_modified_at` (date format, default: `%Y-%m-%d`).
+    You can customize the hover text, icon, and date format in `_data/strings.yml` using the following keys: `last_modified_at` (hover text), `last_modified_at_icon` (icon name, default: `icon-history`) and `date_formats.last_modified_at` (date format, default: `%Y-%m-%d`).
 
 * Added option to "invert" / darken the font colors in the sidebar. This enables use of bright sidebar images. 
   Set `invert_sidebar: true` in the font matter to enable. Use `defaults` in the config file to enable this for all pages.
 
 * Added a demo of [Clap Button](https://getclaps.app/) during development.
-
 * Added option to configure border radius
 * Added dingbat to `page` layout
 * Added `plain` layout that comes without a dingbat

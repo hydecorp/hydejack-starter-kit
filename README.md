@@ -15,9 +15,9 @@ selected_projects:
   - /showcase/shawn-yeager/
 projects_page: showcase.md
 selected_posts:
+  - /blog/hydejack/2021-02-13-whats-new-in-hydejack-9-1/
   - hydejack/_posts/2020-07-03-introducing-hydejack-9.md
   - /blog/hydejack/2018-09-01-introducing-dark-mode/
-  - hydejack/_posts/2018-06-30-introducing-hydejack-8.md
   - hydejack/_posts/2018-06-01-example-content-iii.md
 posts_page: /posts/
 no_third_column: true
