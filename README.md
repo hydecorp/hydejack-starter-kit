@@ -21,6 +21,7 @@ selected_posts:
   - hydejack/_posts/2018-06-01-example-content-iii.md
 posts_page: /posts/
 no_third_column: true
+permalink: /
 ---
 
 # Hydejack
