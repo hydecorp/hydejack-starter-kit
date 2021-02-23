@@ -8,6 +8,16 @@ layout: plain
 * this list will be replaced by the toc
 {:toc .large-only}
 
+## v9.1.3
+Feb 23 2021
+{:.heading.post-date}
+
+* [PRO] Adjusted calculation to dark mode background color to prevent red tint of grey colors
+* [PRO] Fix ToC scroll into view bug
+* Hide underline in tooltips
+* Show clap button on collection pages
+* Show dingbat in `plain` layout
+
 ## v9.1.2
 Feb 11 2021
 {:.heading.post-date}
