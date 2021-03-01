@@ -18,7 +18,7 @@ image: /assets/img/blog/hydejack-8.png
 
 Use the the form below to purchase Hydejack PRO:
 
-<div class="gumroad-product-embed" data-gumroad-product-id="nuOluY"><a href="https://gumroad.com/l/nuOluY">Loading…</a></div>
+<iframe src="https://flurly.com/p/hydejack-pro" class="border border-radius" style="width:100%;height:1500px"></iframe>
 
 
 [blog]: /blog/

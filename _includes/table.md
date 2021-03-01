@@ -22,45 +22,23 @@ The table below shows what's included in each version:
 | No Hydejack Branding          |                     | &#x2714;            |
 | License                       | [GPL-3.0][lic]      | [PRO]               |
 | Source                        | [GitHub][src]       | Included            |
-| __Price__                     | __Free__            | <span class="price"><del>$99</del> <strong class="new-price">$69</strong> <small>One-Time Payment</small></span> [^22] |
+| __Price__                     | __Free__            | __$69__ <small>One-Time Payment</small> |
 |===============================+=====================+=====================|
-|                               | [__Download__][kit] | [__Buy PRO__][buy]{:.gumroad-button data-gumroad-single-product="true"} |
+|                               | [__Download__][kit]{:.btn.btn-default} | [Checkout](https://flurly.com/p/hydejack-pro){:.btn.btn-primary.btn-lg.heading} [^22] |
 {:.stretch-table.dl-table}
 
 [^21]: Large screens (> 1664px width) only.
 
-[^22]: Price now permanently reduced by <strong class="discount">30%</strong>! Use the offer code <strong class="code">QR0TW8M</strong> to apply this discount later.
+[^22]: If PayPal is your only payment option, use [this link](https://gumroad.com/l/nuOluY) instead. Note that the price is increased due to PayPal fees.
+
+<!-- [^22]: Price now permanently reduced by <strong class="discount">30%</strong>! Use the offer code <strong class="code">QR0TW8M</strong> to apply this discount later.
        {:.ppi}
-       If you're upgrading from Hydejack 8, find your upgrade discount code in the latest zip download.
+       If you're upgrading from Hydejack 8, find your upgrade discount code in the latest zip download. -->
 
 <script type="module">
   document.querySelectorAll('a[href="#_search-input"]').forEach(el => {
     if (!el.dataset.done) {
       el.addEventListener('click', () => document.getElementById('_search-input').focus());
-      el.dataset.done = '';
-    }
-  });
-
-  document.querySelectorAll('.ppi').forEach(async el => {
-    if (!el.dataset.done) {
-      const { name, emoji, code, discount } = await window._ppiData;
-      if (!code) return;
-      el.querySelectorAll('.name').forEach(el => { el.innerText = name });
-      el.querySelectorAll('.emoji').forEach(el => { el.innerText = emoji; el.title = name });
-      el.querySelectorAll('.code').forEach(el => { el.innerText = code.toUpperCase() });
-      el.querySelectorAll('.discount').forEach(el => { el.innerText = `${discount * 100}%` });
-      el.dataset.done = '';
-    }
-  });
-
-  document.querySelectorAll('.price').forEach(async el => {
-    if (!el.dataset.done) {
-      const { name, emoji, code, discount } = await window._ppiData;
-      if (!code) return;
-      el.querySelectorAll('.name').forEach(el => { el.innerText = name });
-      el.querySelectorAll('.emoji').forEach(el => { el.innerText = emoji; el.title = name });
-      el.querySelectorAll('.code').forEach(el => { el.innerText = code.toUpperCase() });
-      el.querySelectorAll('.new-price').forEach(el => { el.innerText = `$${99 - discount * 100}` });
       el.dataset.done = '';
     }
   });
