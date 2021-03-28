@@ -8,13 +8,13 @@
 #
 # Fill out the information below:
 
-name = "my-hydejack-site" # Change name
+name = "hydejack-site"
 type = "webpack"
-account_id = "{{ ACCOUNT_ID }}" # Replace with your Cloudflare account id
-workers_dev = true # Change when using custom domain
-route = ""
-zone_id = ""
+account_id = "efb289061241436254219b424fcea4cf"
+zone_id = "7ba22a65e18ec5a38434032407597e5c"
+route = "https://hydejack.com/*"
+workers_dev = true
 
 [site]
-bucket = "./_site"
+bucket = "./build"
 entry-point = "workers-site"
