@@ -8,6 +8,19 @@ layout: plain
 * this list will be replaced by the toc
 {:toc .large-only}
 
+## v9.1.3
+Mar 28 2021
+{:.heading.post-date}
+
+### Added
+* Allow setting custom Google Fonts providers via `google_fonts_url` ([#264](https://github.com/hydecorp/hydejack/issues/264)). Defaults to `https://fonts.googleapis.com`. 
+
+### Fixes
+* Merged [#266](https://github.com/hydecorp/hydejack/pull/266) --- Fixed a bug that caused incorrect links to be rendered.
+* Merged [#267](https://github.com/hydecorp/hydejack/pull/267) --- Fixed a bug that caused incorrect sub-titles when using multiple categories/tags.
+* Fix [#262](https://github.com/hydecorp/hydejack/issues/262) --- Fixed a bug that causes warnings when not providing a skill level / fluency level in the resume.
+* Fixed a bug preventing scrolling when using sticky ToC with certain aspect ratios.
+
 ## v9.1.2
 Feb 11 2021
 {:.heading.post-date}
