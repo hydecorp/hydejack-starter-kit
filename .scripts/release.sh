@@ -47,6 +47,7 @@ cp -r \
     -not -name '*~' \
     -not -name '~*' \
     -not -name '_site*' \
+    -not -name 'build*' \
     -mindepth 1 \
     -maxdepth 1) \
   starter-kit
