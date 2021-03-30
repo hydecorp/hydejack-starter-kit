@@ -9,6 +9,13 @@ sitemap: false
 * this list will be replaced by the toc
 {:toc .large-only}
 
+## v9.1.4
+Mar 30 2021
+{:.heading.post-date}
+
+* Fixed scroll position restoration in webkit.
+* Fixed an issue that caused clap button to use canonical url incorrectly.
+
 ## v9.1.3
 Mar 28 2021
 {:.heading.post-date}
