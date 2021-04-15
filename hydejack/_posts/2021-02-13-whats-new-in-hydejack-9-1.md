@@ -107,7 +107,7 @@ For more, see [the dedicated website](https://getclaps.app/).
 ***
 {:style="margin:2rem 0"}
 
-There are many more changes and bugfixes in 9.1. See the [CHANGELOG](/changelog/){:.heading.flip-title} for details.
+There are many more changes and bugfixes in 9.1. See the [CHANGELOG](/CHANGELOG/){:.heading.flip-title} for details.
 
 
 ## Credits
