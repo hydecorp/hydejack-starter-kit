@@ -3,7 +3,7 @@
 
 # Uncomment and set the URL of your site (with protocol, e.g. `https://`)
 # NOTE: You don't need to provide this property when hosting on GitHub Pages or Netlify.
-# url:                   https://username.github.io
+url:                   https://lic3n.github.io
 
 # Uncomment and set the "base URL" of your site.
 # When your site is in a subdirectory, set to `/<name of directory>`,
@@ -20,16 +20,18 @@
 lang:                  en
 
 # The title of your blog. Used in the sidebar and the browser tab.
-title:                 Starter Kit
+title:                 profile page
 
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
 description:           >
-  Hydejack is a boutique Jekyll theme for hackers, nerds, and academics,
-  with a focus on personal sites that are meant to impress.
+  Professional enthusiast eager to contribute to the team success 
+  through learning, hard work, attention to detail, and excellent agile skills
+  Growing in the mastering of DevOps and cybersecurity practices for 
+  the Cloud environment. Motivated to learn, grow and excel my career
 
 # A shorter description for the sidebar.
-tagline:               Change `tagline` in `_config.yml`
+tagline:               cybersecurity
 
 # A list of keywords for your blog
 keywords:              []
