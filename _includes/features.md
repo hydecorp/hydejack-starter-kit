@@ -1,7 +1,7 @@
 An incomplete list of features included in all versions of **Hydejack**:
 
 * Responsive layout with unique design features for every screen size
-* Cover Pages for a stunning fist impression.
+* Cover Pages for a stunning first impression.
 * Customizable sidebar and touch-enabled drawer menu
 * Single Page Web App-style page loading
 * Advanced FLIP animations, inspired by Material Design
