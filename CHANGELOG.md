@@ -525,7 +525,7 @@ So far Hydejack has been a decent Jekyll theme, but with v8 it really starts sta
 * Added the `figure` CSS class, which allows images to have nicer-looking captions. E.g.
 
   ~~~md
-  ![An image with a caption](https://placehold.it/800x50){:.lead}
+  ![An image with a caption](https://via.placeholder.com/800x50){:.lead}
   A caption to an image.
   {:.figure}
   ~~~
