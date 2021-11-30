@@ -11,8 +11,8 @@ redirect_from:
   - /examples/
 ---
 
-If you'd like to have your blog or project featured here, please contact me at [mail@qwtel.com](mailto:mail@qwtel.com).  
+<!-- If you'd like to have your blog or project featured here, please contact me at [mail@qwtel.com](mailto:mail@qwtel.com).  
 I'm specifically looking for sites with Hydejack 9 (free or PRO) that show variety and customization.
 {:.note title="Call to action"}
 
-<br/>
+<br/> -->
