@@ -9,6 +9,16 @@ sitemap: false
 * this list will be replaced by the toc
 {:toc .large-only}
 
+## v9.1.5
+Nov 30 2021
+{:.heading.post-date}
+
+* Now works with Ruby 3.0
+* Fixed theme color issue when using multiple theme colors
+* Fixed UTF-8 characters not rendering correctly in breadcrumbs
+* Fixed empty string warning in resume layout
+* Removed clap button info box
+
 ## v9.1.4
 Mar 30 2021
 {:.heading.post-date}
@@ -526,7 +536,7 @@ So far Hydejack has been a decent Jekyll theme, but with v8 it really starts sta
 * Added the `figure` CSS class, which allows images to have nicer-looking captions. E.g.
 
   ~~~md
-  ![An image with a caption](https://placehold.it/800x50){:.lead}
+  ![An image with a caption](https://via.placeholder.com/800x50){:.lead}
   A caption to an image.
   {:.figure}
   ~~~

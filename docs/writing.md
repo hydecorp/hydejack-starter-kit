@@ -107,11 +107,11 @@ You can make an image span the full width by adding the `lead` class.
 
 Example:
 
-![Full-width image](https://placehold.it/800x100){:.lead width="800" height="100" loading="lazy"}
+![Full-width image](https://via.placeholder.com/800x100){:.lead width="800" height="100" loading="lazy"}
 
 Markdown:
 ~~~markdown
-![Full-width image](https://placehold.it/800x100){:.lead width="800" height="100" loading="lazy"}
+![Full-width image](https://via.placeholder.com/800x100){:.lead width="800" height="100" loading="lazy"}
 ~~~
 
 It is recommended to provide the dimension of the image via the `width` and `height` attributes, 
@@ -125,14 +125,14 @@ but it has been removed in v9 in favor of this more standards-based approach.
 ## Adding image captions
 You can add captions to large images by adding the `figcaption` class to the paragraph after the image:
 
-![Full-width image](https://placehold.it/800x100){:.lead width="800" height="100" loading="lazy"}
+![Full-width image](https://via.placeholder.com/800x100){:.lead width="800" height="100" loading="lazy"}
 
 An optional caption for an image.
 {:.figcaption}
 
 Markdown:
 ~~~md
-![Full-width image](https://placehold.it/800x100){:.lead width="800" height="100" loading="lazy"}
+![Full-width image](https://via.placeholder.com/800x100){:.lead width="800" height="100" loading="lazy"}
 
 A caption for an image.
 {:.figcaption}
