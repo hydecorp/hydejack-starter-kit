@@ -94,9 +94,8 @@ Note that this depends on the `last_modified_at` property of the page, which mus
 
 ## Clap Button Preview
 I've been trying something new with [**getclaps.app**](https://getclaps.app/), a feedback and analytics tool for personal sites like those powered by Hydejack. 
-It looks like this:
 
-<clap-button style="--clap-button-color:var(--body-color);margin:2rem auto 3rem;width:3rem;height:3rem;font-size:smaller" nowave></clap-button>
+<!-- <clap-button style="--clap-button-color:var(--body-color);margin:2rem auto 3rem;width:3rem;height:3rem;font-size:smaller" nowave></clap-button> -->
 
 It is a separate product from Hydejack and not enabled by default. Because it depends on a backend component, it requires a monthly fee. 
 If enabled, it is placed below posts and pages where the dingbat character (❖) used to be.
