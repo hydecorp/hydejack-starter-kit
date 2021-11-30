@@ -8,6 +8,16 @@ layout: plain
 * this list will be replaced by the toc
 {:toc .large-only}
 
+## v9.1.5
+Nov 30 2021
+{:.heading.post-date}
+
+* Now works with Ruby 3.0
+* Fixed theme color issue when using multiple theme colors
+* Fixed UTF-8 characters not rendering correctly in breadcrumbs
+* Fixed empty string warning in resume layout
+* Removed clap button info box
+
 ## v9.1.4
 Mar 30 2021
 {:.heading.post-date}
