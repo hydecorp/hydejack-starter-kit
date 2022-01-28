@@ -394,7 +394,7 @@ titles_from_headings:
   collections:         true
 
 compress_html:
-  comments:            ["<!-- ", " -->"]
+  comments:            ["<!--", "-->"]
   clippings:           all
   endings:             all
   ignore:
