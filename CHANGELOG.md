@@ -9,6 +9,15 @@ sitemap: false
 * this list will be replaced by the toc
 {:toc .large-only}
 
+## v9.1.6
+Feb 07 2022
+{:.heading.post-date}
+
+* Removed unused clap button HTML tags
+* Fixed an issue with using `featured` projects on the `welcome` layout
+* Minor style adjustments
+* Updated dependencies
+
 ## v9.1.5
 Nov 30 2021
 {:.heading.post-date}
