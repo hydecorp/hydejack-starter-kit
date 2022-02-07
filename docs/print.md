@@ -57,7 +57,7 @@ You can now also [![Deploy to Netlify][dtn]][nfy]{:.no-mark-external} directly.
 {:.note}
 
 [hsc]: https://github.com/hydecorp/hydejack-starter-kit
-[src]: https://github.com/hydecorp/hydejack-starter-kit/archive/v9.1.5.zip
+[src]: https://github.com/hydecorp/hydejack-starter-kit/archive/v9.1.6.zip
 [nfy]: https://app.netlify.com/start/deploy?repository=https://github.com/hydecorp/hydejack-starter-kit
 [dtn]: https://www.netlify.com/img/deploy/button.svg
 
@@ -118,7 +118,7 @@ For existing sites, you can instead set the `remote_theme` key as follows:
 
 ```yml
 ## file: `_config.yml`
-remote_theme: hydecorp/hydejack@v9.1.5
+remote_theme: hydecorp/hydejack@v9.1.6
 ```
 
 Make sure the `plugins` list contains `jekyll-include-cache` (create if it doesn't exist):
@@ -213,7 +213,7 @@ and you have to apply them again. Make sure you've made a backup before overwrit
 When building on GitHub Pages, upgrading Hydejack is as simple as setting the `remote_theme` key in `_config.yml` to the desired version.
 
 ```yml
-remote_theme: hydecorp/hydejack@v9.1.5
+remote_theme: hydecorp/hydejack@v9.1.6
 ```
 
 To use the latest version on the `v9` branch on each build, you can use  `hydecorp/hydejack@v9`.
@@ -245,6 +245,9 @@ The `url` is the domain of your site, including the protocol (`http` or `https`)
 url: https://qwtel.com
 ~~~
 
+You don't need to provide this property when hosting on GitHub Pages or Netlify.
+{:.note}
+
 If your entire Jekyll blog is hosted in a subdirectory of your page, provide the path in `baseurl` with a leading `/`, but no trailing `/`,
 e.g.
 
@@ -255,6 +258,8 @@ baseurl: /hydejack
 
 Otherwise, provide the empty string `''`
 
+You don't need to provide this property when hosting on GitHub Pages or Netlify.
+{:.note}
 
 #### GitHub Pages
 When hosting on [GitHub Pages](https://pages.github.com/) the `url` is `https://<username>.github.io`
@@ -285,8 +290,12 @@ If you save a blurred image as JPG, it will also drastically reduce its file siz
 
 The `accent_image` property also accepts the special value `none` which will remove the default image.
 
-Note that these values can be overwritte on a per-page basis, i.e. you can create a unique look for each page.
-You can also apply a certain look all posts in a category via [front matter defaults][fmd], e.g.:
+If your sidebar image contains bright colors, the white text can be difficult to read. In this case, consider setting
+`invert_sidebar: true` in the front matter to invert the text colors in the sidebar. 
+Use [front matter defaults][fmd] to enable this on all pages (see below).
+
+Note that these values can be overwritten on a per-page basis, i.e. you can create a unique look for each page.
+You can also apply a certain look to all posts in a category via [front matter defaults][fmd], e.g.:
 
 ```yml
 ## file: `_config.yml`
@@ -553,7 +562,7 @@ author:
   social:
     email:    mail@qwtel.com
     rss:      {{ site.url }}{{ site.baseurl }}/feed.xml # make sure you provide an absolute URL
-    download: https://github.com/hydecorp/hydejack/archive/v9.1.5.zip
+    download: https://github.com/hydecorp/hydejack/archive/v9.1.6.zip
 ~~~
 
 
@@ -674,10 +683,10 @@ There are a couple of things to know about this gem:
 *  It is not supported on GitHub Pages. 
    You have to build the site on your machine before uploading to GitHub,
    or use a more permissive cloud building tool such as Netlify. 
-   See [the section below](#mathjax) for an alternative.
 *  You need some kind of JavaScript runtime on your machine.
    Usually installing [NodeJS](https://nodejs.org/en/download/) will suffice. 
-   For details, see <https://github.com/kramdown/math-katex#documentation>
+   Alternatively, adding `gem "duktape"` will also do.
+   For more, see <https://github.com/kramdown/math-katex#documentation>
 
 Before you add math content, remember to run `bundle install` and restart Jekyll.
 
@@ -685,7 +694,19 @@ Before you add math content, remember to run `bundle install` and restart Jekyll
 [katex]: https://khan.github.io/KaTeX/
 [mathjax]: https://www.mathjax.org/
 
-### Adding custom favicons and app icons
+
+### Adding custom Favicons and App Icons
+#### Changing the Favicon
+By default, Hydejack will use the Favicon from `/assets/icons/favicon.ico` and Apple Touch Icon from `/assets/icons/icon-192x192.png`.
+You can either override these files, or override the path in the config file via `favicon` and `app_touch_icon` keys:
+
+```yml
+## file: "_config.yml"
+favicon: /favicon.ico
+apple_touch_icon: /assets/img/logo.png
+```
+
+#### Changing the App Icons
 By default, Hydejack includes its own favicon, as well as app icons in 8 different resolutions.
 
 | Name               | Resolution |
@@ -985,7 +1006,7 @@ Some content
 ### Adding a cover page
 Hydejack 8 introduces cover pages, i.e. pages witht he sidebar opened, so that it spans the entire screen. This feature is intended for landing pages. To enable it on a page, simply add `cover: true` to the front matter.
 
-![Cover page example](../assets/img/blog/hydejack-8@0,5x.png){:width="960" height="540"}
+![Cover page example](../assets/img/blog/hydejack-8@0,5x.png){:.lead width="960" height="540" loading="lazy"}
 
 ~~~yml
 ## file: `index.md`
@@ -1301,11 +1322,8 @@ If a keyword is not recognized, the provided text will be spelled out  instead. 
 
 ~~~yml
 ## file: `resume.md`
----
-layout: resume
 no_language_icons: true
 no_skill_icons: true
----
 ~~~
 
 #### Adding a specialized resume or multiple resumes
@@ -1328,25 +1346,30 @@ resume:
 ---
 ~~~
 
-<!-- ### Downloads
-By default, the resume layout will show buttons for printing, vCard and JSON Resume button. 
-To disable these buttons, add `no_buttons: true` to the front matter.
+#### Downloads
+You can add buttons to let readers print or download your resume in various formats. 
+Add the following to the front matter to add all 4 buttons:
 
-The PDF download can't be generated automatically. Instead, place `Resume.pdf` in your `assets` folder:
-
-Downloads currently aren't supported when using multiple resumes. Use the `no_buttons` option to avoid confusion.
-{:.note}
-
+```yml
+## file: "resume.md"
+buttons:
+  print: true
+  pdf: /assets/Resume.pdf
+  vcf: http://h2vx.com/vcf/<!--url-->
+  json: /assets/resume.json
 ```
-├── assets
-│   └── Resume.pdf
-```
 
-You can generate the `Resume.pdf` from your resume page itself. 
-Use your browser's "Print to PDF" feature (Chrome works best). 
+To remove a button remove the corresponding key from the hash. 
+
+While the `resume.json` is can be generated by Jekyll itself, and the vCard can be generated by an [external service][h2vx],
+the PDF needs to be pre-generated by you.
+
+You can render a PDF from the resume page itself by using your browser's "Print to PDF" feature (Chrome works best). 
 For best results, check the following options in the print popup:
 
-![Uncheck Headers and footers, check Background graphics](/assets/img/docs/chrome-print.png){:width="299" height="588" loading="lazy"} -->
+[h2vx]: http://h2vx.com/vcf/
+
+![Uncheck Headers and footers, check Background graphics](/assets/img/docs/chrome-print.png){:width="299" height="588" loading="lazy"}
 
 
 
@@ -1465,11 +1488,11 @@ You can make an image span the full width by adding the `lead` class.
 
 Example:
 
-![Full-width image](https://placehold.it/800x100){:.lead width="800" height="100" loading="lazy"}
+![Full-width image](https://via.placeholder.com/800x100){:.lead width="800" height="100" loading="lazy"}
 
 Markdown:
 ~~~markdown
-![Full-width image](https://placehold.it/800x100){:.lead width="800" height="100" loading="lazy"}
+![Full-width image](https://via.placeholder.com/800x100){:.lead width="800" height="100" loading="lazy"}
 ~~~
 
 It is recommended to provide the dimension of the image via the `width` and `height` attributes, 
@@ -1483,14 +1506,14 @@ but it has been removed in v9 in favor of this more standards-based approach.
 ### Adding image captions
 You can add captions to large images by adding the `figcaption` class to the paragraph after the image:
 
-![Full-width image](https://placehold.it/800x100){:.lead width="800" height="100" loading="lazy"}
+![Full-width image](https://via.placeholder.com/800x100){:.lead width="800" height="100" loading="lazy"}
 
 An optional caption for an image.
 {:.figcaption}
 
 Markdown:
 ~~~md
-![Full-width image](https://placehold.it/800x100){:.lead width="800" height="100" loading="lazy"}
+![Full-width image](https://via.placeholder.com/800x100){:.lead width="800" height="100" loading="lazy"}
 
 A caption for an image.
 {:.figcaption}
@@ -1549,7 +1572,12 @@ In this case, Hydejack will break the layout and grant the table the entire avai
 | Third line      |quux        | baz             | bar            | Third line      |quux        | baz             | bar            | Third line      |quux        | baz             | bar            | Third line      |quux        | baz             | bar            |
 | Second body     |            |                 |                | Second body     |            |                 |                | Second body     |            |                 |                | Second body     |            |                 |                |
 | 2 line          |            |                 |                | 2 line          |            |                 |                | 2 line          |            |                 |                | 2 line          |            |                 |                |
+|=================|============|=================|================|=================|============|=================|================|=================|============|=================|================|=================|============|=================|================|
 | Footer row      |            |                 |                | Footer row      |            |                 |                | Footer row      |            |                 |                | Footer row      |            |                 |                |
+{:.smaller}
+
+Tables adopts to the font size! You can decrease the size of the table by adding the `smaller` CSS class. Put `{:.smaller}` below the Markdown table, or add `class="smaller"` to a HTML table.
+{:.note}
 
 #### Scroll table
 If the extra space still isn't enough, the table will receive a scrollbar.
@@ -1563,40 +1591,13 @@ By adding the `scroll-table` class on a table, the behavior is changed to never 
 | Third line      |quux        | baz             | bar            | Third line      |quux        | baz             | bar            | Third line      |quux        | baz             | bar            | Third line      |quux        | baz             | bar            |
 | Second body     |            |                 |                | Second body     |            |                 |                | Second body     |            |                 |                | Second body     |            |                 |                |
 | 2 line          |            |                 |                | 2 line          |            |                 |                | 2 line          |            |                 |                | 2 line          |            |                 |                |
+|=================|============|=================|================|=================|============|=================|================|=================|============|=================|================|=================|============|=================|================|
 | Footer row      |            |                 |                | Footer row      |            |                 |                | Footer row      |            |                 |                | Footer row      |            |                 |                |
-{:.scroll-table}
+{:.smaller.scroll-table}
 
 You can add the `scroll-table` class to a markdown table by putting `{:.scroll-table}` in line directly below the table.
 To add the class to a HTML table, add the it to the `class` attribute of the `table` tag, e.g. `<table class="scroll-table">`.
 
-#### Flip table
-Alternatively, you can "flip" (transpose) the table.
-Unlike the other approach, this will keep the table head (now the first column) fixed in place.
-
-You can enable this behavior by adding `flip-table` or `flip-table-small` to the CSS classes of the table.
-The `-small` version will only enable scrolling on "small" screens (< 1080px wide).
-
-This approach only works on simple tables that have a single `tbody` and an optional `thead`.
-{:.note}
-
-Example:
-
-| Default aligned |Left aligned| Center aligned  | Right aligned  | Default aligned |Left aligned| Center aligned  | Right aligned  | Default aligned |Left aligned| Center aligned  | Right aligned  | Default aligned |Left aligned| Center aligned  | Right aligned  |
-|-----------------|:-----------|:---------------:|---------------:|-----------------|:-----------|:---------------:|---------------:|-----------------|:-----------|:---------------:|---------------:|-----------------|:-----------|:---------------:|---------------:|
-| First body part |Second cell | Third cell      | fourth cell    | First body part |Second cell | Third cell      | fourth cell    | First body part |Second cell | Third cell      | fourth cell    | First body part |Second cell | Third cell      | fourth cell    |
-| Second line     |foo         | **strong**      | baz            | Second line     |foo         | **strong**      | baz            | Second line     |foo         | **strong**      | baz            | Second line     |foo         | **strong**      | baz            |
-| Third line      |quux        | baz             | bar            | Third line      |quux        | baz             | bar            | Third line      |quux        | baz             | bar            | Third line      |quux        | baz             | bar            |
-| 4th line        |quux        | baz             | bar            | 4th line        |quux        | baz             | bar            | 4th line        |quux        | baz             | bar            | 4th line        |quux        | baz             | bar            |
-| 5th line        |quux        | baz             | bar            | 5th line        |quux        | baz             | bar            | 5th line        |quux        | baz             | bar            | 5th line        |quux        | baz             | bar            |
-| 6th line        |quux        | baz             | bar            | 6th line        |quux        | baz             | bar            | 6th line        |quux        | baz             | bar            | 6th line        |quux        | baz             | bar            |
-| 7th line        |quux        | baz             | bar            | 7th line        |quux        | baz             | bar            | 7th line        |quux        | baz             | bar            | 7th line        |quux        | baz             | bar            |
-| 8th line        |quux        | baz             | bar            | 8th line        |quux        | baz             | bar            | 8th line        |quux        | baz             | bar            | 8th line        |quux        | baz             | bar            |
-| 9th line        |quux        | baz             | bar            | 9th line        |quux        | baz             | bar            | 9th line        |quux        | baz             | bar            | 9th line        |quux        | baz             | bar            |
-| 10th line       |quux        | baz             | bar            | 10th line       |quux        | baz             | bar            | 10th line       |quux        | baz             | bar            | 10th line       |quux        | baz             | bar            |
-{:.flip-table}
-
-You can add the `flip-table` class to a markdown table by putting `{:.flip-table}` in line directly below the table.
-To add the class to a HTML table, add the it to the `class` attribute of the `table` tag, e.g. `<table class="flip-table">`.
 
 #### Small tables
 If a table is small enough to fit the screen even on small screens, you can add the `stretch-table` class
@@ -1626,12 +1627,12 @@ To add a code block without syntax highlighting, simply indent 4 spaces (regular
 For code blocks with code highlighting, use `~~~<language>`. This syntax is also supported by GitHub.
 For more information and a list of supported languages, see [Rouge](http://rouge.jneen.net/).
 
-<!-- You can give each code block a title, by making the first line in the block a comment of the form `Title: "<my title>"`. -->
+You can give each code block a filename, by making the first line in the block a comment of the form `File: "dir/filename.ext"`. Use either single quotes `'`, double quotes `"`, or backticks <code>`</code> to surround the filename.
 
 Example:
 
 ~~~js
-// title: "code-block.js"
+// file: "code-block.js"
 // Example can be run directly in your JavaScript console
 
 // Create a function that takes two arguments and returns the sum of those
@@ -1649,7 +1650,7 @@ An optional caption for a code block
 Markdown:
 
     ~~~js
-    // title: "code-block.js"
+    // file: "code-block.js"
     // Example can be run directly in your JavaScript console
 
     // Create a function that takes two arguments and returns the sum of those
@@ -1714,7 +1715,7 @@ Markdown:
 
 ~~~latex
 $$
-\begin{aligned}
+\begin{aligned} %!!15
   \phi(x,y) &= \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right) \\[2em]
             &= \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j)            \\[2em]
             &= (x_1, \ldots, x_n)
@@ -1956,7 +1957,7 @@ To enable this feature, create a `sw.js` file in the root of your project and ad
 ```js
 ---
 ---
-importScripts("{% raw %}{{ '/assets/js/service-worker.js' | relative_url }}?t={{ site.time | date_to_xmlschema }}{% endraw %}");
+importScripts("{% raw %}{{ '/assets/js/sw.js' | relative_url }}?t={{ site.time | date_to_xmlschema }}{% endraw %}");
 ```
 
 This will load the main service worker script from Hydejack's assets. The `site.time` part is necessary to make the service worker "byte different" every time you create a new build of your site, which triggers an update.
@@ -2089,7 +2090,7 @@ The rules are as follows:
 * Every line that isn't contained in a block and ends with `// link` will be linked
 * Every line for which none of the above applies will be included in both.
 
-The actual splitting happen with the `_scripts/build-css.sh` script (requires node.js 8+).
+The actual splitting happen with the `.scripts/build-css.sh` script (requires node.js 8+).
 You can run the script once by using
 
 ~~~bash
@@ -2112,44 +2113,6 @@ hydejack:
 ```
 
 to your config file.
-
-
-### Building the JavaScript
-In order to build the JavaScript you need to have [node.js](https://nodejs.org/en/) installed. Specifically, the `npm` command needs to be available, which is part of node.js.
-
-Building the JavaScript is optional! Hydejack comes with a pre-built, minified `hydejack.js` file
-that you can find in part of the theme's `assets`.
-{:.note}
-
-Before you start, make sure you've copied the following files:
-* `_js/`
-* `package.json`
-* `package-lock.json`
-* `.babelrc`
-* `.eslintignore`
-* `.eslintrc`
-
-When building for the first time (and after each update of Hydejack) you have to run
-
-~~~bash
-$ npm install
-~~~
-
-to fetch all dependencies (and put them in a local folder `node_modules`), lint the code and write the bundled and minified script into `assets/js/hydejack.js`.
-
-You can re-build it with
-
-~~~bash
-$ npm run build:js
-~~~
-
-If you want to actively develop the scripts, it is better to run
-
-~~~bash
-$ npm run watch:js
-~~~
-
-which will build a non-minified version of `assets/js/hydejack.js` after each filechange.
 
 
 *[FLIP]: First Last Invert Play
