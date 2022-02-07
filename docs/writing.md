@@ -217,36 +217,6 @@ By adding the `scroll-table` class on a table, the behavior is changed to never 
 You can add the `scroll-table` class to a markdown table by putting `{:.scroll-table}` in line directly below the table.
 To add the class to a HTML table, add the it to the `class` attribute of the `table` tag, e.g. `<table class="scroll-table">`.
 
-### Flip table
-Alternatively, you can "flip" (transpose) the table.
-Unlike the other approach, this will keep the table head (now the first column) fixed in place.
-
-You can enable this behavior by adding `flip-table` or `flip-table-small` to the CSS classes of the table.
-The `-small` version will only enable scrolling on "small" screens (< 1080px wide).
-
-This approach only works on simple tables that have a single `tbody` and an optional `thead`.
-{:.note}
-
-Example:
-
-| Default aligned |Left aligned| Center aligned  | Right aligned  | Default aligned |Left aligned| Center aligned  | Right aligned  | Default aligned |Left aligned| Center aligned  | Right aligned  | Default aligned |Left aligned| Center aligned  | Right aligned  |
-|-----------------|:-----------|:---------------:|---------------:|-----------------|:-----------|:---------------:|---------------:|-----------------|:-----------|:---------------:|---------------:|-----------------|:-----------|:---------------:|---------------:|
-| First body part |Second cell | Third cell      | fourth cell    | First body part |Second cell | Third cell      | fourth cell    | First body part |Second cell | Third cell      | fourth cell    | First body part |Second cell | Third cell      | fourth cell    |
-| Second line     |foo         | **strong**      | baz            | Second line     |foo         | **strong**      | baz            | Second line     |foo         | **strong**      | baz            | Second line     |foo         | **strong**      | baz            |
-| Third line      |quux        | baz             | bar            | Third line      |quux        | baz             | bar            | Third line      |quux        | baz             | bar            | Third line      |quux        | baz             | bar            |
-| 4th line        |quux        | baz             | bar            | 4th line        |quux        | baz             | bar            | 4th line        |quux        | baz             | bar            | 4th line        |quux        | baz             | bar            |
-| 5th line        |quux        | baz             | bar            | 5th line        |quux        | baz             | bar            | 5th line        |quux        | baz             | bar            | 5th line        |quux        | baz             | bar            |
-| 6th line        |quux        | baz             | bar            | 6th line        |quux        | baz             | bar            | 6th line        |quux        | baz             | bar            | 6th line        |quux        | baz             | bar            |
-| 7th line        |quux        | baz             | bar            | 7th line        |quux        | baz             | bar            | 7th line        |quux        | baz             | bar            | 7th line        |quux        | baz             | bar            |
-| 8th line        |quux        | baz             | bar            | 8th line        |quux        | baz             | bar            | 8th line        |quux        | baz             | bar            | 8th line        |quux        | baz             | bar            |
-| 9th line        |quux        | baz             | bar            | 9th line        |quux        | baz             | bar            | 9th line        |quux        | baz             | bar            | 9th line        |quux        | baz             | bar            |
-| 10th line       |quux        | baz             | bar            | 10th line       |quux        | baz             | bar            | 10th line       |quux        | baz             | bar            | 10th line       |quux        | baz             | bar            |
-| 11th line       |quux        | baz             | bar            | 11th line       |quux        | baz             | bar            | 11th line       |quux        | baz             | bar            | 11th line       |quux        | baz             | bar            |
-| 12th line       |quux        | baz             | bar            | 12th line       |quux        | baz             | bar            | 12th line       |quux        | baz             | bar            | 12th line       |quux        | baz             | bar            |
-{:.smaller.flip-table}
-
-You can add the `flip-table` class to a markdown table by putting `{:.flip-table}` in line directly below the table.
-To add the class to a HTML table, add the it to the `class` attribute of the `table` tag, e.g. `<table class="flip-table">`.
 
 ### Small tables
 If a table is small enough to fit the screen even on small screens, you can add the `stretch-table` class

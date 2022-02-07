@@ -14,13 +14,14 @@ jobs:
         with:
           token: ${{ secrets.GH_REPO_PAT }}
           submodules: true
+          fetch-depth: 0
       - uses: actions/cache@v2
         with:
           path: vendor/bundle
           key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
           restore-keys: |
             ${{ runner.os }}-gems-
-      - uses: helaili/jekyll-action@2.1.0
+      - uses: helaili/jekyll-action@v2
         with:
           token: ${{ secrets.GH_REPO_PAT }}
           jekyll_env: production
