@@ -98,8 +98,6 @@ pdfprint "CHANGELOG" "https://hydejack.com/CHANGELOG/"
 pdfprint "Documentation" "https://hydejack.com/docs/print/"
 pdfprint "NOTICE" "https://hydejack.com/NOTICE/"
 pdfprint "PRO License" "https://hydejack.com/licenses/PRO/"
-# pdfprint "PRO–hy-drawer License" "https://hydecorp.github.io/drawer/licenses/hydejack/"
-# pdfprint "PRO–hy-push-state License" "https://hydecorp.github.io/push-state/licenses/hydejack/"
 
 # Generate the zip
 cd ..; zip -q -r hydejack-pro-$version.zip hydejack-pro-$version/
