@@ -50,13 +50,13 @@ author:
 # Add links to the sidebar.
 menu:
   - title:             Project
-    url:               /example/
-  - title:             Resarch
-    url:               /docs/
+    url:               /Project/
+  - title:             Research
+    url:               /Research/
   - title:             Study.log
-    url:               /docs/
+    url:               /Study/
   - title:             Blog
-    url:               /docs/
+    url:               /Blog/
   - title:             About
     url:               /about/
 
