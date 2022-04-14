@@ -50,15 +50,15 @@ author:
 # Add links to the sidebar.
 menu:
   - title: Project
-    url:   /Category/Project/
+    url:   /Project/
   - title: Research
-    url:   /Category/Research/
+    url:   /Research/
   - title: Study.log
-    url:   /Category/Study/
+    url:   /Study/
   - title: Blog
-    url:   /Category/Blog/
+    url:   /Blog/
   - title: About
-    url:   /Category/about/
+    url:   /about/
 
 # Add links to the footer.
 # Typically you'll want to link to your cookie- or privacy policy (if appliable), etc..

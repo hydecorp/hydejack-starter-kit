@@ -1,6 +1,5 @@
 ---
 layout: grid
-categories: [Category, Blog]
 title:  Blog
 slug:   blog
 description: >
