@@ -49,9 +49,13 @@ author:
 
 # Add links to the sidebar.
 menu:
-  - title:             Example
+  - title:             Project
     url:               /example/
-  - title:             Documentation
+  - title:             Resarch
+    url:               /docs/
+  - title:             Study
+    url:               /docs/
+  - title:             Blog
     url:               /docs/
   - title:             About
     url:               /about/
