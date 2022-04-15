@@ -2,3 +2,83 @@
 // .sidebar a {
 //   text-shadow: rgba(0, 0, 0, 0.25) 0.1rem 0.1rem 0.15rem;
 // }
+
+// Sidebar Modification
+
+.sidebar {
+    text-align: center;
+  }
+  
+  .sidebar-sticky {
+    height: 100%;
+    padding-top: 5%;
+    position: fixed;
+  }
+  
+  .sidebar-nav-item {
+    padding: .25rem 0;
+    width:100%;
+  }
+  
+  .sidebar-nav-subitem {
+    @extend .f4;
+    width:100%;
+    padding: .25rem 0;
+    display: inline-block;
+  }
+  
+  .sidebar-nav-subitem:last-child {
+    margin: 0 0 4px 0;
+  }
+  
+  .list-wrapper {
+    text-align: left;
+    width: 18rem;
+    display: flex;
+  }
+  
+  .list-body {
+    margin: 0;
+    text-align: left;
+  }
+  
+  .sidebar-about {
+    > a.sidebar-title {
+      &::after {
+        width: 9rem;
+      }
+    }
+  }
+  
+  // Submenu Insertion
+  
+  .spread-btn{
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    text-align: right;
+    width: 100%;
+  }
+  
+  .spread-btn:hover{
+    color: #4FB1BA;
+  }
+  
+  input[type=checkbox]{
+    display: none;
+  }
+  
+  input[type=checkbox] ~ ul{
+    height: 0;
+    transform: scaleY(0);
+    transition: transform .2s ease-out;
+  }
+  
+  input[type=checkbox]:checked ~ ul{
+    height: 100%;
+    list-style: none;
+    transform-origin: top;
+    transform: scaleY(1);
+    transition: transform .2s ease-out;
+  }
