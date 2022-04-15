@@ -1,10 +1,10 @@
 ---
 layout: tag-list
 type: tag
-title: Algorithm
-slug: algorithm
+title: Java
+slug: java
 category: devlog
 sidebar: true
 description: >
-   Algorithm study / Problem solutions
+   Java Problem solutions
 ---
