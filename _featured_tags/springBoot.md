@@ -1,10 +1,10 @@
 ---
 layout: tag-list
 type: tag
-title: Java
-slug: java
+title: Spring-Boot
+slug: springboot
 category: studylog
 sidebar: true
 description: >
-   Learn Java
+   Learn Spring-Boot
 ---
