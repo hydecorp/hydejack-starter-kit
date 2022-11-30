@@ -48,6 +48,7 @@ vendor
 _zip
 /stats.json
 /dist
+production
 # /build
 
 /assets/js/*hydejack-*
