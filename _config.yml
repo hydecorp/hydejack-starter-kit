@@ -350,12 +350,12 @@ plugins:
 #   admins:              <id>
 
 # Used on index and about sites
-# social:
-#   name:                <firstname> <lastname>
-#   links:
-#     - https://twitter.com/<username>
-#     - https://github.com/<username>
-
+social:
+  name: Tsseo Seo
+  links:
+    - https://twitter.com/<username>
+    - https://github.com/3rd-big
+# †
 # Plugin Configs
 # ---------------------------------------------------------------------------------------
 optional_front_matter:
