@@ -4,6 +4,8 @@ Left here for reference, feel free to delete.
 -->
 <link rel="dns-prefetch" href="https://assets.gumroad.com">
 <script defer data-domain="hydejack.com" src="https://plausible.io/js/plausible.js"></script>
+<script>(function () { window.counterscale = { q: [["set", "siteId", "hydejack.com"], ["trackPageview"]] } })()</script>
+<script id="counterscale-script" src="https://counterscale-bio.pages.dev/tracker.js" defer></script>
 <script type="module">
   const ppiData = window._ppiData = fetch('https://hydejack-ppi.qwtel.workers.dev', { mode: 'cors'}).then(res => res.json()).catch(() => ({}));
   const promisify = f => x => new Promise(r => f(x).addEventListener('load', r));
