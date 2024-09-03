@@ -8,6 +8,14 @@ layout: plain
 * this list will be replaced by the toc
 {:toc .large-only}
 
+## v9.1.7
+Sep 03 2024
+{:.heading.post-date}
+
+* Fixed deprecation warnings
+* Updated Ruby dependencies
+* Fixed browser chrome (e.g. scrollbar) not matching dark mode
+
 ## v9.1.6
 Feb 07 2022
 {:.heading.post-date}

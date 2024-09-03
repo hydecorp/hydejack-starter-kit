@@ -3,11 +3,12 @@ Code used for embedding Gumroad on the Hydejack Site.
 Left here for reference, feel free to delete.
 -->
 <link rel="dns-prefetch" href="https://assets.gumroad.com">
+{% unless jekyll.environment == 'development' %}
 <script defer data-domain="hydejack.com" src="https://plausible.io/js/plausible.js"></script>
 <script>(function () { window.counterscale = { q: [["set", "siteId", "hydejack.com"], ["trackPageview"]] } })()</script>
 <script id="counterscale-script" src="https://counterscale-bio.pages.dev/tracker.js" defer></script>
+{% endunless %}
 <script type="module">
-  const ppiData = window._ppiData = fetch('https://hydejack-ppi.qwtel.workers.dev', { mode: 'cors'}).then(res => res.json()).catch(() => ({}));
   const promisify = f => x => new Promise(r => f(x).addEventListener('load', r));
   const loadJS = promisify(window.loadJS);
   let p1, p2, embedCreated, overlayCreated;
@@ -16,12 +17,7 @@ Left here for reference, feel free to delete.
     const io1 = new IntersectionObserver(async (entries) => {
       if (entries.some(x => x.isIntersecting)) {
         p1 = p1 || loadJS('https://gumroad.com/js/gumroad-embed.js');
-        const [{ code }] = await Promise.all([ppiData, p1]);
-        document.querySelectorAll('.gumroad-product-embed').forEach(el => { 
-          if (!el.dataset.gumroadParams) {
-            el.dataset.gumroadParams = 'offer_code=' + (code || 'qr0tw8m');
-          }
-        });
+        await p1;
         !embedCreated && await new Promise(function check1(res) {
           if (typeof createGumroadEmbed !== 'undefined')  {
             embedCreated = 1;
@@ -39,14 +35,7 @@ Left here for reference, feel free to delete.
     const io2 = new IntersectionObserver(async (entries) => {
       if (entries.some(x => x.isIntersecting)) {
         p2 = p2 || loadJS('https://gumroad.com/js/gumroad.js');
-        const [{ code }] = await Promise.all([ppiData, p2]);
-        if (code) {
-          document.querySelectorAll('.gumroad-button').forEach(el => { 
-            if (!el.href.endsWith(code)) {
-              el.href = el.href + '/' + (code || 'qr0tw8m');
-            }
-          });
-        }
+        await p2;
         !overlayCreated && await new Promise(function check(res) {
           if (typeof createGumroadOverlay !== 'undefined') {
             overlayCreated = 1;
