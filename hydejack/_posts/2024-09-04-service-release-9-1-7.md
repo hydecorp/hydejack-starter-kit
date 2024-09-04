@@ -26,6 +26,9 @@ While I can't go back to working full-time on this project --- the economics of 
 
 ![Deprecation Warnings](/assets/img/blog/deprecation-warnings.png){:.border}
 
+__UPDATE__: Unfortunately, fixing these warnings broke compatibility with GitHub Pages. The fix needed to be reverted. I'm investigating fixing the warnings in a backwards compatible way.  
+{:.message}
+
 With that out of the way, another thing I want to improve is the documentation for deployments. Things have changed since I wrote the original docs. There are now much better ways of deploying to GitHub Pages and from GitHub Actions in general. 
 
 The deployment experience for PRO customers could also be improved. Upgrading from Free to PRO hasn't been as smooth as it could be due to the need to manually manage source files. Instead, it would be possible to create a GitHub Organization for all customers which would allow pulling PRO code directly from a private repository in most CI pipelines.

@@ -8,6 +8,12 @@ layout: plain
 * this list will be replaced by the toc
 {:toc .large-only}
 
+## v9.1.8
+Sep 04 2024
+{:.heading.post-date}
+
+* Reverted "Fixed deprecation warnings" which broke compatibility with the legacy GitHub Pages pipeline
+
 ## v9.1.7
 Sep 04 2024
 {:.heading.post-date}
