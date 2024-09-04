@@ -15,7 +15,7 @@ selected_projects:
   - /showcase/shawn-yeager/
 projects_page: showcase.md
 selected_posts:
-  - hydejack/_posts/2024-09-04-service-release-9-1-7.md
+  - hydejack/_posts/2024-09-04-service-release-for-9-1.md
   - hydejack/_posts/2020-07-03-introducing-hydejack-9.md
   - /blog/hydejack/2018-09-01-introducing-dark-mode/
   - hydejack/_posts/2018-06-01-example-content-iii.md
