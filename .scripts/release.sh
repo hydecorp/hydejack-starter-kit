@@ -36,6 +36,7 @@ cp -r \
     -not -name .scripts \
     -not -name .sass-cache \
     -not -name .jekyll-cache \
+    -not -name .ruby-lsp \
     -not -name .bundle \
     -not -name Gemfile.lock \
     -not -name node_modules \
