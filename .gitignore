@@ -2,7 +2,6 @@
 _gh_pages
 _site
 _drafts
-.ruby-version
 
 # Numerous always-ignore extensions
 *.diff
@@ -45,6 +44,7 @@ vendor
 .jekyll-metadata
 .jekyll-cache
 *.gem
+Gemfile.lock
 _zip
 /stats.json
 /dist
