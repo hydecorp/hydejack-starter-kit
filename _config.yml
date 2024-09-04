@@ -313,6 +313,7 @@ exclude:
   - vendor
   - Gemfile
   - Gemfile.lock
+  - .ruby-lsp
 include:
   - .well-known
   - LICENSE.md
