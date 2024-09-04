@@ -76,7 +76,7 @@ find . -name '.DS_Store' -delete
 # This assumes the next version is already online at qwtel.com
 # This also assumes macOS with chrome installed...
 function pdfprint {
-  /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome \
+  /Applications/Brave\ Browser.app/Contents/MacOS/Brave\ Browser\
     --headless \
     --disable-gpu \
     --disable-translate \
