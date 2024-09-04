@@ -309,6 +309,7 @@ collections:
 
 exclude:
   - ./#jekyll-theme-hydejack/node_modules
+  - ./#jekyll-theme-hydejack/assets
   - ./#jekyll-theme-hydejack/.git
   - .jekyll-cache
   - .sass-cache
@@ -316,6 +317,7 @@ exclude:
   - vendor
   - Gemfile
   - Gemfile.lock
+  - .ruby-lsp
 include:
   - .well-known
   - LICENSE.md
