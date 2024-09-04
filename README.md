@@ -26,20 +26,6 @@ permalink: /
 
 # Hydejack
 
-<!-- <style>
-  .layout-home>.page>header { 
-    color: #fff;
-    text-shadow: rgb(0 0 0 / 25%) 0.1rem 0.1rem 0.15rem;
-    background-color:rgb(8,46,57);
-    background-image:url(/assets/img/sidebar-bg.jpg) ;
-    background-position: center;
-    background-size: cover;
-  }
-  .layout-home>.page>header .btn-default { 
-    color: #fff;
-  }
-</style> -->
-
 A boutique Jekyll theme for hackers, nerds, and academics.  
 {:.lead}
 
