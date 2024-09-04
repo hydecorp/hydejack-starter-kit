@@ -27,7 +27,7 @@ qwtel:
 
     [fea]: /#features
     [pro]: /download/
-    [kit]: https://github.com/hydecorp/hydejack-starter-kit/archive/v9.1.7.zip
+    [kit]: https://github.com/hydecorp/hydejack-starter-kit/archive/v9.1.8.zip
     [nfy]: https://app.netlify.com/start/deploy?repository=https://github.com/hydecorp/hydejack-starter-kit
     [dtn]: https://www.netlify.com/img/deploy/button.svg
     [buy]: https://gum.co/nuOluY
@@ -47,7 +47,7 @@ qwtel:
     twitter:         hydecorp
     github:          https://github.com/hydecorp/hydejack
     email:           mail@hydejack.com
-    download:        https://github.com/hydecorp/hydejack-starter-kit/archive/v9.1.7.zip
+    download:        https://github.com/hydecorp/hydejack-starter-kit/archive/v9.1.8.zip
 
 # Another author
 mdo:
