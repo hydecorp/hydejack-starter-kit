@@ -18,12 +18,10 @@ qwtel:
     |:------------------------------|:-------------------:|:-------------------:|
     | [Features][fea]               | &#x2714;            | &#x2714;            |
     | [PRO Features][pro]           |                     | &#x2714;            |
-    | __Price__                     | __Free__            | __$99__ <small>One-Time Payment</small> [^22] |
+    | __Price__                     | __Free__            | __$99__{:.price} <small>One-Time Payment</small> |
     |===============================+=====================+=====================|
     |                               | [__Download__][kit] | [__Buy PRO__][buy]{:.gumroad-button data-gumroad-single-product="true"} |
     {:.stretch-table.dl-table}
-
-    [^22]: Discounts may apply, check [Gumroad][buy]{:data-gumroad-single-product="true"} for up-to-date pricing.
 
     [fea]: /#features
     [pro]: /download/

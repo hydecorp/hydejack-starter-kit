@@ -312,12 +312,14 @@ exclude:
   - .jekyll-cache
   - _zip
   - .sass-cache
+  - .ruby-lsp
   - '*.toml'
   - vendor
   - Gemfile
   - Gemfile.lock
-  - .ruby-lsp
+  - functions
 include:
+  - _routes.json
   - .well-known
   - LICENSE.md
 

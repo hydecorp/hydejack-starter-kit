@@ -55,8 +55,7 @@ jobs:
         uses: cloudflare/wrangler-action@v3
         id: deploy
         with:
-          wranglerVersion: "3.13"
+          wranglerVersion: "3.74.0"
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: efb289061241436254219b424fcea4cf
           command: pages deploy build --project-name=hydejack-site-pages --branch=main --commit-dirty=true 
-        
