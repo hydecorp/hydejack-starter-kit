@@ -50,4 +50,3 @@ Use the the form below to purchase Hydejack PRO:
 [rouge]: http://rouge.jneen.net
 [katex]: https://khan.github.io/KaTeX/
 [mathjax]: https://www.mathjax.org/
-[tinyletter]: https://tinyletter.com/

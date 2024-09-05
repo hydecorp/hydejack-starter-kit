@@ -47,7 +47,7 @@ hydejack:
 
 Hydejack does some clever things to show more related "Related Posts" on the bottom of blog posts. However, clever things (implemented within the liquid templating engine) take time, and this becomes apparent when trying to build a site with 10,000 posts.
 
-To speed up buidling further, set the (admittedly poorly named) `use_lsi` option to `true`:
+To speed up building further, set the (admittedly poorly named) `use_lsi` option to `true`:
 
 ```yml
 hydejack:

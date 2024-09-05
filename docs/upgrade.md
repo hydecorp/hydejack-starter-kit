@@ -37,7 +37,7 @@ bundle update jekyll-theme-hydejack
 
 If you've modified any of Hydejack's files in `#jekyll-theme-hydejack`, your changes will most likely be overwritten
 and you have to apply them again. Make sure you've made a backup before overwriting any files.
-{:.note}
+{:.note title="Important"}
 
 ## GitHub Pages
 When building on GitHub Pages, upgrading Hydejack is as simple as setting the `remote_theme` key in `_config.yml` to the desired version.

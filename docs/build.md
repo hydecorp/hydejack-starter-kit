@@ -52,7 +52,9 @@ which can be deployed using the methods outlined in the [Jekyll Documentation][d
 
 
 ## GitHub Pages
-If you're using the Starter Kit for GitHub pages, all you have to do is push your repository:
+If you're using the Starter Kit for GitHub pages, all you have to do is push your repository. 
+
+It works the same for customers who bought the **PRO Version** and are using the `starter-kit-gh-pages` from the provided zip.
 
 ```bash
 $ git add .

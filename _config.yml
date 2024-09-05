@@ -85,7 +85,12 @@ paginate_path:         /blog/:num/
 # Theme
 # ---------------------------------------------------------------------------------------
 
+# This will use the gem `jekyll-theme-hydejack`, as defined in the sibling `Gemfile`.
 theme: jekyll-theme-hydejack
+
+# You can uncomment `theme` above and replace it with `remote_theme` here iff you are using the 
+# `jekyll-remote-theme` plugin (which is the case when using the legacy GitHub Pages pipeline).
+# This will fetch the `v9` branch of the public Hydejack repository on GitHub.
 # remote_theme: hydecorp/hydejack@v9
 
 destination: build
@@ -238,7 +243,8 @@ hydejack:
   # Disable the breadcrumbs above the title
   no_breadcrumbs:      false
 
-  # Set to `true` when building with the `--lsi` option
+  # Set to `true` when building with the `--lsi` option.
+  # The net effect is to use the Jekyll-provided `site.related_posts` variable.
   use_lsi:             true
 
   # When using Google Analytics, set to `true` to display a cookie notice banner.
@@ -254,7 +260,7 @@ hydejack:
   # seeing an old date. 
   hide_dates:          false
 
-  # TODO
+  # Similarly, showing last modified date can devalue a post if it is too far in the past.
   hide_last_modified:  false
 
   # Note that dark mode only works in the PRO version of Hydejack.

@@ -11,6 +11,7 @@ description: >
   Hydejack is back from the dead with a few long overdue bugfixes. 
 redirect_from:
   /blog/hydejack/2024-09-04-service-release-9-1-7/
+excerpt_separator: <!--more-->
 ---
 
 # Service Release For 9.1
@@ -18,6 +19,8 @@ redirect_from:
 A full-time job and focus to my many other side projects meant that Hydejack has been effectively abandoned for the last couple of years. 
 
 Recently I've used Hydejack myself to blog on my personal site, and while it may sound silly, __I came away impressed with my own product__.
+
+<!--more-->
 
 When I was actively working on Hydejack, all I could see were its flaws, but looking at it with fresh eyes, it struck me as  a pretty good product and in many ways ahead of its time: 
 Just recently the [View Transitions API][vta] has landed in major browsers, enabling the kinds of animations that have been the bread and butter of Hydejack for years (back then painstakingly hand-coded using JavaScript).

@@ -14,7 +14,6 @@ The table below shows what's included in each version:
 | [Dark Mode][dark]             |                     | &#x2714;            |
 | [Built-In Search][search]     |                     | &#x2714;            |
 | [Custom Forms][forms]         |                     | &#x2714;            |
-| [Newsletter Box][news]        |                     | &#x2714;            |
 | [Grid layout][grid]           |                     | &#x2714;            |
 | [Offline Support][ofln]       |                     | &#x2714;            |
 | Table of Contents[^21]        |                     | &#x2714;            |

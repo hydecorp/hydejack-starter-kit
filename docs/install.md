@@ -54,7 +54,7 @@ gem "jekyll-theme-hydejack", path: "./#jekyll-theme-hydejack"
 ~~~
 
 The folder is prefixed with a `#` to indicate that this folder is different from regular Jekyll content. 
-The `#` char was choosen specifically because it is on of the four characters ignored by Jekyll by default (`.`, `_` , `#`, `~`).
+The `#` char was chosen specifically because it is on of the four characters ignored by Jekyll by default (`.`, `_` , `#`, `~`).
 {:.note}
 
 In your config file, change the `theme` to Hydejack:
@@ -70,7 +70,7 @@ but it pays off to check out the example config file in the Starter Kit to see w
 You can now jump to [running locally](#running-locally).
 
 ### Troubleshooting
-If your existing site combines theme files with your content (as did previous verisons of Hydejack/PRO),
+If your existing site combines theme files with your content (as did previous versions of Hydejack/PRO),
 make sure to delete the following folders:
 
 - `_layouts`
@@ -109,7 +109,6 @@ To run this configuration locally, make sure the following is part of your `Gemf
 ```ruby
 # file: `Gemfile`
 gem "github-pages", group: :jekyll_plugins
-gem "jekyll-include-cache", group: :jekyll_plugins
 ```
 
 Note that Hydejack has a reduced feature set when built on GitHub Pages. 
