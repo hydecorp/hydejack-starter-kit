@@ -114,8 +114,9 @@ font:                  Noto Sans, Helvetica, Arial, sans-serif
 # To change font-weight, see _sass/variables.scss
 font_heading:          Roboto Slab, Helvetica, Arial, sans-serif
 
-# The font used for code blocks. Expects a string that is a valid CSS font-family value.
-font_code:             Fira Code, Menlo, Monaco, Consolas, monospace;
+# The font used for code blocks. Expects a string that is a valid CSS font-family value. 
+# Defaults to the [System Monospace Font Stack](https://qwtel.com/posts/software/the-monospaced-system-ui-css-font-stack/).
+# font_code:             Fira Code, Menlo, Monaco, Consolas, monospace;
 
 clap_button:           false
 
@@ -171,22 +172,6 @@ kramdown:
   math_engine:         katex
   math_engine_opts:    {}
   footnote_backlink:   '&#x21a9;&#xfe0e;'
-
-
-# 3rd Party Integrations
-# ----------------------------------------------------------------------------------------
-
-# Set your Google Analytics id to receive `pageview` events.
-# To remove Google Anaylics from your page, remove the line below.
-# google_analytics:      UA-XXXXXXXX-X
-
-# Setting a disqus shortname will enable the comment section on
-# pages with `comments: true` in the front matter.
-# disqus:                qwtel
-
-# Setting a tinyletter username will enable the newsletter subscription box.
-# PRO version only!
-tinyletter:            qwtel
 
 
 # Hydejack Settings
