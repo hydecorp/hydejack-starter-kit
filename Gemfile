@@ -12,11 +12,7 @@ gem "jekyll", "~> 4.3"
 
 # Using the local `./#jekyll-theme-hydejack` folder as source for the theme.
 # You can remove this line (and the folder), if you have another way of fetching it (see below).
-if ENV['JEKYLL_ENV'] == 'development'
-  gem "jekyll-theme-hydejack", path: "./#jekyll-theme-hydejack"
-else
-  gem "jekyll-theme-hydejack", git: "https://github.com/hydecorp/hydejack", branch: "v9"
-end
+gem "jekyll-theme-hydejack", path: "./#jekyll-theme-hydejack"
 
 # If you are a PRO customer and part of the ["Customers" team](https://github.com/orgs/hydecorp/teams/customers), 
 # you can fetch the theme from the private repository. See [Deploy in the Hydejack Docs](https://hydejack.com/docs/deploy) for details.
