@@ -20,7 +20,7 @@ qwtel:
     | [PRO Features][pro]           |                     | &#x2714;            |
     | __Price__                     | __Free__            | __$99__{:.price} <small>One-Time Purchase</small>[^xx] |
     |===============================+=====================+=====================|
-    |                               | [__Download__][kit] | [__Buy PRO__][buy]{:.gumroad-button data-gumroad-single-product="true"} |
+    |                               | [__Download__][kit] | [__Buy PRO__][buy]{:.gumroad-button.no-mark data-gumroad-single-product="true"} |
     {:.stretch-table.dl-table}
 
     [fea]: /#features

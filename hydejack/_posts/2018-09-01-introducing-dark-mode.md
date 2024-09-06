@@ -12,7 +12,7 @@ description: >
   The PRO version of Hydejack now includes an optional Dark Mode, making it the first Jekyll theme to include this feature.
 ---
 
-Like many people, I'm a sucker for is dark UI themes, whether it's Twitter, macOS, or code editors. I even [built an addon for Atom](https://atom.io/packages/theme-flux-solar) that automatically switches between light and dark based on sunset and sunrise.
+Like many people, I'm a sucker for dark UI themes, whether it's Twitter, macOS, or code editors. I even [built an addon for Atom](https://atom.io/packages/theme-flux-solar) that automatically switches between light and dark based on sunset and sunrise.
 
 When I was playing around with Unity, I even considered a subscription just so I could use the dark theme, which is exclusive to subscribers. Following this line of thought, I've added a Dark Mode to the PRO version of Hydejack.
 

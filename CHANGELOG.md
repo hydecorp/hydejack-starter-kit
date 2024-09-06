@@ -12,7 +12,7 @@ layout: plain
 Sep 05 2024
 {:.heading.post-date}
 
-* Fixed Dart Sass deprecation warnings
+* Fixed Dart Sass deprecation warnings in a way that is compatible with the legacy GitHub Pages pipeline
 
 ## v9.1.8
 Sep 04 2024

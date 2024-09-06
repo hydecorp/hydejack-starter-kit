@@ -92,16 +92,14 @@ Blog posts can now have a "last modified at" date in the sub title row.
 Note that this depends on the `last_modified_at` property of the page, which must be either set manually in the frontmatter (not recommended), or via a plugin like [`jekyll-last-modified-at`](https://github.com/gjtorikian/jekyll-last-modified-at). Note that the later is not available when building on GitHub Pages and can increase build times.
 
 
-## Clap Button Preview
-I've been trying something new with [**getclaps.app**](https://getclaps.app/), a feedback and analytics tool for personal sites like those powered by Hydejack. 
+## ~~Clap Button Preview~~
+~~I've been trying something new with **getclaps.app**, a feedback and analytics tool for personal sites like those powered by Hydejack.~~
 
-<!-- <clap-button style="--clap-button-color:var(--body-color);margin:2rem auto 3rem;width:3rem;height:3rem;font-size:smaller" nowave></clap-button> -->
+~~It is a separate product from Hydejack and not enabled by default. Because it depends on a backend component, it requires a monthly fee.~~
+~~If enabled, it is placed below posts and pages where the dingbat character (❖) used to be.~~
 
-It is a separate product from Hydejack and not enabled by default. Because it depends on a backend component, it requires a monthly fee. 
-If enabled, it is placed below posts and pages where the dingbat character (❖) used to be.
-
-I can't claim that this product is fully baked (feedback welcome), but I've been using it on my personal site and here for the last couple of months with no issues.
-For more, see [the dedicated website](https://getclaps.app/).
+~~I can't claim that this product is fully baked (feedback welcome), but I've been using it on my personal site and here for the last couple of months with no issues.~~
+~~For more, see the dedicated website.~~
 
 ***
 {:style="margin:2rem 0"}

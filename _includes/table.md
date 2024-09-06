@@ -23,7 +23,7 @@ The table below shows what's included in each version:
 | Source                        | [GitHub][src]       | Included            |
 | __Price__                     | __Free__            | __$99__{:.price} <small>One-Time Purchase</small>[^xx] |
 |===============================+=====================+=====================|
-|                               | [__Download__][kit] | [__Buy PRO__][buy]{:.gumroad-button data-gumroad-single-product="true"} |
+|                               | [__Download__][kit] | [__Buy PRO__][buy]{:.gumroad-button.no-mark data-gumroad-single-product="true"} |
 {:.stretch-table.dl-table}
 
 [^21]: Large screens (> 1664px width) only.
