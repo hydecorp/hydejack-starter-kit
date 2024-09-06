@@ -1,20 +1,15 @@
-<!--
-Code used for embedding Gumroad on the Hydejack Site. 
-Left here for reference, feel free to delete.
--->
-<link rel="dns-prefetch" href="https://assets.gumroad.com">
 {% unless jekyll.environment == 'development' %}
 <script defer data-domain="hydejack.com" src="https://plausible.io/js/plausible.js"></script>
 <script>(function () { window.counterscale = { q: [["set", "siteId", "hydejack.com"], ["trackPageview"]] } })()</script>
-<script id="counterscale-script" src="https://counterscale-bio.pages.dev/tracker.js" defer></script>
+<script defer id="counterscale-script" src="https://counterscale-bio.pages.dev/tracker.js"></script>
 {% endunless %}
+<link rel="dns-prefetch" href="https://assets.gumroad.com">
 <script type="module">
-  const promisify = f => x => new Promise(r => f(x).addEventListener('load', r));
-  const loadJS = promisify(window.loadJS);
-  let p1, p2, embedCreated, overlayCreated;
+  const loadJS = x => new Promise(r => window.loadJS(x).addEventListener('load', r));
 
+  let p1, p2, io1, io2, embedCreated, overlayCreated;
   document.querySelector('hy-push-state').addEventListener('load', () => {
-    const io1 = new IntersectionObserver(async (entries) => {
+    io1 ||= new IntersectionObserver(async (entries) => {
       if (entries.some(x => x.isIntersecting)) {
         p1 = p1 || loadJS('https://gumroad.com/js/gumroad-embed.js');
         await p1;
@@ -32,7 +27,7 @@ Left here for reference, feel free to delete.
       }
     }, { rootMargin: '1440px' });
 
-    const io2 = new IntersectionObserver(async (entries) => {
+    io2 ||= new IntersectionObserver(async (entries) => {
       if (entries.some(x => x.isIntersecting)) {
         p2 = p2 || loadJS('https://gumroad.com/js/gumroad.js');
         await p2;
