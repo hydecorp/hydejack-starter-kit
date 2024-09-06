@@ -313,6 +313,7 @@ exclude:
   - _zip
   - .sass-cache
   - .ruby-lsp
+  - .wrangler
   - '*.toml'
   - vendor
   - Gemfile

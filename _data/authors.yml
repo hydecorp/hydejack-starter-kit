@@ -18,7 +18,7 @@ qwtel:
     |:------------------------------|:-------------------:|:-------------------:|
     | [Features][fea]               | &#x2714;            | &#x2714;            |
     | [PRO Features][pro]           |                     | &#x2714;            |
-    | __Price__                     | __Free__            | __$99__{:.price} <small>One-Time Payment</small> |
+    | __Price__                     | __Free__            | __$99__{:.price} <small>One-Time Purchase</small>[^xx] |
     |===============================+=====================+=====================|
     |                               | [__Download__][kit] | [__Buy PRO__][buy]{:.gumroad-button data-gumroad-single-product="true"} |
     {:.stretch-table.dl-table}
@@ -29,6 +29,10 @@ qwtel:
     [nfy]: https://app.netlify.com/start/deploy?repository=https://github.com/hydecorp/hydejack-starter-kit
     [dtn]: https://www.netlify.com/img/deploy/button.svg
     [buy]: https://gum.co/nuOluY
+
+    [^xx]: 
+        Discounts may apply, check [Gumroad][buy]{:data-gumroad-single-product="true"} for up-to-date pricing.
+        {:.price-desc}
 
   # This photo will be used in the about section
   picture:
@@ -42,8 +46,8 @@ qwtel:
   # Comment/uncommet to show/hide
   # Rearrange to change the order in which they appear
   social:
-    twitter:         hydecorp
     github:          https://github.com/hydecorp/hydejack
+    twitter:         hydecorp
     email:           mail@hydejack.com
     download:        https://github.com/hydecorp/hydejack-starter-kit/archive/v9.1.9.zip
 

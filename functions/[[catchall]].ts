@@ -1,11 +1,13 @@
 /// <reference types="@cloudflare/workers-types/2023-07-01" />
 
-const PRODUCT_ID = 'nuOluY';
-const DEFAULT_PRICE = 9900;
+const ProductId = 'nuOluY';
+const DefaultDiscountCode = 'v8b41wp'
+const DefaultDiscount = 0.9
+const CountryOverride = '';
 
 interface Env {
   GUMROAD_ACCESS_TOKEN: string
-  KV: KVNamespace
+  KV?: KVNamespace
 }
 
 const formatPrice = (price: number) => {
@@ -17,14 +19,14 @@ const formatPrice = (price: number) => {
 async function getPrices(request: Request, env: Env, waitUntil: (promise: Promise<any>) => void) {
   let product: any;
   try {
-    const cachedProduct = await env.KV.get(PRODUCT_ID, 'json') as any;
+    const cachedProduct = await env.KV?.get(ProductId, 'json') as any;
     if (cachedProduct) {
-      // console.debug('Using cached product');
+      console.debug('Using cached product');
       product = cachedProduct;
     }
     else {
-      // console.debug('Not using cached product :(');
-      const productUrl = new URL(`https://api.gumroad.com/v2/products/${PRODUCT_ID}`);
+      console.debug('Not using cached product');
+      const productUrl = new URL(`https://api.gumroad.com/v2/products/${ProductId}`);
       productUrl.searchParams.append('access_token', env.GUMROAD_ACCESS_TOKEN);
 
       const productResponse = await fetch(productUrl, { method: 'GET' });
@@ -41,38 +43,33 @@ async function getPrices(request: Request, env: Env, waitUntil: (promise: Promis
 
       product = productWrapper.product;
 
-      waitUntil(env.KV.put(PRODUCT_ID, JSON.stringify(product), { expirationTtl: 300 }));
+      env.KV && waitUntil(env.KV.put(ProductId, JSON.stringify(product), { expirationTtl: 300 }));
     }
   } catch (err) { 
     console.error('Error fetching product', err);
     return null;
   }
 
-  // console.debug('Has Product:', !!product);
+  console.debug('Has Product:', !!product);
 
-  const country = (request as any).cf?.country ?? request.headers.get('cf-ipcountry');
+  const country = CountryOverride || ((request as any).cf?.country ?? request.headers.get('cf-ipcountry'));
   if (!country) {
     console.error('No country code');
     return null;
   }
 
-  // console.debug('Country:', country);
+  console.debug('Country:', country);
   const ppppp = product.purchasing_power_parity_prices as Record<string, number>;
   if (!ppppp) {
     console.error('No prices', product);
     return null;
   }
 
-  const defaultPrice = product.price ?? DEFAULT_PRICE;
+  const defaultPrice = product.price;
   const price = ppppp[country] ?? defaultPrice;
 
   if (!(country in ppppp)) {
     console.warn('No price for country', country, ppppp);
-  }
-
-  if (price === defaultPrice) {
-    // console.debug('Price is default', price, 'nothing to do');
-    return null;
   }
 
   return { defaultPrice, price };
@@ -83,20 +80,38 @@ export const onRequest: PagesFunction<Env> = async (context) => {
 
   const response = await env.ASSETS.fetch(request);
   if (!response.headers.get('content-type')?.includes('text/html')) {
-    // console.debug("not a text/html response");
+    console.debug("not a text/html response");
     return response
   }
 
-  // console.debug("Has secret:", !!env.GUMROAD_ACCESS_TOKEN);
+  console.debug("Has secret:", !!env.GUMROAD_ACCESS_TOKEN);
 
-  let promise: Promise<{ defaultPrice: any, price: any }|null> | null = null;
+  let _promise: Promise<{ defaultPrice: any, price: any }|null> | null = null;
 
-  return new HTMLRewriter()
+  const discountHandler = {
+    async element(element) {
+      const result = await (_promise ??= getPrices(request, env, context.waitUntil));
+      if (result != null) {
+        const { defaultPrice, price } = result;
+        if (price == defaultPrice) {
+          const href = `${element.getAttribute('href')!}/${DefaultDiscountCode}`;
+          element.setAttribute('href', href);
+        }
+      }
+    }
+  } satisfies HTMLRewriterElementContentHandlers;
+
+  const discountBacklink = `&nbsp;<a href="#fnref:xx" class="reversefootnote" role="doc-backlink">↩︎</a>`;
+
+  const transformedResponse = new HTMLRewriter()
     .on(".price", {
       async element(element) {
-        const result = await (promise ??= getPrices(request, env, context.waitUntil));
+        const result = await (_promise ??= getPrices(request, env, context.waitUntil));
         if (result != null) {
-          const { defaultPrice, price } = result;
+          let { defaultPrice, price } = result;
+          if (price == defaultPrice) {
+            price *= DefaultDiscount // apply generic discount
+          } 
           element.setInnerContent(
             `<del>\$${formatPrice(defaultPrice)}</del> \$${formatPrice(price)}`, 
             { html: true },
@@ -104,5 +119,39 @@ export const onRequest: PagesFunction<Env> = async (context) => {
         }
       }
     })
+    .on(".price-desc", {
+      async element(element) {
+        const result = await (_promise ??= getPrices(request, env, context.waitUntil));
+        if (result != null) {
+          const { defaultPrice, price } = result;
+          if (price == defaultPrice) {
+            element.setInnerContent(
+              `Price permanently reduced by <strong>10%</strong>! You can save the offer code <strong>${DefaultDiscountCode.toUpperCase()}</strong> to apply this discount in the future.${discountBacklink}`, 
+              { html: true },
+            );
+          } else {
+            element.setInnerContent(
+              `Location-based discount has been applied. Proceed to <a href="https://gum.co/${ProductId}">Gumroad</a> for details.${discountBacklink}`,
+              { html: true },
+            );
+          }
+        }
+      }
+    })
+    .on(`a[href="https://gum.co/${ProductId}"]`, discountHandler)
+    .on(`a[href="https://gumroad.com/l/${ProductId}"]`, discountHandler)
+    .on('.gumroad-product-embed', {
+      async element(element) {
+        const result = await (_promise ??= getPrices(request, env, context.waitUntil));
+        if (result != null) {
+          const { defaultPrice, price } = result;
+          if (price == defaultPrice) {
+            element.setAttribute('data-gumroad-params', `offer_code=${DefaultDiscountCode}`);
+          }
+        }
+      }
+    })
     .transform(response);
+    transformedResponse.headers.append('vary', 'cf-ipcountry');
+    return transformedResponse;
 }
