@@ -11,13 +11,13 @@ buttons: |
   [Download](#download){:.btn.btn-primary}
   [Documentation](/docs){:.btn.btn-default}
 selected_projects:
-  - _showcase/nick-engmann.md
-  - /showcase/shawn-yeager/
+  - _showcase/shawn-yeager.md
+  - _showcase/lazyren.md
 projects_page: showcase.md
 selected_posts:
   - hydejack/_posts/2024-09-04-service-release-for-9-1.md
   - hydejack/_posts/2020-07-03-introducing-hydejack-9.md
-  - /blog/hydejack/2018-09-01-introducing-dark-mode/
+  - hydejack/_posts/2018-09-01-introducing-dark-mode.md
   - hydejack/_posts/2018-06-01-example-content-iii.md
 posts_page: /posts/
 no_third_column: true

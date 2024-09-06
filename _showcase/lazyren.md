@@ -17,8 +17,10 @@ links:
     url: https://lazyren.github.io/
   - title: Blog Post
     url: https://lazyren.github.io/devlog/how-i-customized-hydejack-theme.html
-accent_image: https://lazyren.github.io/assets/img/sidebar-bg.jpg
-theme_color: rgb(25,55,71)
+accent_image: 
+  background: url('https://lazyren.github.io/assets/img/doguri.jpg') center/cover
+  overlay: false
+accent_color: rgb(0,174,239)
 ---
 
 DaeIn took customization to the next level.
