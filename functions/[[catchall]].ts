@@ -29,7 +29,7 @@ async function getPrices(request: Request, env: Env, waitUntil: (promise: Promis
       const productUrl = new URL(`https://api.gumroad.com/v2/products/${ProductId}`);
       productUrl.searchParams.append('access_token', env.GUMROAD_ACCESS_TOKEN);
 
-      const productResponse = await fetch(productUrl, { method: 'GET' });
+      const productResponse = await fetch(productUrl, { method: 'GET', headers: [[ 'user-agent', navigator.userAgent ]] });
       if (!productResponse.ok) {
         console.error('Product response not ok', productResponse.status);
         return null;
