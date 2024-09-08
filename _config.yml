@@ -20,7 +20,7 @@
 lang:                  en
 
 # The title of your blog. Used in the sidebar and the browser tab.
-title:                 Hydejack
+title:                 Starter Kit
 
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
@@ -168,7 +168,7 @@ defaults:
         type:          WebPage
 
 kramdown:
-  math_engine:         katex
+  math_engine:         mathjax
   math_engine_opts:    {}
   footnote_backlink:   '&#x21a9;&#xfe0e;'
 
