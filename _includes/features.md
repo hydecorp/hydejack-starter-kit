@@ -13,7 +13,6 @@ An incomplete list of features included in all versions of **Hydejack**:
 * Author section below each article and support for multiple authors
 * Built-in icons for many social networks
 * Simple and semantic HTML + Structured Data
-* Google Analytics and Google Fonts support
 * Works with GitHub Pages out of the box[^12]
 
 [^11]: Actual page load speed depends on your hosting provider, location, resolution and format of images, usage of 3rd party plugins, and other factors.
