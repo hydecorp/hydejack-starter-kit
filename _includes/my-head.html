@@ -1,1 +1,43 @@
-<!-- Add HTML tags here to be included in the head -->
+<!-- Add HTML tags here to be included in the head. You can delete the below: -->
+<link rel="dns-prefetch" href="https://assets.gumroad.com">
+<script type="module">
+  const loadJS = x => new Promise(r => window.loadJS(x).addEventListener('load', r));
+
+  let p1, p2, io1, io2, embedCreated, overlayCreated;
+  document.querySelector('hy-push-state').addEventListener('load', () => {
+    io1 ||= new IntersectionObserver(async (entries) => {
+      if (entries.some(x => x.isIntersecting)) {
+        p1 = p1 || loadJS('https://gumroad.com/js/gumroad-embed.js');
+        await p1;
+        !embedCreated && await new Promise(function check1(res) {
+          if (typeof createGumroadEmbed !== 'undefined')  {
+            embedCreated = 1;
+            res(createGumroadEmbed());
+          }
+          else setTimeout(() => check1(res), 200);
+        });
+        await new Promise(function check2(res) {
+          if (typeof GumroadEmbed !== 'undefined') res(GumroadEmbed.reload());
+          else setTimeout(() => check2(res), 200);
+        });
+      }
+    }, { rootMargin: '1440px' });
+
+    io2 ||= new IntersectionObserver(async (entries) => {
+      if (entries.some(x => x.isIntersecting)) {
+        p2 = p2 || loadJS('https://gumroad.com/js/gumroad.js');
+        await p2;
+        !overlayCreated && await new Promise(function check(res) {
+          if (typeof createGumroadOverlay !== 'undefined') {
+            overlayCreated = 1;
+            res(createGumroadOverlay());
+          }
+          else setTimeout(() => check(res), 200);
+        });
+      }
+    }, { rootMargin: '300px' });
+
+    document.querySelectorAll('.gumroad-product-embed').forEach(el => io1.observe(el));
+    document.querySelectorAll('.gumroad-button').forEach(el => io2.observe(el));
+  });
+</script>
