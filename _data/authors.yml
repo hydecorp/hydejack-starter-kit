@@ -25,6 +25,7 @@ author1:
   # Social media icons in sidebar
   # Comment/uncommet to show/hide
   # Rearrange to change the order in which they appear
+  # You can also provide an absolute URL (starting with https://) instead of usernames
   social:
     twitter:         <username>
     github:          <username>
@@ -64,7 +65,21 @@ author1:
     # stumbleupon:     <username>
     # paypal:          <username>
     # download:        <url>
-    # keybase          <username>
+    # keybase:         <username>
+    # signal:          <group-invite-code>
+    # threads:         @<username>
+    # playstation:     https://<url>
+    # messenger:       https://<url>
+    # stripe:          https://<url>
+    # slack:           https://<url>
+    # gitlab:          <username>
+    # line:            <username>
+    # medium:          <path>
+    # xbox:            <gamer-tag>
+    # wechat:          https://<url>
+    # discord:         <invite-code>
+    # mastodon:        https://<url>
+    # x:               <username>
 
 # Another author (optional)
 author2:

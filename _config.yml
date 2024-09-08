@@ -96,20 +96,27 @@ accent_color:          rgb(79,177,186)
 # Defaults to `accent_color`.
 theme_color:           rgb(25,55,71)
 
+# IMPORTANT:
+# As of Hydejack 9.2, Google Fonts are turned off by default due to a stronger focus on privacy.
+# Hydejack will use the default font of your visitor's operating system instead.
+# If you want to match the look of hydejack.com, remove the following line and uncomment 
+# the font-related options below:
+
 # The string encoding which fonts to fetch from Google Fonts.
 # See: <https://hydejack.com/docs/configuration/>
-google_fonts:          Roboto+Slab:700|Noto+Sans:400,400i,700,700i
+# google_fonts:          Roboto+Slab:700|Noto+Sans:400,400i,700,700i
 
 # The text font. Expects a string that is a valid CSS font-family value.
 # To change font-weight, see _sass/variables.scss
-font:                  Noto Sans, Helvetica, Arial, sans-serif
+# font:                  Noto Sans, Helvetica, Arial, sans-serif
 
 # The font used for headings. Expects a string that is a valid CSS font-family value.
 # To change font-weight, see _sass/variables.scss
-font_heading:          Roboto Slab, Helvetica, Arial, sans-serif
+# font_heading:          Roboto Slab, Helvetica, Arial, sans-serif
 
-# The font used for code blocks. Expects a string that is a valid CSS font-family value.
-font_code:             Fira Code, Menlo, Monaco, Consolas, monospace;
+# The font used for code blocks. Expects a string that is a valid CSS font-family value. 
+# Defaults to the [System Monospace Font Stack](https://qwtel.com/posts/software/the-monospaced-system-ui-css-font-stack/).
+# font_code:             Fira Code, Menlo, Monaco, Consolas, monospace;
 
 defaults:
   # You can use this to provide a default accent color and background for
@@ -129,6 +136,7 @@ defaults:
     values:
       sitemap:         false
 
+  # Don't include licenses in sitemap (feel free to delete)
   - scope:
       path:            licenses/
     values:
@@ -163,22 +171,6 @@ kramdown:
   math_engine:         katex
   math_engine_opts:    {}
   footnote_backlink:   '&#x21a9;&#xfe0e;'
-
-
-# 3rd Party Integrations
-# ----------------------------------------------------------------------------------------
-
-# Set your Google Analytics id to receive `pageview` events.
-# To remove Google Anaylics from your page, remove the line below.
-# google_analytics:      UA-XXXXXXXX-X
-
-# Setting a disqus shortname will enable the comment section on
-# pages with `comments: true` in the front matter.
-# disqus:                <username>
-
-# Setting a tinyletter username will enable the newsletter subscription box.
-# PRO version only!
-# tinyletter:            <username>
 
 
 # Hydejack Settings
@@ -245,7 +237,8 @@ hydejack:
   # Disable the breadcrumbs above the title
   no_breadcrumbs:      false
 
-  # Set to `true` when building with the `--lsi` option
+  # Set to `true` when building with the `--lsi` option.
+  # The net effect is to use the Jekyll-provided `site.related_posts` variable.
   use_lsi:             true
 
   # When using Google Analytics, set to `true` to display a cookie notice banner.
@@ -261,7 +254,7 @@ hydejack:
   # seeing an old date. 
   hide_dates:          false
 
-  # TODO
+  # Similarly, showing last modified date can devalue a post if it is too far in the past.
   hide_last_modified:  false
 
   # Note that dark mode only works in the PRO version of Hydejack.
@@ -309,12 +302,15 @@ collections:
 exclude:
   - .jekyll-cache
   - .sass-cache
+  - .ruby-lsp
+  - .wrangler
   - '*.toml'
   - vendor
   - Gemfile
   - Gemfile.lock
-  - .ruby-lsp
+  - functions
 include:
+  - _routes.json
   - .well-known
   - LICENSE.md
 

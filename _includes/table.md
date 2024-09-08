@@ -9,12 +9,11 @@ The table below shows what's included in each version:
 | [Blog]                        | &#x2714;            | &#x2714;            |
 | [Features]                    | &#x2714;            | &#x2714;            |
 | [Documentation][docs]         | &#x2714;            | &#x2714;            |
+| [Dark Mode][dark]             | &#x2714;            | &#x2714;            |
 | [Portfolio]                   |                     | &#x2714;            |
 | Printable [Resume]            |                     | &#x2714;            |
-| [Dark Mode][dark]             |                     | &#x2714;            |
 | [Built-In Search][search]     |                     | &#x2714;            |
 | [Custom Forms][forms]         |                     | &#x2714;            |
-| [Newsletter Box][news]        |                     | &#x2714;            |
 | [Grid layout][grid]           |                     | &#x2714;            |
 | [Offline Support][ofln]       |                     | &#x2714;            |
 | Table of Contents[^21]        |                     | &#x2714;            |
@@ -22,14 +21,16 @@ The table below shows what's included in each version:
 | No Hydejack Branding          |                     | &#x2714;            |
 | License                       | [GPL-3.0][lic]      | [PRO]               |
 | Source                        | [GitHub][src]       | Included            |
-| __Price__                     | __Free__            | __$99__ <small>One-Time Payment</small> [^22] |
+| __Price__                     | __Free__            | __$119__{:.price} <small>One-Time Purchase</small>[^xx] |
 |===============================+=====================+=====================|
-|                               | [__Download__][kit] | [__Buy PRO__][buy]{:.gumroad-button data-gumroad-single-product="true"} |
+|                               | [__Download__][kit] | [__Buy PRO__][buy]{:.gumroad-button.no-mark data-gumroad-single-product="true"} |
 {:.stretch-table.dl-table}
 
 [^21]: Large screens (> 1664px width) only.
 
-[^22]: Discounts may apply, check [Gumroad][buy]{:data-gumroad-single-product="true"} for up-to-date pricing.
+[^xx]: 
+    Discounts may apply, check [Gumroad][buy]{:data-gumroad-single-product="true"} for up-to-date pricing.
+    {:.price-desc}
 
 <script type="module">
   document.querySelectorAll('a[href="#_search-input"]').forEach(el => {
