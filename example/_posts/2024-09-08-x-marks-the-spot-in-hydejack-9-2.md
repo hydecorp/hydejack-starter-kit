@@ -11,7 +11,7 @@ image:
 accent_image: 
   background: url('/assets/img/blog/pawel-czerwinski-848z7lbCjoo-unsplash.jpg') center/cover
   overlay: false
-
+excerpt_separator: <!--more-->
 ---
 
 # X Marks the Spot in Hydejack 9.2
@@ -19,11 +19,13 @@ accent_image:
 
 Lots of things have changed in the world of social media since the last release. To bring Hydejack up to date, the default logo for Twitter has changed:
 
-* toc
-{:toc .large-only}
-
 <span class="icon-twitter-old"></span> → <span class="icon-twitter"></span>
 {:.larger}
+
+<!--more-->
+
+* toc
+{:toc .large-only}
 
 If you prefer the old Twitter logo, you can use it through `twitter-old`.
 {:.note.smaller}
