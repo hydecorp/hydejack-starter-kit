@@ -239,12 +239,20 @@ Note that this distinction has no effect when `no_inline_css` is enabled.
 ### Adding custom HTML to the head
 To add custom HTML elements to the `<head>` of the document, open `_includes/my-head.html` (create the folder/the files if they don't exist) and add your elements there.
 
+For example, you can add a custom tracking script via:
+
+~~~html
+<!-- file: "_includes/my-head.html" -->
+<script defer data-domain="my-domain.com" src="https://plausible.io/js/plausible.js"></script>
+~~~
+
 
 ### Adding custom HTML to the body
 To add custom HTML elements to the `<body>` of the document, open `_includes/my-body.html` (create the folder/the files if they don't exist) and add your elements there.
 
-What's the difference to `my-scripts.html`?
-: This file was used in earlier versions of Hydejack to accomplish the same goal. However, there are still instances were you might want to prefer `my-scripts.html` over `my-body.html`, as it won't load scrips on redirect pages and will be ignored by browsers < IE10.
+An earlier version of Hydejack used the `my-scripts.html` file to accomplish the same goal.
+There are still some instances were you might want to prefer `my-scripts.html` over `my-body.html`, as it won't load scrips on redirect pages and will be ignored by browsers < IE10.
+{:.note}
 
 
 ## Adding a welcome page*

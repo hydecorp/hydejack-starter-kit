@@ -4,7 +4,6 @@ title: Config
 description: >
   This chapter covers the many configuration options of Hydejack, allowing you to tailor it to your needs.
 hide_description: true
-sitemap: false
 ---
 
 Once Jekyll is running, you can start with basic configuration by adding various entries to `_config.yml`. 
@@ -223,7 +222,7 @@ At a bare minimum, you should add an `author` key with a `name` and `email` sub-
 # file: `_config.yml`
 author:
   name:  Florian Klampfer
-  email: mail@qwtel.com
+  email: mail@hydejack.com
 ~~~
 
 If you would like the author to be displayed in the about section below a post or project\*, add an `about` key and provide markdown content. I recommend using the YAML pipe `|` syntax, so you can include multiple paragraphs:
@@ -232,7 +231,7 @@ If you would like the author to be displayed in the about section below a post o
 # file: `_config.yml`
 author:
   name:  Florian Klampfer
-  email: mail@qwtel.com
+  email: mail@hydejack.com
   about: |
     Hi, I'm Florian or @qwtel...
 
@@ -342,9 +341,9 @@ If you'd like to add an email <span class="icon-mail"></span>, RSS <span class="
 # file: `_config.yml`
 author:
   social:
-    email:    mail@qwtel.com
+    email:    mail@hydejack.com
     rss:      {{ site.url }}{{ site.baseurl }}/feed.xml # make sure you provide an absolute URL
-    download: https://github.com/hydecorp/hydejack/archive/v9.1.9.zip
+    download: https://github.com/hydecorp/hydejack/archive/v9.2.0.zip
 ~~~
 
 
@@ -535,26 +534,13 @@ cookies_banner:
 
 
 ## Enabling newsletter boxes*
-To enable showing newsletter subscription boxes below each post and project,
-provide your [Tinyletter] username to the `tinyletter` key in the config file.
-
-```yml
-# file: `_config.yml`
-tinyletter:  <tinyletter username>
-```
-
-To edit the content of the newsletter box, open `_data/strings.yml`, and change the entries under the `tinyletter` key.
-
 If want to use a different mailing provider you can build your own form, and insert it into `_includes/my-newsletter.html`. The file includes an example form for MailChimp, where you need to fill in `site.mailchimp.action` and `site.mailchimp.hidden_input` (you can get these from MailChimp).
 
 To build a completely new from, you can use [the same CSS classes as Bootstrap](https://getbootstrap.com/docs/4.0/components/forms/). Note that only form, grid and utility classes are available. Check out [Forms by Example](../forms-by-example.md){:.heading.flip-title} for more examples.
 
-[tinyletter]: https://tinyletter.com/
 
 
-## Enabling Dark Mode*
-Buyers of the PRO version have access to a dark-themed version of Hydejack.
-
+## Enabling Dark Mode
 Dark mode can be enabled in `config.yml` under the `hydejack` key and has three settings and two adjustments:
 
 ```yml
@@ -562,17 +548,19 @@ Dark mode can be enabled in `config.yml` under the `hydejack` key and has three 
 hydejack:
   dark_mode:
     dynamic: true
-    sunrise: 6
-    sunset:  18
     icon:    true
     always:  false
 ```
 
-Setting `dynamic`, will enable dark mode based on the client's local time (unlike location-based sunset calculations, this approach does not require a permission form the user). You can adjust `sunrise` and `sunset` to change when to show the light/dark theme.
+Setting `dynamic` will enable dark mode based on the client's device setting, as expressed by the `prefer-color-scheme` CSS media query.
 
 Setting `icon` will show a switch to alternate between the light and dark mode at the top of the page.
 
 Finally, setting `always` will cause dark mode to become the default theme at all times (combine with `dynamic: false`).
+
+Older versions of Hydejack allowed enabling dark mode based on local time. These settings continue to work, but are no longer recommended.
+{:.note}
+
 
 Continue with [Basics](basics.md){:.heading.flip-title}
 {:.read-more}

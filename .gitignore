@@ -1,7 +1,8 @@
 # Ignore docs files
-_gh_pages
 _site
 _drafts
+build
+dist
 
 # Numerous always-ignore extensions
 *.diff
@@ -28,27 +29,20 @@ nbproject
 *.sublime-workspace
 .idea
 
-# Komodo
-*.komodoproject
-.komodotools
-
-# grunt-html-validation
-validation-status.json
-validation-report.json
-
 # Folders to ignore
 node_modules
-package*.json
+package-lock.json
 vendor
 .sass-cache
 .jekyll-metadata
 .jekyll-cache
+.ruby-lsp
+.wrangler
 *.gem
 Gemfile.lock
 _zip
 /stats.json
-/dist
-/build
+.dev.vars
 
 /assets/js/*hydejack-*
 /_sass/*/__*__/*

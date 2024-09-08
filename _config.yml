@@ -67,7 +67,8 @@ legal:
     url:               /CHANGELOG/
 
 # This text will appear in a `<small>` tag in the footer of every page.
-copyright:             © 2021. All rights reserved.
+copyright:             >
+  \* Not included in free version
 
 # Format of the permalinks
 permalink:             /:categories/:year-:month-:day-:title/
@@ -80,10 +81,14 @@ paginate_path:         /:num/
 # Theme
 # ---------------------------------------------------------------------------------------
 
+# This will use the gem `jekyll-theme-hydejack`, as defined in the sibling `Gemfile`.
 theme: jekyll-theme-hydejack
+
+# You can uncomment `theme` above and replace it with `remote_theme` here iff you are using the 
+# `jekyll-remote-theme` plugin (which is the case when using the legacy GitHub Pages pipeline).
+# This will fetch the `v9` branch of the public Hydejack repository on GitHub.
 # remote_theme: hydecorp/hydejack@v9
 
-destination: build
 
 # Customizaton
 # ----------------------------------------------------------------------------------------
@@ -109,8 +114,9 @@ font:                  Noto Sans, Helvetica, Arial, sans-serif
 # To change font-weight, see _sass/variables.scss
 font_heading:          Roboto Slab, Helvetica, Arial, sans-serif
 
-# The font used for code blocks. Expects a string that is a valid CSS font-family value.
-font_code:             Fira Code, Menlo, Monaco, Consolas, monospace;
+# The font used for code blocks. Expects a string that is a valid CSS font-family value. 
+# Defaults to the [System Monospace Font Stack](https://qwtel.com/posts/software/the-monospaced-system-ui-css-font-stack/).
+# font_code:             Fira Code, Menlo, Monaco, Consolas, monospace;
 
 defaults:
   # You can use this to provide a default accent color and background for
@@ -130,6 +136,7 @@ defaults:
     values:
       sitemap:         false
 
+  # Don't include licenses in sitemap (feel free to delete)
   - scope:
       path:            licenses/
     values:
@@ -164,22 +171,6 @@ kramdown:
   math_engine:         katex
   math_engine_opts:    {}
   footnote_backlink:   '&#x21a9;&#xfe0e;'
-
-
-# 3rd Party Integrations
-# ----------------------------------------------------------------------------------------
-
-# Set your Google Analytics id to receive `pageview` events.
-# To remove Google Anaylics from your page, remove the line below.
-# google_analytics:      UA-XXXXXXXX-X
-
-# Setting a disqus shortname will enable the comment section on
-# pages with `comments: true` in the front matter.
-# disqus:                <username>
-
-# Setting a tinyletter username will enable the newsletter subscription box.
-# PRO version only!
-# tinyletter:            <username>
 
 
 # Hydejack Settings
@@ -246,7 +237,8 @@ hydejack:
   # Disable the breadcrumbs above the title
   no_breadcrumbs:      false
 
-  # Set to `true` when building with the `--lsi` option
+  # Set to `true` when building with the `--lsi` option.
+  # The net effect is to use the Jekyll-provided `site.related_posts` variable.
   use_lsi:             true
 
   # When using Google Analytics, set to `true` to display a cookie notice banner.
@@ -262,7 +254,7 @@ hydejack:
   # seeing an old date. 
   hide_dates:          false
 
-  # TODO
+  # Similarly, showing last modified date can devalue a post if it is too far in the past.
   hide_last_modified:  false
 
   # Note that dark mode only works in the PRO version of Hydejack.
@@ -313,12 +305,15 @@ exclude:
   - ./#jekyll-theme-hydejack/.git
   - .jekyll-cache
   - .sass-cache
+  - .ruby-lsp
+  - .wrangler
   - '*.toml'
   - vendor
   - Gemfile
   - Gemfile.lock
-  - .ruby-lsp
+  - functions
 include:
+  - _routes.json
   - .well-known
   - LICENSE.md
 
