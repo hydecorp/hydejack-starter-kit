@@ -39,14 +39,32 @@ If you've modified any of Hydejack's files in `#jekyll-theme-hydejack`, your cha
 and you have to apply them again. Make sure you've made a backup before overwriting any files.
 {:.note title="Important"}
 
+If you've followed the steps to add __Hydejack PRO__ as a git dependency, all you have to do is change the `tag` to the latest version:
+
+~~~ruby
+# file: `Gemfile`
+gem "jekyll-theme-hydejack", git: "https://github.com/hydecorp/hydejack-pro", tag: "pro/v9.2.0"
+~~~
+
+Note that you can also define a git dependency based on a branch, which removes the need for manual updates:
+
+~~~ruby
+# file: `Gemfile`
+gem "jekyll-theme-hydejack", git: "https://github.com/hydecorp/hydejack-pro", branch: "pro/v9"
+~~~
+
 ## GitHub Pages
 When building on GitHub Pages, upgrading Hydejack is as simple as setting the `remote_theme` key in `_config.yml` to the desired version.
 
 ```yml
-remote_theme: hydecorp/hydejack@v9.1.9
+remote_theme: hydecorp/hydejack@v9.2.0
 ```
 
 To use the latest version on the `v9` branch on each build, you can use  `hydecorp/hydejack@v9`.
+
+This setting only works with the Free Version of Hydejack. 
+**PRO Customers** must carefully merge contents of the `starter-kit-gh-pages` folder in the downloaded zip with their existing files. See [Deploy](./deploy.md){:.heading.flip-title} for a better way to use GitHub Pages, which also works with the PRO version.
+{:.note}
 
 
 Continue with [Config](config.md){:.heading.flip-title}

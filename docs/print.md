@@ -7,8 +7,6 @@ sitemap: false
 ---
 
 Here you should be able to find everything you need to know to accomplish the most common tasks when blogging with Hydejack.
-Should you think something is missing, [please let me know](mailto:mail@hydejack.com).
-Should you discover a mistake in the docs (or a bug in general) feel free to [open an issue](https://github.com/hydecorp/hydejack/issues) on GitHub.
 
 While this manual tries to be beginner-friendly, as a user of Jekyll it is assumed that you are comfortable running shell commands and editing text files.
 {:.note}
@@ -44,20 +42,14 @@ For new sites, the best way to get started with Hydejack is via the Starter Kit.
 It comes with a documented config file and example content that gets you started quickly.
 
 If you have a GitHub account, fork the [Hydejack Starter Kit][hsc] repository. 
-Otherwise [download the Starter Kit][src] and unzip them somewhere on your machine.
+Otherwise [download the Starter Kit][src] and unzip the contents somewhere on your machine.
 
 If you bought the __PRO Version__ of Hydejack, use the contents of the `starter-kit` folder instead.
 
-In addition to the docs here, you can follow the quick start guide in the Starter Kit.
-{:.note}
-
 You can now jump to [running locally](#running-locally).
 
-You can now also [![Deploy to Netlify][dtn]][nfy]{:.no-mark-external} directly.
-{:.note}
-
 [hsc]: https://github.com/hydecorp/hydejack-starter-kit
-[src]: https://github.com/hydecorp/hydejack-starter-kit/archive/v9.1.9.zip
+[src]: https://github.com/hydecorp/hydejack-starter-kit/archive/v9.2.0.zip
 [nfy]: https://app.netlify.com/start/deploy?repository=https://github.com/hydecorp/hydejack-starter-kit
 [dtn]: https://www.netlify.com/img/deploy/button.svg
 
@@ -71,6 +63,16 @@ Add the following to your `Gemfile`:
 gem "jekyll-theme-hydejack"
 ~~~
 
+Next, in your config file, change the `theme` to Hydejack:
+
+~~~yml
+## file: `_config.yml`
+theme: jekyll-theme-hydejack
+~~~
+
+You can now jump to [running locally](#running-locally).
+
+#### PRO Customers
 If you bought the __PRO Version__ of Hydejack, copy the `#jekyll-theme-hydejack` folder into the root folder of your site,
 and add the following to your `Gemfile` instead:
 
@@ -80,10 +82,22 @@ gem "jekyll-theme-hydejack", path: "./#jekyll-theme-hydejack"
 ~~~
 
 The folder is prefixed with a `#` to indicate that this folder is different from regular Jekyll content. 
-The `#` char was choosen specifically because it is on of the four characters ignored by Jekyll by default (`.`, `_` , `#`, `~`).
+The `#` character was chosen because it is on of the four characters ignored by Jekyll by default (`.`, `_` , `#`, `~`)
 {:.note}
 
-In your config file, change the `theme` to Hydejack:
+Alternatively, if you've been added to the ["PRO Customers" team](https://github.com/orgs/hydecorp/teams/pro-customers) on GitHub, you can add __Hydejack PRO__ as a git dependency instead:
+
+~~~ruby
+## file: `Gemfile`
+gem "jekyll-theme-hydejack", git: "https://github.com/hydecorp/hydejack-pro", tag: "pro/v9.2.0"
+~~~
+
+If you've provided your GitHub username during checkout you should have been automatically added to the team. Otherwise you can request an invite via [mail@hydejack.com](mailto:mail@hydejack.com).
+{:.note}
+
+In order for Bundle to fetch the private repository, an __environment variable__ named __`BUNDLE_GITHUB__COM`__ must be set to __`x-access-token:<GH_REPO_PAT>`__, where you replace `<GH_REPO_PAT>` with a GitHub [Personal Access Token](https://github.com/settings/tokens) (PAT) that has the "repo" permission.
+
+After you've secured a way to fetch the `jekyll-theme-hydejack` gem, in your config file, change the `theme` to Hydejack:
 
 ~~~yml
 ## file: `_config.yml`
@@ -91,12 +105,13 @@ theme: jekyll-theme-hydejack
 ~~~
 
 Hydejack comes with a default configuration file that takes care most of the configuration,
-but it pays off to check out the example config file in the Starter Kit to see what's available.
+but it pays off to check out the [annotated example config file][config] from the Starter Kit to see what's available. See chapter [Config](./config.md){:.heading.flip-title} for more.
+{:.note}
 
 You can now jump to [running locally](#running-locally).
 
 #### Troubleshooting
-If your existing site combines theme files with your content (as did previous verisons of Hydejack/PRO),
+If your existing site combines theme files with your content (as did previous versions of Hydejack/PRO),
 make sure to delete the following folders:
 
 - `_layouts`
@@ -109,20 +124,33 @@ Make sure to only delete files that belong to the old theme!
 
 
 ### GitHub Pages
-If you want to build your site on [GitHub Pages][ghp], check out the [`gh-pages` branch][gpb] in the Hydejack Starter Kit repo.
+As of September 2024, the recommended way of deploying to GitHub Pages is through a custom [GitHub Action][gha], which gives you full control over the build process. 
+No extra steps are required when using a GH Action and you can jump to [running locally](#running-locally), or learn more in chapter [Deploy](./deploy.md){:.heading.flip-title}.
+That being said, Hydejack maintains backwards compatibility with the legacy pipeline and you can continue to use it.
+{:.note}
+
+If you want to build your site using the legacy pipeline, you can build off of the [`gh-pages` branch][gpb] in the Hydejack Starter Kit repo.
 
 [ghp]: https://jekyllrb.com/docs/github-pages/
 [gpb]: https://github.com/hydecorp/hydejack-starter-kit/tree/gh-pages
+[gha]: https://docs.github.com/en/actions
 
-For existing sites, you can instead set the `remote_theme` key as follows:
+The main difference to the regular starter kit is the use of `remote_theme` setting in the config file. 
 
 ```yml
 ## file: `_config.yml`
-remote_theme: hydecorp/hydejack@v9.1.9
+remote_theme: hydecorp/hydejack@v9.2.0
 ```
 
+This setting only works with the Free Version of Hydejack. 
+**PRO Customers** should use the `starter-kit-gh-pages` folder in the downloaded zip file when targeting the GitHub Pages legacy pipeline.
+{:.note}
+
+`starter-kit-gh-pages` is only required when deploying to GitHub Pages through the legacy build pipeline.
+When using [a custom GitHub Action](./deploy.md#github-actions), the regular `starter-kit` provides a cleaner, less cluttered folder structure.
+{:.note}
+
 Make sure the `plugins` list contains `jekyll-include-cache` (create if it doesn't exist):
-{:.note title="Important"}
 
 ```yml
 ## file: `_config.yml`
@@ -135,7 +163,6 @@ To run this configuration locally, make sure the following is part of your `Gemf
 ```ruby
 ## file: `Gemfile`
 gem "github-pages", group: :jekyll_plugins
-gem "jekyll-include-cache", group: :jekyll_plugins
 ```
 
 Note that Hydejack has a reduced feature set when built on GitHub Pages. 
@@ -166,7 +193,7 @@ and point your browser to <http://localhost:4000> to see Hydejack in action.
 
 
 
-
+[config]: https://github.com/hydecorp/hydejack-starter-kit/blob/v9/_config.yml
 [upgrade]: #upgrade
 
 
@@ -207,16 +234,34 @@ bundle update jekyll-theme-hydejack
 
 If you've modified any of Hydejack's files in `#jekyll-theme-hydejack`, your changes will most likely be overwritten
 and you have to apply them again. Make sure you've made a backup before overwriting any files.
-{:.note}
+{:.note title="Important"}
+
+If you've followed the steps to add __Hydejack PRO__ as a git dependency, all you have to do is change the `tag` to the latest version:
+
+~~~ruby
+## file: `Gemfile`
+gem "jekyll-theme-hydejack", git: "https://github.com/hydecorp/hydejack-pro", tag: "pro/v9.2.0"
+~~~
+
+Note that you can also define a git dependency based on a branch, which removes the need for manual updates:
+
+~~~ruby
+## file: `Gemfile`
+gem "jekyll-theme-hydejack", git: "https://github.com/hydecorp/hydejack-pro", branch: "pro/v9"
+~~~
 
 ### GitHub Pages
 When building on GitHub Pages, upgrading Hydejack is as simple as setting the `remote_theme` key in `_config.yml` to the desired version.
 
 ```yml
-remote_theme: hydecorp/hydejack@v9.1.9
+remote_theme: hydecorp/hydejack@v9.2.0
 ```
 
 To use the latest version on the `v9` branch on each build, you can use  `hydecorp/hydejack@v9`.
+
+This setting only works with the Free Version of Hydejack. 
+**PRO Customers** must carefully merge contents of the `starter-kit-gh-pages` folder in the downloaded zip with their existing files. See [Deploy](./deploy.md){:.heading.flip-title} for a better way to use GitHub Pages, which also works with the PRO version.
+{:.note}
 
 
 
@@ -441,7 +486,7 @@ At a bare minimum, you should add an `author` key with a `name` and `email` sub-
 ## file: `_config.yml`
 author:
   name:  Florian Klampfer
-  email: mail@qwtel.com
+  email: mail@hydejack.com
 ~~~
 
 If you would like the author to be displayed in the about section below a post or project\*, add an `about` key and provide markdown content. I recommend using the YAML pipe `|` syntax, so you can include multiple paragraphs:
@@ -450,7 +495,7 @@ If you would like the author to be displayed in the about section below a post o
 ## file: `_config.yml`
 author:
   name:  Florian Klampfer
-  email: mail@qwtel.com
+  email: mail@hydejack.com
   about: |
     Hi, I'm Florian or @qwtel...
 
@@ -560,9 +605,9 @@ If you'd like to add an email <span class="icon-mail"></span>, RSS <span class="
 ## file: `_config.yml`
 author:
   social:
-    email:    mail@qwtel.com
+    email:    mail@hydejack.com
     rss:      {{ site.url }}{{ site.baseurl }}/feed.xml # make sure you provide an absolute URL
-    download: https://github.com/hydecorp/hydejack/archive/v9.1.9.zip
+    download: https://github.com/hydecorp/hydejack/archive/v9.2.0.zip
 ~~~
 
 
@@ -753,26 +798,13 @@ cookies_banner:
 
 
 ### Enabling newsletter boxes*
-To enable showing newsletter subscription boxes below each post and project,
-provide your [Tinyletter] username to the `tinyletter` key in the config file.
-
-```yml
-## file: `_config.yml`
-tinyletter:  <tinyletter username>
-```
-
-To edit the content of the newsletter box, open `_data/strings.yml`, and change the entries under the `tinyletter` key.
-
 If want to use a different mailing provider you can build your own form, and insert it into `_includes/my-newsletter.html`. The file includes an example form for MailChimp, where you need to fill in `site.mailchimp.action` and `site.mailchimp.hidden_input` (you can get these from MailChimp).
 
 To build a completely new from, you can use [the same CSS classes as Bootstrap](https://getbootstrap.com/docs/4.0/components/forms/). Note that only form, grid and utility classes are available. Check out [Forms by Example](../forms-by-example.md){:.heading.flip-title} for more examples.
 
-[tinyletter]: https://tinyletter.com/
 
 
-### Enabling Dark Mode*
-Buyers of the PRO version have access to a dark-themed version of Hydejack.
-
+### Enabling Dark Mode
 Dark mode can be enabled in `config.yml` under the `hydejack` key and has three settings and two adjustments:
 
 ```yml
@@ -780,17 +812,19 @@ Dark mode can be enabled in `config.yml` under the `hydejack` key and has three 
 hydejack:
   dark_mode:
     dynamic: true
-    sunrise: 6
-    sunset:  18
     icon:    true
     always:  false
 ```
 
-Setting `dynamic`, will enable dark mode based on the client's local time (unlike location-based sunset calculations, this approach does not require a permission form the user). You can adjust `sunrise` and `sunset` to change when to show the light/dark theme.
+Setting `dynamic` will enable dark mode based on the client's device setting, as expressed by the `prefer-color-scheme` CSS media query.
 
 Setting `icon` will show a switch to alternate between the light and dark mode at the top of the page.
 
 Finally, setting `always` will cause dark mode to become the default theme at all times (combine with `dynamic: false`).
+
+Older versions of Hydejack allowed enabling dark mode based on local time. These settings continue to work, but are no longer recommended.
+{:.note}
+
 
 
 
@@ -1044,12 +1078,20 @@ Note that this distinction has no effect when `no_inline_css` is enabled.
 #### Adding custom HTML to the head
 To add custom HTML elements to the `<head>` of the document, open `_includes/my-head.html` (create the folder/the files if they don't exist) and add your elements there.
 
+For example, you can add a custom tracking script via:
+
+~~~html
+<!-- file: "_includes/my-head.html" -->
+<script defer data-domain="my-domain.com" src="https://plausible.io/js/plausible.js"></script>
+~~~
+
 
 #### Adding custom HTML to the body
 To add custom HTML elements to the `<body>` of the document, open `_includes/my-body.html` (create the folder/the files if they don't exist) and add your elements there.
 
-What's the difference to `my-scripts.html`?
-: This file was used in earlier versions of Hydejack to accomplish the same goal. However, there are still instances were you might want to prefer `my-scripts.html` over `my-body.html`, as it won't load scrips on redirect pages and will be ignored by browsers < IE10.
+An earlier version of Hydejack used the `my-scripts.html` file to accomplish the same goal.
+There are still some instances were you might want to prefer `my-scripts.html` over `my-body.html`, as it won't load scrips on redirect pages and will be ignored by browsers < IE10.
+{:.note}
 
 
 ### Adding a welcome page*
@@ -1890,38 +1932,32 @@ which can be deployed using the methods outlined in the [Jekyll Documentation][d
 
 
 ### GitHub Pages
-If you're using the Starter Kit for GitHub pages, all you have to do is push your repository:
+
+As of September 2024, you can deploy to GitHub Pages using a custom GitHub Action. 
+You can read more about it in chapter [Deploy](#deploy){:.heading.flip-title}.
+{:.note}
+
+If you're using the Starter Kit based on the `gh-pages` branch, or the `starter-kit-gh-pages` folder from the **PRO Version**,
+all you have to do is push your repository:
 
 ```bash
 $ git add .
-$ git commit "Update"
-$ git push origin master
+$ git commit "Update content"
+$ git push origin gh-pages
 ```
 
-<!-- ## GitHub Pages
-To deploy to GitHub Pages, the steps are:
+Make sure _Source_ is set to "Deploy from a branch" in the _Pages_ section of the repository settings, 
+and that the branch you've pushed to matches the one selected in the dropdown:
 
-~~~bash
-$ cd _site
-$ git init # you only need to do this once
-$ git remote add origin <github_remote_url> # you only need to do this once
-$ git add .
-$ git commit -m "Build"
-$ git push origin master:<remote_branch>
-$ cd ..
-~~~
+![GitHub repository settings](../assets/img/docs/pipeline-gh-pages.png)
+{:.border}
 
-`github_remote_url`
-: Find this on your repository's GitHub page.
-
-`remote_branch`
-: Either `master` for "user or organization pages", or `gh-pages` for "project pages"
-
-More on [user, organization, and project pages](https://help.github.com/articles/user-organization-and-project-pages/). -->
+Ensure these settings are set to continue using the GitHub Pages legacy pipeline.
+{:.figcaption}
 
 
-<!-- 
- -->
+
+
 
 [deploy]: https://jekyllrb.com/docs/deployment-methods/
 [lsa]: https://en.wikipedia.org/wiki/Latent_semantic_analysis
@@ -1929,6 +1965,152 @@ More on [user, organization, and project pages](https://help.github.com/articles
 [lsi]: http://www.classifier-reborn.com/lsi
 
 *[LSI]: Latent Semantic Indexer
+
+
+
+{% comment %}****---------------------------------------------------------------
+                    DEPLOY
+----------------------------------------------------------------{% endcomment %}
+
+## Deploy
+This chapter was added in 2024 with my recommendations on how to deploy Hydejack based on recent developments in GitHub Pages and other changes in the world of static site deployment. 
+
+Note that the [Jekyll Documentation on Deployment][deploy] remains the best, most up-to-date resource for all things Jekyll deployment. 
+These docs are my personal recipes with some extra steps that are mostly relevant to **PRO Customers**. 
+
+0. this unordered seed list will be replaced by toc as unordered list
+{:toc}
+
+
+### GitHub Actions
+You can deploy to GitHub Pages from a custom GitHub Action. It allows you to fully customize the build pipeline, set specific versions for Ruby and Jekyll and use any Jekyll plugin you may wish. 
+
+To opt into the GitHub Actions pipelines, go to the repository's settings, find the *Pages* tab and ensure that the *Source* to "GitHub Actions":
+
+![GitHub repository settings](../assets/img/docs/pipeline-gh-actions.png)
+{:.border}
+
+Ensure these settings are set to opt in the GitHub Actions pipeline.
+{:.figcaption}
+
+As with the legacy GitHub Pages pipeline, deployments are triggered by pushing commits to a specific branch.
+To set up the pipeline, create a YAML file in `.github/workflows` in the root of your repository with the following content:
+
+{% raw %}
+~~~yml
+## file: ".github/workflows/jekyll.yml"
+## Sample workflow for building and deploying a Jekyll site to GitHub Pages
+name: Deploy Jekyll site to Pages
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: [$default-branch] # You can change this to a specific branch (without the `$`)
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+## Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+## Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+## However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # Build job
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Fetch whole history for jekyll-last-modified-at plugin
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@8575951200e472d5f2d95c625da0c7bec8217c42 # v1.161.0
+        with:
+          ruby-version: '3.1' # Not needed with a .ruby-version file
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+          cache-version: 0 # Increment this number if you need to re-download cached gems
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+      - name: Build with Jekyll
+        # Outputs to the './_site' directory by default
+        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+        env:
+          JEKYLL_ENV: production
+      - name: Upload artifact
+        # Automatically uploads an artifact from the './_site' directory by default
+        uses: actions/upload-pages-artifact@v3
+
+  # Deployment job
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+~~~
+{% endraw %}
+
+This example is based on [`actions/starter-workflows` repository](https://github.com/actions/starter-workflows/blob/main/pages/jekyll.yml) 
+with one Hydejack-specific change applied:
+
+The checkout step has been modified to pull the entire history of the repository. 
+This allows the `jekyll-last-modified-at` plugin to generate accurate dates based on git history.
+
+```yml
+with:
+  fetch-depth: 0  # Fetch whole history for jekyll-last-modified-at plugin
+```
+
+This GitHub Action works with any [Install](./install.md){:.heading.flip-title} of Hydejack that also runs on your local machine.
+
+### Private Repo for PRO Customers
+If you're a **PRO Customer** and followed the instructions during [Install](./install.md){:.heading.flip-title} to add the theme as a git dependency, your deploy pipeline must be authorized to pull from the private [`hydejack-pro` repository](https://github.com/hydecorp/hydejack-pro).
+
+~~~ruby
+## file: `Gemfile`
+gem "jekyll-theme-hydejack", git: "https://github.com/hydecorp/hydejack-pro", tag: "pro/v9.2.0"
+~~~
+
+Make sure you are member of the ["PRO Customers" team](https://github.com/orgs/hydecorp/teams/pro-customers) on GitHub. If you've provided a GitHub handle during checkout you should have been automatically added, otherwise you can request an invite via [mail@hydejack.com](mailto:mail@hydejack.com).
+{:.note}
+
+In order for Bundle to fetch the private repository, an __environment variable__ named __`BUNDLE_GITHUB__COM`__ must be set to __`x-access-token:<GH_REPO_PAT>`__, where you replace `<GH_REPO_PAT>` with a 
+GitHub [Personal Access Token](https://github.com/settings/tokens) (PAT) that has the "repo" permission.
+
+If using a git dependency works for you, you can declutter your repository by deleting the `#jekyll-theme-hydejack` folder.
+{:.note}
+
+Most CI providers have a settings page that allows you can set environment variables. In the case of the GitHub Action above, the `BUNDLE_GITHUB__COM` variable is required during the "Setup Ruby" step. The modified step looks as follows:
+
+{% raw %}
+~~~yml
+- name: Setup Ruby
+  uses: ruby/setup-ruby@8575951200e472d5f2d95c625da0c7bec8217c42 # v1.161.0
+  with:
+    ruby-version: '3.1' # Not needed with a .ruby-version file
+    bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+    cache-version: 0 # Increment this number if you need to re-download cached gems
+  env: #!!
+    BUNDLE_GITHUB__COM: x-access-token:${{ secrets.GH_REPO_PAT }} #!!
+~~~
+{% endraw %}
+
+
+
+[deploy]: https://jekyllrb.com/docs/deployment-methods/
 
 
 
@@ -1954,11 +2136,13 @@ Enabling this feature requires that your content meets the following criteria:
 
 To enable this feature, create a `sw.js` file in the root of your project and add the following content:
 
+{% raw %}
 ```js
 ---
 ---
-importScripts("{% raw %}{{ '/assets/js/sw.js' | relative_url }}?t={{ site.time | date_to_xmlschema }}{% endraw %}");
+importScripts("{{ '/assets/js/sw.js' | relative_url }}?t={{ site.time | date_to_xmlschema }}");
 ```
+{% endraw %}
 
 This will load the main service worker script from Hydejack's assets. The `site.time` part is necessary to make the service worker "byte different" every time you create a new build of your site, which triggers an update.
 

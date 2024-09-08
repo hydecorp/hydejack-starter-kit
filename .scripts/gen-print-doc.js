@@ -20,6 +20,7 @@ const DOCS = [
   resolve(`./docs/writing.md`),
   resolve(`./docs/scripts.md`),
   resolve(`./docs/build.md`),
+  resolve(`./docs/deploy.md`),
   resolve(`./docs/advanced.md`),
 ];
 

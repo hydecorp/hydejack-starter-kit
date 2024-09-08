@@ -10,9 +10,12 @@ source "https://rubygems.org"
 # Happy Jekylling!
 gem "jekyll", "~> 4.3"
 
-# Using the local `./#jekyll-theme-hydejack` folder as source for the theme.
-# You can remove this line (and the folder), if you have another way of fetching it (see below).
-gem "jekyll-theme-hydejack", path: "./#jekyll-theme-hydejack"
+case ENV['JEKYLL_ENV']
+when 'development'
+  gem "jekyll-theme-hydejack", path: "./#jekyll-theme-hydejack"
+else
+  gem "jekyll-theme-hydejack", git: "https://github.com/hydecorp/hydejack-dev", branch: "pro/v9"
+end
 
 # If you are a PRO customer and part of the ["Customers" team](https://github.com/orgs/hydecorp/teams/customers), 
 # you can fetch the theme from the private repository. See [Deploy in the Hydejack Docs](https://hydejack.com/docs/deploy) for details.
