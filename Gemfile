@@ -14,16 +14,14 @@ case ENV['JEKYLL_ENV']
 when 'development'
   gem "jekyll-theme-hydejack", path: "./#jekyll-theme-hydejack"
 else
-  gem "jekyll-theme-hydejack", git: "https://github.com/hydecorp/hydejack-dev", branch: "pro/v9"
+  gem "jekyll-theme-hydejack", git: "https://github.com/hydecorp/hydejack-pro", branch: "pro/v9"
 end
 
-# If you are a PRO customer and part of the ["Customers" team](https://github.com/orgs/hydecorp/teams/customers), 
-# you can fetch the theme from the private repository. See [Deploy in the Hydejack Docs](https://hydejack.com/docs/deploy) for details.
-# gem "jekyll-theme-hydejack", git: "https://github.com/hydecorp/hydejack-dev", branch: "pro/v9"
+# If you are part of the ["Customers" team](https://github.com/orgs/hydecorp/teams/pro-customers), 
+# you can fetch the theme from a private repository. 
+# See [Deploy in the Hydejack Docs](https://hydejack.com/docs/deploy) for details.
 
-# You can pin the version to a specific tag:
-# gem "jekyll-theme-hydejack", git: "https://github.com/hydecorp/hydejack-dev", tag: "pro/v9.1.9"
-
+# gem "jekyll-theme-hydejack", git: "https://github.com/hydecorp/hydejack-pro", tag: "pro/v9.2.0"
 
 # IMPORTANT: The followign gem is used to compile math formulas to 
 # KaTeX during site building.
