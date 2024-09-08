@@ -16,6 +16,10 @@ accent_image:
 
 # X Marks the Spot in Hydejack 9.2
 ## New Social Media Icons
+
+* toc
+{:toc .large-only}
+
 Lots of things have changed in the world of social media since the last release. To bring Hydejack up to date, the default logo for Twitter has changed:
 
 <span class="icon-twitter-old"></span> → <span class="icon-twitter"></span>
@@ -58,7 +62,16 @@ For detail, check out the new [Deploy](../../docs/deploy.md){:.heading.flip-titl
 ## Google Fonts Off by Default
 Google Fonts are now turned off by default in the starter kits, but remain in use on hydejack.com for visual continuity. All associated options continue to work as they did before. Only new users have to enable them in the config file if they want to match the look of hydejack.com.
 
-The reason for this change is that sensibilities around privacy have changed in recent years. No Google product feels appropriate as a default option for an ownership and self-hosting oriented product like Hydejack.
+The reason for this change is that sensibilities around privacy have changed in recent years. 
+No Google product feels appropriate as a default option for an ownership and self-hosting oriented product like Hydejack.
+
+To restore the old look that matches hydejack.com, add the following to your `_config.yml` file:
+
+```yml
+google_fonts:          Roboto+Slab:700|Noto+Sans:400,400i,700,700i
+font:                  Noto Sans, Helvetica, Arial, sans-serif
+font_heading:          Roboto Slab, Helvetica, Arial, sans-serif
+```
 
 On a related note, I've also decided against updating the included Google Analytics script, in part because the upgrade path is incomprehensible, but also due the the same privacy concerns that make Google Fonts a bad default option. I recommend independent analytics services like 
 [Plausible](https://plausible.io), [Matomo](https://matomo.org/) or maybe even [Counterscale](https://counterscale.dev) (if you are a Cloudflare customer).
