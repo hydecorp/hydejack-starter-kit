@@ -12,6 +12,7 @@ accent_image:
   background: url('/assets/img/blog/pawel-czerwinski-848z7lbCjoo-unsplash.jpg') center/cover
   overlay: false
 excerpt_separator: <!--more-->
+sitemap: false
 ---
 
 # X Marks the Spot in Hydejack 9.2
