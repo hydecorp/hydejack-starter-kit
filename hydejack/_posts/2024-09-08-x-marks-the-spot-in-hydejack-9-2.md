@@ -8,9 +8,7 @@ image:
     1920w: /assets/img/blog/pawel-czerwinski-848z7lbCjoo-unsplash.jpg
     960w:  /assets/img/blog/pawel-czerwinski-848z7lbCjoo-unsplash@0,5x.jpg
     480w:  /assets/img/blog/pawel-czerwinski-848z7lbCjoo-unsplash@0,25x.jpg
-accent_image: 
-  background: url('/assets/img/blog/pawel-czerwinski-848z7lbCjoo-unsplash.jpg') center/cover
-  overlay: false
+accent_image: /assets/img/blog/pawel-czerwinski-848z7lbCjoo-unsplash.jpg
 excerpt_separator: <!--more-->
 ---
 
