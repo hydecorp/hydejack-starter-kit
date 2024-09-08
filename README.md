@@ -15,7 +15,7 @@ selected_projects:
   - _showcase/lazyren.md
 projects_page: showcase.md
 selected_posts:
-  - hydejack/_posts/2024-09-07-x-marks-the-spot-in-hydejack-9-2.md
+  - hydejack/_posts/2024-09-08-x-marks-the-spot-in-hydejack-9-2.md
   - hydejack/_posts/2024-09-04-service-release-for-9-1.md
   - hydejack/_posts/2021-02-13-whats-new-in-hydejack-9-1.md
   - hydejack/_posts/2020-07-03-introducing-hydejack-9.md
