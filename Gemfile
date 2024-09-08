@@ -10,12 +10,7 @@ source "https://rubygems.org"
 # Happy Jekylling!
 gem "jekyll", "~> 4.3"
 
-case ENV['JEKYLL_ENV']
-when 'development'
-  gem "jekyll-theme-hydejack", path: "./#jekyll-theme-hydejack"
-else
-  gem "jekyll-theme-hydejack", git: "https://github.com/hydecorp/hydejack-pro", branch: "pro/v9"
-end
+gem "jekyll-theme-hydejack", path: "./#jekyll-theme-hydejack"
 
 # If you are part of the ["Customers" team](https://github.com/orgs/hydecorp/teams/pro-customers), 
 # you can fetch the theme from a private repository. 
