@@ -4,6 +4,7 @@ title: Deploy
 description: >
   On how to deploy Hydejack to a variety of popular hosting providers.
 hide_description: true
+sitemap: false
 ---
 
 This chapter was added in 2024 with my recommendations on how to deploy Hydejack based on recent developments in GitHub Pages and other changes in the world of static site deployment. 
