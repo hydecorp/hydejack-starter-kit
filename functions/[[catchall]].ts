@@ -75,13 +75,14 @@ async function getPrices(request: Request, env: Env, waitUntil: (promise: Promis
   return { defaultPrice, price };
 }
 
-export const onRequest: PagesFunction<Env> = async (context) => {
-  const { request, env } = context;
+export const onRequestGet: PagesFunction<Env> = async (context) => {
+  const { env } = context;
+  const request = context.request as Request;
 
   const response = await env.ASSETS.fetch(request);
-  if (!response.headers.get('content-type')?.includes('text/html')) {
+  if (!response.headers.get('content-type')?.includes('text/html') || !response.body) {
     console.debug("not a text/html response");
-    return response
+    return response;
   }
 
   console.debug("Has secret:", !!env.GUMROAD_ACCESS_TOKEN);
@@ -113,7 +114,7 @@ export const onRequest: PagesFunction<Env> = async (context) => {
             price *= DefaultDiscount // apply generic discount
           } 
           element.setInnerContent(
-            `<del>\$${formatPrice(defaultPrice)}</del> \$${formatPrice(price)}`, 
+            html`<del>\$${formatPrice(defaultPrice)}</del> \$${formatPrice(price)}`, 
             { html: true },
           );
         }
@@ -126,12 +127,12 @@ export const onRequest: PagesFunction<Env> = async (context) => {
           const { defaultPrice, price } = result;
           if (price == defaultPrice) {
             element.setInnerContent(
-              `Price permanently reduced by <strong>10%</strong>! You can save the offer code <strong>${DefaultDiscountCode.toUpperCase()}</strong> to apply this discount in the future.${discountBacklink}`, 
+              html`Price permanently reduced by <strong>10%</strong>! You can save the offer code <strong>${DefaultDiscountCode.toUpperCase()}</strong> to apply this discount in the future.${discountBacklink}`, 
               { html: true },
             );
           } else {
             element.setInnerContent(
-              `Location-based discount has been applied. Proceed to <a href="https://gum.co/${ProductId}">Gumroad</a> for details.${discountBacklink}`,
+              html`Location-based discount has been applied. Proceed to <a href="https://gum.co/${ProductId}">Gumroad</a> for details.${discountBacklink}`,
               { html: true },
             );
           }
@@ -154,4 +155,10 @@ export const onRequest: PagesFunction<Env> = async (context) => {
     .transform(response);
     transformedResponse.headers.append('vary', 'cf-ipcountry');
     return transformedResponse;
+}
+
+function html(strings: TemplateStringsArray, ...values: any[]) {
+  let str = '', i = 0;
+  for (const string of strings) str += string + (values[i++] || '');
+  return str;
 }

@@ -17,10 +17,9 @@ interface Env {
 }
 
 export const onRequestPost: PagesFunction<Env> = async (context) => {
-  const { env, params } = context;
+  const { env, params: { secret } } = context;
   const request = context.request as Request;
 
-  const secret = params.catchall?.[0];
   if (secret !== env.PING_SECRET) {
     console.error("Invalid secret:", secret);
     return new Response(null, { status: 401 });
