@@ -20,6 +20,7 @@ Sep 08 2024
 * Changed the default font weight for headings to 900 (you can undo this by setting `font_weight_heading: 700` in `_data/variables.yml`).
 * Fixed a bug that caused a scrollbar to appear on the copy button on code blocks
 * Fixed a bug that caused a glitch on the copy button during light/dark mode transition 
+* Fixed a bug that caused newlines to get lost when using the copy button
 
 ## v9.1.9
 Sep 05 2024
