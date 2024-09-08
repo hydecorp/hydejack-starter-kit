@@ -40,7 +40,7 @@ jobs:
         uses: ruby/setup-ruby@8575951200e472d5f2d95c625da0c7bec8217c42 # v1.161.0
         with:
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-          cache-version: 1 # Increment this number if you need to re-download cached gems
+          cache-version: 0 # Increment this number if you need to re-download cached gems
       # - name: Set up Node.js
       #   uses: actions/setup-node@v4
       #   with:
@@ -51,7 +51,7 @@ jobs:
         run: bundle exec jekyll build --destination ./build
         env:
           JEKYLL_ENV: production
-          BUNDLE_GITHUB__COM: x-access-token:${{ secrets.JEKYLL_PAT }} #!!
+          BUNDLE_GITHUB__COM: x-access-token:${{ secrets.GH_REPO_PAT }} #!!
       - name: Publish to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         id: deploy
