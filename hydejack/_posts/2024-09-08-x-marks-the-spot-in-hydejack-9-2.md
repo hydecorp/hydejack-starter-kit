@@ -1,7 +1,7 @@
 ---
 layout: post
 description: > 
-  This feature realease adds new social media icons for 2024 and makes dark mode available to everyone.
+  This feature release adds new social media icons for 2024 and makes dark mode available to everyone.
 image: 
   path: /assets/img/blog/pawel-czerwinski-848z7lbCjoo-unsplash.jpg
   srcset: 
@@ -17,10 +17,10 @@ accent_image:
 # X Marks the Spot in Hydejack 9.2
 ## New Social Media Icons
 
+Lots of things have changed in the world of social media since the last release. To bring Hydejack up to date, the default logo for Twitter has changed:
+
 * toc
 {:toc .large-only}
-
-Lots of things have changed in the world of social media since the last release. To bring Hydejack up to date, the default logo for Twitter has changed:
 
 <span class="icon-twitter-old"></span> → <span class="icon-twitter"></span>
 {:.larger}

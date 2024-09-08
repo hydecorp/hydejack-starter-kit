@@ -93,8 +93,6 @@ theme: jekyll-theme-hydejack
 # This will fetch the `v9` branch of the public Hydejack repository on GitHub.
 # remote_theme: hydecorp/hydejack@v9
 
-destination: build
-
 # Customizaton
 # ----------------------------------------------------------------------------------------
 
