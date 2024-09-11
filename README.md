@@ -1,6 +1,6 @@
 ---
 layout: home
-cover: true
+cover: false
 image: /assets/img/blog/hydejack-9.jpg
 logo: <img src="/assets/img/logo.png"/>
 description: >
