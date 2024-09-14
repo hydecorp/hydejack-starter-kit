@@ -27,7 +27,7 @@ Hydejack's cover page on a variety of screen sizes.
 {:.figcaption}
 
 
-**Hydejack** is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress. 
+**Hydejack** is a boutique [Jekyll] theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress. 
 
 It includes a blog that is suitable for both prose and technical documentation, a portfolio to showcase your projects, and a resume template that looks amazing on the web and in print.
 
@@ -133,6 +133,7 @@ Use the the form below to purchase Hydejack PRO:
 
 <div class="gumroad-product-embed" data-gumroad-product-id="nuOluY"><a href="https://gumroad.com/l/nuOluY">Loading…</a></div>
 
+[jekyll]: https://jekyllrb.com
 
 [blog]: /
 [portfolio]: https://hydejack.com/examples/
