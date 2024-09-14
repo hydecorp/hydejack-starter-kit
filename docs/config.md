@@ -344,7 +344,7 @@ author:
   social:
     email:    mail@hydejack.com
     rss:      {{ site.url }}{{ site.baseurl }}/feed.xml # make sure you provide an absolute URL
-    download: https://github.com/hydecorp/hydejack/archive/v9.2.0.zip
+    download: https://github.com/hydecorp/hydejack/archive/v9.2.1.zip
 ~~~
 
 

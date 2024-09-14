@@ -44,7 +44,7 @@ If you've followed the steps to add __Hydejack PRO__ as a git dependency, all yo
 
 ~~~ruby
 # file: `Gemfile`
-gem "jekyll-theme-hydejack", git: "https://github.com/hydecorp/hydejack-pro", tag: "pro/v9.2.0"
+gem "jekyll-theme-hydejack", git: "https://github.com/hydecorp/hydejack-pro", tag: "pro/v9.2.1"
 ~~~
 
 Note that you can also define a git dependency based on a branch, which removes the need for manual updates:
@@ -58,7 +58,7 @@ gem "jekyll-theme-hydejack", git: "https://github.com/hydecorp/hydejack-pro", br
 When building on GitHub Pages, upgrading Hydejack is as simple as setting the `remote_theme` key in `_config.yml` to the desired version.
 
 ```yml
-remote_theme: hydecorp/hydejack@v9.2.0
+remote_theme: hydecorp/hydejack@v9.2.1
 ```
 
 To use the latest version on the `v9` branch on each build, you can use  `hydecorp/hydejack@v9`.

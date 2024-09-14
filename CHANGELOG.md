@@ -9,6 +9,12 @@ sitemap: false
 * this list will be replaced by the toc
 {:toc .large-only}
 
+## v9.2.1
+Sep 14 2024
+{:.heading.post-date}
+
+* Fixed missing Dart Sass deprecation warning
+
 ## v9.2.0
 Sep 08 2024
 {:.heading.post-date}
