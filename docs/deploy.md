@@ -114,7 +114,7 @@ If you're a **PRO Customer** and followed the instructions during [Install](./in
 
 ~~~ruby
 # file: `Gemfile`
-gem "jekyll-theme-hydejack", git: "https://github.com/hydecorp/hydejack-pro", tag: "pro/v9.2.0"
+gem "jekyll-theme-hydejack", git: "https://github.com/hydecorp/hydejack-pro", tag: "pro/v9.2.1"
 ~~~
 
 Make sure you are member of the ["PRO Customers" team](https://github.com/orgs/hydecorp/teams/pro-customers) on GitHub. If you've provided a GitHub handle during checkout you should have been automatically added, otherwise you can request an invite via [mail@hydejack.com](mailto:mail@hydejack.com).

@@ -25,7 +25,7 @@ If you bought the __PRO Version__ of Hydejack, use the contents of the `starter-
 You can now jump to [running locally](#running-locally).
 
 [hsc]: https://github.com/hydecorp/hydejack-starter-kit
-[src]: https://github.com/hydecorp/hydejack-starter-kit/archive/v9.2.0.zip
+[src]: https://github.com/hydecorp/hydejack-starter-kit/archive/v9.2.1.zip
 [nfy]: https://app.netlify.com/start/deploy?repository=https://github.com/hydecorp/hydejack-starter-kit
 [dtn]: https://www.netlify.com/img/deploy/button.svg
 
@@ -65,7 +65,7 @@ Alternatively, if you've been added to the ["PRO Customers" team](https://github
 
 ~~~ruby
 # file: `Gemfile`
-gem "jekyll-theme-hydejack", git: "https://github.com/hydecorp/hydejack-pro", tag: "pro/v9.2.0"
+gem "jekyll-theme-hydejack", git: "https://github.com/hydecorp/hydejack-pro", tag: "pro/v9.2.1"
 ~~~
 
 If you've provided your GitHub username during checkout you should have been automatically added to the team. Otherwise you can request an invite via [mail@hydejack.com](mailto:mail@hydejack.com).
@@ -115,7 +115,7 @@ The main difference to the regular starter kit is the use of `remote_theme` sett
 
 ```yml
 # file: `_config.yml`
-remote_theme: hydecorp/hydejack@v9.2.0
+remote_theme: hydecorp/hydejack@v9.2.1
 ```
 
 This setting only works with the Free Version of Hydejack. 

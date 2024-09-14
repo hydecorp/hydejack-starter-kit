@@ -49,7 +49,7 @@ If you bought the __PRO Version__ of Hydejack, use the contents of the `starter-
 You can now jump to [running locally](#running-locally).
 
 [hsc]: https://github.com/hydecorp/hydejack-starter-kit
-[src]: https://github.com/hydecorp/hydejack-starter-kit/archive/v9.2.0.zip
+[src]: https://github.com/hydecorp/hydejack-starter-kit/archive/v9.2.1.zip
 [nfy]: https://app.netlify.com/start/deploy?repository=https://github.com/hydecorp/hydejack-starter-kit
 [dtn]: https://www.netlify.com/img/deploy/button.svg
 
@@ -89,7 +89,7 @@ Alternatively, if you've been added to the ["PRO Customers" team](https://github
 
 ~~~ruby
 ## file: `Gemfile`
-gem "jekyll-theme-hydejack", git: "https://github.com/hydecorp/hydejack-pro", tag: "pro/v9.2.0"
+gem "jekyll-theme-hydejack", git: "https://github.com/hydecorp/hydejack-pro", tag: "pro/v9.2.1"
 ~~~
 
 If you've provided your GitHub username during checkout you should have been automatically added to the team. Otherwise you can request an invite via [mail@hydejack.com](mailto:mail@hydejack.com).
@@ -139,7 +139,7 @@ The main difference to the regular starter kit is the use of `remote_theme` sett
 
 ```yml
 ## file: `_config.yml`
-remote_theme: hydecorp/hydejack@v9.2.0
+remote_theme: hydecorp/hydejack@v9.2.1
 ```
 
 This setting only works with the Free Version of Hydejack. 
@@ -240,7 +240,7 @@ If you've followed the steps to add __Hydejack PRO__ as a git dependency, all yo
 
 ~~~ruby
 ## file: `Gemfile`
-gem "jekyll-theme-hydejack", git: "https://github.com/hydecorp/hydejack-pro", tag: "pro/v9.2.0"
+gem "jekyll-theme-hydejack", git: "https://github.com/hydecorp/hydejack-pro", tag: "pro/v9.2.1"
 ~~~
 
 Note that you can also define a git dependency based on a branch, which removes the need for manual updates:
@@ -254,7 +254,7 @@ gem "jekyll-theme-hydejack", git: "https://github.com/hydecorp/hydejack-pro", br
 When building on GitHub Pages, upgrading Hydejack is as simple as setting the `remote_theme` key in `_config.yml` to the desired version.
 
 ```yml
-remote_theme: hydecorp/hydejack@v9.2.0
+remote_theme: hydecorp/hydejack@v9.2.1
 ```
 
 To use the latest version on the `v9` branch on each build, you can use  `hydecorp/hydejack@v9`.
@@ -607,7 +607,7 @@ author:
   social:
     email:    mail@hydejack.com
     rss:      {{ site.url }}{{ site.baseurl }}/feed.xml # make sure you provide an absolute URL
-    download: https://github.com/hydecorp/hydejack/archive/v9.2.0.zip
+    download: https://github.com/hydecorp/hydejack/archive/v9.2.1.zip
 ~~~
 
 
@@ -2081,7 +2081,7 @@ If you're a **PRO Customer** and followed the instructions during [Install](./in
 
 ~~~ruby
 ## file: `Gemfile`
-gem "jekyll-theme-hydejack", git: "https://github.com/hydecorp/hydejack-pro", tag: "pro/v9.2.0"
+gem "jekyll-theme-hydejack", git: "https://github.com/hydecorp/hydejack-pro", tag: "pro/v9.2.1"
 ~~~
 
 Make sure you are member of the ["PRO Customers" team](https://github.com/orgs/hydecorp/teams/pro-customers) on GitHub. If you've provided a GitHub handle during checkout you should have been automatically added, otherwise you can request an invite via [mail@hydejack.com](mailto:mail@hydejack.com).
